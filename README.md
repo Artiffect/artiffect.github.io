@@ -28,6 +28,7 @@ draft: false # true면 사이트에 노출되지 않음
 ```
 
 - `pubDatetime`이 미래 날짜면 그날까지 배포 사이트에서 숨겨진다.
+- 작성 중인 글은 `src/content/posts/_drafts/`에 둔다. git에서 제외되므로 레포와 배포 사이트에 올라가지 않고, `pnpm dev`에서는 미리 볼 수 있다 (`draft: false`일 때). 다 쓰면 `posts/` 바로 아래로 옮겨 커밋한다.
 - `src/content/posts/tailwind-typography.md`: 마크다운 문법 참고용 (draft)
 
 ## 설정
