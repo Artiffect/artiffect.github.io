@@ -4,6 +4,7 @@ import { fontData, experimental_getFontFileURL } from "astro:assets";
 import satori from "satori";
 import sharp from "sharp";
 import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
+import { loadGoogleFont } from "@/utils/loadGoogleFont";
 import { getPostSlug } from "@/utils/getPostPaths";
 import { postFilter } from "@/utils/postFilter";
 import config from "@/config";
@@ -36,13 +37,20 @@ export const GET: APIRoute = async ({ props, url }) => {
     throw new Error("Cannot find the font path.");
   }
 
-  const [regularData, boldData] = await Promise.all([
+  // 이 이미지에 그릴 글자 (한글 폰트는 이 글자만 담아서 받음)
+  const text = [props.data.title, props.data.author, config.site.title].join(
+    ""
+  );
+
+  const [regularData, boldData, krRegularData, krBoldData] = await Promise.all([
     fetch(experimental_getFontFileURL(regularFontPath, url)).then(res =>
       res.arrayBuffer()
     ),
     fetch(experimental_getFontFileURL(boldFontPath, url)).then(res =>
       res.arrayBuffer()
     ),
+    loadGoogleFont("Noto Sans KR", 400, text),
+    loadGoogleFont("Noto Sans KR", 700, text),
   ]);
 
   const svg = await satori(
@@ -180,6 +188,19 @@ export const GET: APIRoute = async ({ props, url }) => {
         {
           name: "Google Sans Code",
           data: boldData,
+          weight: 700,
+          style: "normal",
+        },
+        // Google Sans Code에 없는 글자(한글)는 satori가 아래 폰트로 대체해서 그림
+        {
+          name: "Noto Sans KR",
+          data: krRegularData,
+          weight: 400,
+          style: "normal",
+        },
+        {
+          name: "Noto Sans KR",
+          data: krBoldData,
           weight: 700,
           style: "normal",
         },
