@@ -28,8 +28,8 @@ web
 ## Capabilities and Constraints
 
 - Astro 7 + AstroPaper 테마 기반 정적 사이트, Tailwind v4.
-- 기능: 글 목록·태그·아카이브·검색(Pagefind)·RSS·다크 모드·글별 OG 이미지.
-- 예정: /projects(포트폴리오), /photos(사진 갤러리), /about.
+- 기능: 글 목록·태그·아카이브·검색(Pagefind)·RSS·다크 모드·글별 OG 이미지·/projects(포트폴리오 목록·상세).
+- 예정: /photos(사진 갤러리), /about 본문.
 - 홈은 블로그 중심: 최근 글이 메인, 소개는 짧게.
 - 미정: 표시 이름(실명/핸들), 직무 표기, 사이트 제목, 한 줄 소개 — 임시값 유지 중.
 

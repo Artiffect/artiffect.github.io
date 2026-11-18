@@ -7,6 +7,7 @@ export default {
     tags: "Tags",
     about: "About",
     archives: "Archives",
+    projects: "Projects",
     search: "Search",
   },
   post: {
@@ -53,6 +54,9 @@ export default {
 
     searchTitle: "Search",
     searchDesc: "Search any article ...",
+
+    projectsTitle: "Projects",
+    projectsDesc: "{{count}} projects so far",
   },
   a11y: {
     skipToContent: "Skip to content",

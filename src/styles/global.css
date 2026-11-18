@@ -71,7 +71,7 @@
 }
 
 @utility nav-link {
-  @apply hover:text-foreground block px-2.5 py-2 transition-colors;
+  @apply hover:text-foreground block px-1.5 py-2 whitespace-nowrap transition-colors sm:px-2.5;
 }
 
 @utility nav-active {
@@ -131,7 +131,7 @@
 }
 
 @utility nav-icon {
-  @apply hover:text-foreground flex size-9 items-center justify-center rounded-md transition-colors;
+  @apply hover:text-foreground flex size-8 items-center justify-center rounded-md transition-colors sm:size-9;
 }
 
 :target {

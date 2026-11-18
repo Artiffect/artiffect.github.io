@@ -15,6 +15,7 @@ import BackButton from "./_components/BackButton.astro";
 import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import PostToc from "./_components/PostToc.astro";
+import CodeCopyButtons from "@/components/CodeCopyButtons.astro";
 import PostEnd from "@/custom/PostEnd.astro";
 import config from "@/config";
 
@@ -188,6 +189,7 @@ const ogImage = ogImageUrl
     </div>
 
     <BackToTopButton headings={tocHeadings} />
+    <CodeCopyButtons />
 
     <div class="border-border mt-16 border-t pt-8">
       <ShareLinks />
@@ -250,47 +252,6 @@ const ogImage = ogImageUrl
     }
   }
   addHeadingLinks();
-
-  function attachCopyButtons() {
-    const copyButtonLabel = "복사";
-    const codeBlocks = Array.from(document.querySelectorAll("pre"));
-
-    for (const codeBlock of codeBlocks) {
-      const wrapper = document.createElement("div");
-      wrapper.style.position = "relative";
-
-      // 파일명 탭 유무와 상관없이 항상 상자 안쪽 오른쪽 위에 둔다
-      // (파일명 변환기가 모든 pre에 --file-name-offset을 넣어 테두리에 걸쳐 보였음)
-      const topClass = "top-2";
-
-      const copyButton = document.createElement("button");
-      copyButton.className = `copy-code absolute end-2 ${topClass} rounded-md bg-muted border border-border px-2 py-1 text-xs leading-4 text-sub font-medium hover:text-foreground`;
-      copyButton.innerHTML = copyButtonLabel;
-      codeBlock.setAttribute("tabindex", "0");
-      codeBlock.appendChild(copyButton);
-
-      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-      wrapper.appendChild(codeBlock);
-
-      copyButton.addEventListener("click", async () => {
-        await copyCode(codeBlock, copyButton);
-      });
-    }
-
-    async function copyCode(block, button) {
-      const code = block.querySelector("code");
-      const text = code?.innerText;
-
-      await navigator.clipboard.writeText(text ?? "");
-
-      button.innerText = "복사됨";
-
-      setTimeout(() => {
-        button.innerText = copyButtonLabel;
-      }, 700);
-    }
-  }
-  attachCopyButtons();
 
   /** Accessible image lightbox for article images. */
   function initLightbox() {

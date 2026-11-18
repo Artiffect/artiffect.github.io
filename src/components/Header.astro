@@ -51,7 +51,7 @@ const isPostsArea =
       {site.title}
     </a>
     <nav aria-label="주 메뉴">
-      <ul class="text-sub flex items-center gap-1 text-[15px] sm:gap-3">
+      <ul class="text-sub flex items-center text-[15px] sm:gap-3">
         <li>
           <a
             href={getRelativeLocaleUrl(locale, "posts")}
@@ -59,6 +59,15 @@ const isPostsArea =
             aria-current={isPostsArea ? "page" : undefined}
           >
             {t.nav.posts}
+          </a>
+        </li>
+        <li>
+          <a
+            href={getRelativeLocaleUrl(locale, "projects")}
+            class:list={["nav-link", { "nav-active": isActive("/projects") }]}
+            aria-current={isActive("/projects") ? "page" : undefined}
+          >
+            {t.nav.projects}
           </a>
         </li>
         <li>

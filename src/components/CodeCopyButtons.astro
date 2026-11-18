@@ -1,0 +1,41 @@
+---
+// 본문 코드 블록 오른쪽 위에 "복사" 버튼을 붙인다. (글·프로젝트 상세 공용)
+// 본문 영역(#article) 안의 <pre>만 대상으로 한다.
+---
+
+<script>
+  const LABEL = "복사";
+
+  function attachCopyButtons() {
+    const blocks = document.querySelectorAll<HTMLPreElement>("#article pre");
+    for (const block of blocks) {
+      if (block.querySelector(".copy-code")) continue; // 이미 붙었으면 건너뜀
+
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      // 파일명 탭 유무와 상관없이 항상 상자 안쪽 오른쪽 위에 둔다
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className =
+        "copy-code absolute end-2 top-2 rounded-md bg-muted border border-border px-2 py-1 text-xs leading-4 text-sub font-medium hover:text-foreground";
+      button.textContent = LABEL;
+      // 휴대폰에서는 코드 첫 줄이 버튼에 가려지지 않게 위쪽에 버튼 자리를 둔다
+      block.classList.add("max-sm:pt-10");
+      block.setAttribute("tabindex", "0");
+      block.appendChild(button);
+
+      block.parentNode?.insertBefore(wrapper, block);
+      wrapper.appendChild(block);
+
+      button.addEventListener("click", async () => {
+        const text = block.querySelector("code")?.innerText ?? "";
+        await navigator.clipboard.writeText(text);
+        button.textContent = "복사됨";
+        setTimeout(() => (button.textContent = LABEL), 700);
+      });
+    }
+  }
+
+  document.addEventListener("astro:page-load", attachCopyButtons);
+</script>

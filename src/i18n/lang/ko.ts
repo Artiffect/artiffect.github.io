@@ -7,6 +7,7 @@ export default {
     tags: "태그",
     about: "소개",
     archives: "아카이브",
+    projects: "프로젝트",
     search: "검색",
   },
   post: {
@@ -53,6 +54,9 @@ export default {
 
     searchTitle: "검색",
     searchDesc: "글을 검색해 보세요",
+
+    projectsTitle: "프로젝트",
+    projectsDesc: "지금까지 만든 프로젝트 {{count}}개",
   },
   a11y: {
     skipToContent: "본문으로 건너뛰기",
