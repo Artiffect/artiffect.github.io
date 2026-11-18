@@ -12,5 +12,5 @@ export const PROFILE: {
   links: { label: string; href: string }[];
 } = {
   // TODO: 이름·소개·사진이 정해지면 채우기
-  links: [{ label: "GitHub", href: "https://github.com/alison0525" }],
+  links: [{ label: "GitHub", href: "https://github.com/Artiffect" }],
 };

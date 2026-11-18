@@ -1,4 +1,4 @@
-# alison0525.github.io
+# artiffect.github.io
 
 개인 개발 블로그 · 포트폴리오. [Astro](https://astro.build) + [AstroPaper](https://github.com/satnaing/astro-paper) 테마 기반.
 

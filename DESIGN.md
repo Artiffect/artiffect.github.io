@@ -1,5 +1,5 @@
 ---
-name: alison0525 개발 블로그
+name: Artiffect 개발 블로그
 description: 국내 기술 블로그의 표준 레이아웃을 단정하게 마감한 한국어 개인 개발 블로그
 colors:
   background: "#ffffff"
@@ -139,7 +139,7 @@ components:
     rounded: "{rounded.xl}"
 ---
 
-# Design System: alison0525 개발 블로그
+# Design System: Artiffect 개발 블로그
 
 ## Overview
 

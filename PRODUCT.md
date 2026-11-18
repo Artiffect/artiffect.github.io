@@ -44,7 +44,7 @@ web
 ## Evidence on Hand
 
 - 공개 글 0개, 프로젝트·사진 콘텐츠 아직 없음.
-- 프로필 링크: GitHub(alison0525)만.
+- 프로필 링크: GitHub(Artiffect)만.
 - 실제 콘텐츠가 생기기 전까지 경력·프로젝트·수치·추천사를 지어내지 않는다.
 
 ## Product Principles
