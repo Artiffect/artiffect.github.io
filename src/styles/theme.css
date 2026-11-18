@@ -2,33 +2,42 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
+  --color-sub: var(--sub); /* 요약·보조 문장 */
+  --color-accent: var(--accent); /* 활성 점·밑줄 (청록) */
+  --color-accent-ink: var(--accent-ink); /* 링크·태그 글자 (진한 청록) */
   --color-accent-foreground: var(--accent-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted); /* 칩·썸네일 바탕 */
+  --color-muted-foreground: var(--muted-foreground); /* 날짜·개수 */
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code), var(--font-noto-sans-kr);
+  --font-app:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  --font-mono: var(--font-google-sans-code), ui-monospace, monospace;
 }
 
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #ffffff;
+  --foreground: #16181b;
+  --sub: #454a51;
+  --accent: #12b886;
+  --accent-ink: #087f5b;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --muted: #f1f3f5;
+  --muted-foreground: #6e747c;
+  --border: #e6e7e9;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #121314;
+  --foreground: #ecedee;
+  --sub: #b4b8be;
+  --accent: #20c997;
+  --accent-ink: #63e6be;
+  --accent-foreground: #121314;
+  --muted: #1f2124;
+  --muted-foreground: #8e949b;
+  --border: #2a2c2f;
 }

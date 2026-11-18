@@ -71,22 +71,9 @@ export default defineConfig({
       name: "Google Sans Code",
       cssVariable: "--font-google-sans-code",
       provider: fontProviders.google(),
-      // 한글은 아래 Noto Sans KR로 넘어가야 하므로 generic fallback을 두지 않음
-      // (순서는 theme.css의 --font-app에서 지정)
-      fallbacks: [],
+      fallbacks: ["monospace"],
       weights: [300, 400, 500, 600, 700],
       styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
-    },
-    {
-      name: "Noto Sans KR",
-      cssVariable: "--font-noto-sans-kr",
-      provider: fontProviders.google(),
-      fallbacks: ["sans-serif"],
-      // 한글 기준으로 계산된 Arial 크기 보정(약 197%)이 영문 로딩 중 깜빡임을 만들어 끔
-      optimizedFallbacks: false,
-      weights: ["300 700"],
-      styles: ["normal"],
     },
   ],
   env: {

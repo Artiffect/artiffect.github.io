@@ -32,5 +32,9 @@ public/pagefind
 # docker compose
 compose.override.yaml
 
+# 디자인 작업용 예시·캡처 (디자인 기록은 커밋)
+.impeccable/mocks/
+.impeccable/review/
+
 # 작성 중인 글 (로컬 미리보기 전용, 커밋·배포되지 않음)
 src/content/posts/_drafts/
