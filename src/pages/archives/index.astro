@@ -1,23 +1,16 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
-import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import { postFilter } from "@/utils/postFilter";
-import { resolveTimezone } from "@/utils/resolveTimezone";
-import { getPostsByGroupCondition } from "./_utils/getPostsByGroupCondition";
+import { getCategoryLabel } from "@/data/categories";
+import { formatDate } from "@/utils/formatDate";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
-
-dayjs.extend(utc);
-dayjs.extend(timezone);
 
 const locale = Astro.currentLocale ?? config.site.lang;
 
@@ -29,73 +22,68 @@ if (!config.features.showArchives && notFoundUrl) {
 
 const t = useTranslations(locale);
 
-const posts = await getCollection("posts");
-const filteredPosts = posts.filter(postFilter);
-const monthFormatter = new Intl.DateTimeFormat(locale, { month: "long" });
-
-// Group by the calendar day the post's byline shows (see Datetime.astro),
-// not by the build machine's local zone.
-const publishDate = (post: CollectionEntry<"posts">) =>
-  dayjs(post.data.pubDatetime).tz(
-    resolveTimezone(post.data.timezone ?? config.site.timezone)
-  );
+// 모든 공개 글을 연도별로 묶은 한 줄 목록 (홈보다 촘촘하게)
+const posts = getSortedPosts(await getCollection("posts"));
+type Row = {
+  post: CollectionEntry<"posts">;
+  date: ReturnType<typeof formatDate>;
+};
+const groups: { year: number; rows: Row[] }[] = [];
+for (const post of posts) {
+  const date = formatDate(post.data.pubDatetime, post.data.timezone);
+  const last = groups.at(-1);
+  if (last?.year === date.year) last.rows.push({ post, date });
+  else groups.push({ year: date.year, rows: [{ post, date }] });
+}
 ---
 
 <Layout title={`${t.pages.archivesTitle} | ${config.site.title}`}>
   <Header />
 
-  <Breadcrumb />
-
-  <Main pageTitle={t.pages.archivesTitle} pageDesc={t.pages.archivesDesc}>
+  <Main
+    pageTitle={t.pages.archivesTitle}
+    pageDesc={`지금까지 쓴 글 ${posts.length}개`}
+  >
     {
-      Object.entries(
-        getPostsByGroupCondition(filteredPosts, post =>
-          publishDate(post).year()
-        )
-      )
-        .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
-        .map(([year, yearGroup]) => (
-          <div>
-            <span class="text-2xl font-bold">{year}</span>{" "}
-            <sup class="text-muted-foreground text-sm">{yearGroup.length}</sup>
-            {Object.entries(
-              getPostsByGroupCondition(
-                yearGroup,
-                post => publishDate(post).month() + 1
-              )
-            )
-              .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
-              .map(([month, monthGroup]) => (
-                <div class="flex flex-col sm:flex-row">
-                  <div class="mt-6 min-w-36 text-lg sm:my-6">
-                    <span class="font-bold">
-                      {monthFormatter.format(
-                        new Date(2000, Number(month) - 1, 1)
-                      )}
-                    </span>{" "}
-                    <sup class="text-muted-foreground text-xs">
-                      {monthGroup.length}
-                    </sup>
-                  </div>
-                  <ul>
-                    {monthGroup
-                      .sort(
-                        (a, b) =>
-                          Math.floor(
-                            new Date(b.data.pubDatetime).getTime() / 1000
-                          ) -
-                          Math.floor(
-                            new Date(a.data.pubDatetime).getTime() / 1000
-                          )
-                      )
-                      .map(data => (
-                        <Card {...data} />
-                      ))}
-                  </ul>
-                </div>
+      groups.length === 0 ? (
+        <p class="text-sub py-20 text-center text-[15px]">
+          아직 공개한 글이 없습니다.
+        </p>
+      ) : (
+        groups.map(({ year, rows }) => (
+          <section class="mb-10" aria-labelledby={`archive-${year}`}>
+            <h2
+              id={`archive-${year}`}
+              class="text-muted-foreground after:bg-border flex items-center gap-3.5 text-sm font-semibold tabular-nums after:h-px after:flex-1"
+            >
+              {year}
+            </h2>
+            <ul class="mt-2">
+              {rows.map(({ post, date }) => (
+                <li>
+                  <a
+                    href={getPostUrl(post.id, post.filePath, locale)}
+                    class="group grid grid-cols-[4rem_minmax(0,1fr)_auto] items-baseline gap-3 py-2.5"
+                  >
+                    <time
+                      datetime={date.iso}
+                      class="text-muted-foreground text-sm tabular-nums"
+                    >
+                      {date.short}
+                    </time>
+                    <span class="group-hover:text-accent-ink truncate font-medium transition-colors">
+                      {post.data.title}
+                    </span>
+                    <span class="text-muted-foreground text-[13px] max-sm:hidden">
+                      {getCategoryLabel(post.data.category)}
+                    </span>
+                  </a>
+                </li>
               ))}
-          </div>
+            </ul>
+          </section>
         ))
+      )
     }
   </Main>
 

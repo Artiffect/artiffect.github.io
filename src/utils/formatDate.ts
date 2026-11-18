@@ -15,6 +15,7 @@ export function formatDate(date: Date, postTimezone?: string) {
   return {
     iso: d.toISOString(), // <time datetime>용
     label: d.format("YYYY. MM. DD."),
+    short: d.format("MM. DD."), // 연도가 따로 보이는 곳용
     year: d.year(), // 연도별 묶음용
   };
 }
