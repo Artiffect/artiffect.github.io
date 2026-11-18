@@ -10,6 +10,8 @@
   html {
     -webkit-font-smoothing: antialiased;
     caret-color: var(--color-accent);
+    word-break: keep-all; /* 한글을 단어(띄어쓰기) 단위로 줄바꿈 */
+    overflow-wrap: anywhere; /* 아주 긴 영단어·URL은 넘치지 않게 끊음 */
   }
   ::selection {
     background: color-mix(in srgb, var(--color-accent) 25%, transparent);
@@ -96,6 +98,10 @@
 
 @utility page-link {
   @apply text-sub hover:text-foreground inline-flex items-center gap-1.5 font-medium transition-colors;
+}
+
+@utility adjacent-link {
+  @apply border-border hover:border-foreground/25 flex flex-col rounded-xl border px-5 py-4 transition-colors;
 }
 
 @utility nav-icon {

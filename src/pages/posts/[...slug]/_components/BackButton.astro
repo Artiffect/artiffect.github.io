@@ -1,6 +1,5 @@
 ---
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
-import LinkButton from "@/components/LinkButton.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
@@ -12,14 +11,14 @@ const t = useTranslations(locale);
 {
   config.features.showBackButton && (
     <div class="app-layout flex items-center justify-start">
-      <LinkButton
+      <a
         id="back-button"
         href={getRelativeLocaleUrl(locale, "")}
-        class="focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"
+        class="text-muted-foreground hover:text-foreground -ms-1 mt-8 mb-2 inline-flex items-center gap-1 text-sm transition-colors"
       >
-        <IconChevronLeft class="inline-block size-6 rtl:rotate-180" />
-        <span>{t.post.goBack}</span>
-      </LinkButton>
+        <IconChevronLeft class="size-4 rtl:rotate-180" />
+        {t.post.goBack}
+      </a>
     </div>
   )
 }
