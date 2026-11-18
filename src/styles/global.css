@@ -74,6 +74,10 @@
   @apply bg-muted text-accent-ink hover:bg-border inline-flex h-6.5 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-medium transition-colors;
 }
 
+@utility tag-chip-active {
+  @apply bg-accent-ink text-background hover:bg-accent-ink [&>span]:text-background/70;
+}
+
 @utility cat-tab {
   @apply text-sub hover:text-foreground block py-3 text-[14.5px] transition-colors;
 }
@@ -83,11 +87,15 @@
 }
 
 @utility list-title {
-  @apply mt-6 mb-2 text-2xl font-bold tracking-tight lg:mt-0 lg:mb-8;
+  @apply mt-6 mb-2 flex items-baseline gap-2 text-2xl font-bold tracking-tight lg:mt-0 lg:mb-8;
 }
 
 @utility more-link {
-  @apply text-sub hover:text-foreground mt-8 inline-block text-[15px] font-medium transition-colors;
+  @apply text-sub hover:text-foreground mt-8 inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors;
+}
+
+@utility page-link {
+  @apply text-sub hover:text-foreground inline-flex items-center gap-1.5 font-medium transition-colors;
 }
 
 @utility nav-icon {

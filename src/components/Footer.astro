@@ -1,7 +1,8 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import Socials from "./Socials.astro";
-import { useTranslations } from "@/i18n";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getAssetPath } from "@/utils/withBase";
+import config from "@/config";
 
 type Props = {
   noMarginTop?: boolean;
@@ -9,22 +10,57 @@ type Props = {
 
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 
-const t = useTranslations(Astro.currentLocale);
+const locale = Astro.currentLocale ?? config.site.lang;
 const currentYear = new Date().getFullYear();
+
+// 소셜 링크는 아이콘 대신 글자로 (사이드바와 같은 톤)
+const SOCIAL_LABELS: Record<string, string> = {
+  github: "GitHub",
+  linkedin: "LinkedIn",
+  x: "X",
+  mail: "이메일",
+};
+const links = [
+  ...(config.features.showArchives
+    ? [{ label: "아카이브", href: getRelativeLocaleUrl(locale, "archives") }]
+    : []),
+  { label: "RSS", href: getAssetPath("rss.xml") },
+  ...config.socials.map(s => ({
+    label: SOCIAL_LABELS[s.name] ?? s.name,
+    href: s.url,
+    external: true,
+  })),
+];
 ---
 
 <footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
+  class:list={[
+    "border-border border-t",
+    { "mt-auto": !noMarginTop },
+    className,
+  ]}
   {...attrs}
 >
   <div
-    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
+    class="app-wide text-muted-foreground flex flex-col gap-3 py-8 text-[13px] sm:flex-row sm:items-center sm:justify-between"
   >
-    <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
-    </div>
+    <p class="tabular-nums">© {currentYear} {config.site.author}</p>
+    <ul class="flex flex-wrap gap-x-5 gap-y-2">
+      {
+        links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="hover:text-foreground transition-colors"
+              {...("external" in link
+                ? { target: "_blank", rel: "noopener" }
+                : {})}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </footer>

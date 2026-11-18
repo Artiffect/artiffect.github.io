@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import ListLayout from "@/layouts/ListLayout.astro";
 import PostList from "@/components/PostList.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
@@ -18,7 +19,7 @@ const recent = sorted.slice(0, config.posts.perIndex);
   {
     sorted.length > recent.length && (
       <a href={getRelativeLocaleUrl(locale, "posts")} class="more-link">
-        전체 글 보기 →
+        전체 글 보기 <IconArrowRight class="size-4" />
       </a>
     )
   }

@@ -12,9 +12,10 @@ type Props = {
   description?: string;
   allPosts: CollectionEntry<"posts">[]; // 사이드바·탭의 개수 집계용 (전체 글)
   active?: CategorySlug | "all"; // 사이드바·탭에서 켜질 항목
+  activeTag?: string; // 사이드바에서 켜질 태그 (slug)
 };
 
-const { title, description, allPosts, active } = Astro.props;
+const { title, description, allPosts, active, activeTag } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
@@ -22,7 +23,7 @@ const { title, description, allPosts, active } = Astro.props;
   <div
     class="app-wide grid gap-x-18 pt-4 pb-16 lg:grid-cols-[220px_minmax(0,1fr)] lg:pt-12"
   >
-    <Sidebar posts={allPosts} active={active} />
+    <Sidebar posts={allPosts} active={active} activeTag={activeTag} />
     <main id="main-content" data-back-url={Astro.url.pathname} class="min-w-0">
       <CategoryTabs posts={allPosts} active={active} />
       <slot />

@@ -1,32 +1,38 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Breadcrumb from "@/components/Breadcrumb.astro";
-import Main from "@/components/Main.astro";
-import Footer from "@/components/Footer.astro";
-import Tag from "@/components/Tag.astro";
-import { getUniqueTags } from "@/utils/getUniqueTags";
-import { useTranslations } from "@/i18n";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ListLayout from "@/layouts/ListLayout.astro";
+import { getTagCounts } from "@/utils/getTagCounts";
 import config from "@/config";
 
-const posts = await getCollection("posts", ({ data }) => !data.draft);
-const tags = getUniqueTags(posts);
-
 const locale = Astro.currentLocale ?? config.site.lang;
-const t = useTranslations(locale);
+const posts = await getCollection("posts");
+const tags = getTagCounts(posts);
 ---
 
-<Layout title={`${t.pages.tagsTitle} | ${config.site.title}`}>
-  <Header />
-
-  <Breadcrumb />
-
-  <Main pageTitle={t.pages.tagsTitle} pageDesc={t.pages.tagsDesc}>
-    <ul class="flex flex-wrap gap-6">
-      {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
-    </ul>
-  </Main>
-
-  <Footer />
-</Layout>
+<ListLayout title={`태그 | ${config.site.title}`} allPosts={posts}>
+  <h1 class="list-title">
+    태그 <span class="side-count">{tags.length}</span>
+  </h1>
+  {
+    tags.length === 0 ? (
+      <p class="text-sub py-20 text-center text-[15px]">
+        아직 태그가 없습니다.
+      </p>
+    ) : (
+      <ul class="flex flex-wrap gap-2 tabular-nums">
+        {tags.map(t => (
+          <li>
+            <a
+              href={getRelativeLocaleUrl(locale, `tags/${t.tag}/`)}
+              class="tag-chip gap-1.5"
+            >
+              {t.tagName}
+              <span class="side-count">{t.count}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</ListLayout>
