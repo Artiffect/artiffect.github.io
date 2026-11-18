@@ -1,40 +1,31 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Breadcrumb from "@/components/Breadcrumb.astro";
-import Main from "@/components/Main.astro";
-import Card from "@/components/Card.astro";
-import Footer from "@/components/Footer.astro";
+import ListLayout from "@/layouts/ListLayout.astro";
+import PostList from "@/components/PostList.astro";
 import Pagination from "@/components/Pagination.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
-import { useTranslations } from "@/i18n";
 import config from "@/config";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getCollection("posts", ({ data }) => !data.draft);
-  return paginate(getSortedPosts(posts), { pageSize: config.posts.perPage });
+  const posts = await getCollection("posts");
+  return paginate(getSortedPosts(posts), {
+    pageSize: config.posts.perPage,
+    props: { allPosts: posts },
+  });
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
-
-const locale = Astro.currentLocale ?? config.site.lang;
-const t = useTranslations(locale);
+const { page, allPosts } = Astro.props;
 ---
 
-<Layout title={`${t.pages.postsTitle} | ${config.site.title}`}>
-  <Header />
-
-  <Breadcrumb />
-
-  <Main pageTitle={t.pages.postsTitle} pageDesc={t.pages.postsDesc}>
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
-  </Main>
-
+<ListLayout
+  title={`전체 글 | ${config.site.title}`}
+  allPosts={allPosts}
+  active="all"
+>
+  <h1 class="list-title">
+    전체 글 <span class="side-count">{page.total}</span>
+  </h1>
+  <PostList posts={page.data} />
   <Pagination {page} />
-
-  <Footer noMarginTop={page.lastPage > 1} />
-</Layout>
+</ListLayout>

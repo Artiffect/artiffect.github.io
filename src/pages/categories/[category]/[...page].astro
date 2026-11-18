@@ -1,0 +1,41 @@
+---
+import type { GetStaticPathsOptions } from "astro";
+import { getCollection } from "astro:content";
+import ListLayout from "@/layouts/ListLayout.astro";
+import PostList from "@/components/PostList.astro";
+import Pagination from "@/components/Pagination.astro";
+import { CATEGORIES } from "@/data/categories";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import config from "@/config";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = await getCollection("posts");
+  const sorted = getSortedPosts(posts);
+
+  // 글이 있는 카테고리만 페이지를 만든다
+  return CATEGORIES.flatMap(category => {
+    const categoryPosts = sorted.filter(p => p.data.category === category.slug);
+    if (categoryPosts.length === 0) return [];
+    return paginate(categoryPosts, {
+      params: { category: category.slug },
+      props: { category, allPosts: posts },
+      pageSize: config.posts.perPage,
+    });
+  });
+}
+
+const { page, category, allPosts } = Astro.props;
+---
+
+<ListLayout
+  title={`${category.label} | ${config.site.title}`}
+  allPosts={allPosts}
+  active={category.slug}
+>
+  <h1 class="list-title">
+    {category.label}
+    <span class="side-count">{page.total}</span>
+  </h1>
+  <PostList posts={page.data} />
+  <Pagination {page} />
+</ListLayout>

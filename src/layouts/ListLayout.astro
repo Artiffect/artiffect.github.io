@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Sidebar from "@/components/Sidebar.astro";
+import CategoryTabs from "@/components/CategoryTabs.astro";
+import type { CategorySlug } from "@/data/categories";
+
+type Props = {
+  title?: string; // <title>, 없으면 사이트 제목
+  description?: string;
+  allPosts: CollectionEntry<"posts">[]; // 사이드바·탭의 개수 집계용 (전체 글)
+  active?: CategorySlug | "all"; // 사이드바·탭에서 켜질 항목
+};
+
+const { title, description, allPosts, active } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <div
+    class="app-wide grid gap-x-18 pt-4 pb-16 lg:grid-cols-[220px_minmax(0,1fr)] lg:pt-12"
+  >
+    <Sidebar posts={allPosts} active={active} />
+    <main id="main-content" data-back-url={Astro.url.pathname} class="min-w-0">
+      <CategoryTabs posts={allPosts} active={active} />
+      <slot />
+    </main>
+  </div>
+  <Footer />
+</Layout>
+
+<script>
+  // 글 상세의 "뒤로 가기"가 방금 보던 목록으로 돌아오도록 기억
+  document.addEventListener("astro:page-load", () => {
+    const backUrl =
+      document.querySelector<HTMLElement>("#main-content")?.dataset.backUrl;
+    if (backUrl) sessionStorage.setItem("backUrl", backUrl);
+  });
+</script>

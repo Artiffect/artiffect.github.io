@@ -50,6 +50,46 @@
   @apply text-foreground decoration-accent font-semibold underline decoration-2 underline-offset-8;
 }
 
+@utility tag-chip {
+  @apply bg-muted text-accent-ink hover:bg-border inline-flex h-7 items-center rounded-full px-3 text-[13.5px] font-medium transition-colors;
+}
+
+@utility side-heading {
+  @apply text-muted-foreground mb-2 text-[13px] font-semibold;
+}
+
+@utility side-cat {
+  @apply text-sub hover:text-foreground relative flex justify-between py-1.5 text-[14.5px] transition-colors;
+}
+
+@utility side-cat-active {
+  @apply text-foreground before:bg-accent font-bold before:absolute before:top-1/2 before:-left-3.5 before:size-1.5 before:-translate-y-1/2 before:rounded-full;
+}
+
+@utility side-count {
+  @apply text-muted-foreground text-[13px] font-normal;
+}
+
+@utility tag-chip-sm {
+  @apply bg-muted text-accent-ink hover:bg-border inline-flex h-6.5 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-medium transition-colors;
+}
+
+@utility cat-tab {
+  @apply text-sub hover:text-foreground block py-3 text-[14.5px] transition-colors;
+}
+
+@utility cat-tab-active {
+  @apply text-foreground font-bold shadow-[inset_0_-2px_0_var(--color-accent)];
+}
+
+@utility list-title {
+  @apply mt-6 mb-2 text-2xl font-bold tracking-tight lg:mt-0 lg:mb-8;
+}
+
+@utility more-link {
+  @apply text-sub hover:text-foreground mt-8 inline-block text-[15px] font-medium transition-colors;
+}
+
 @utility nav-icon {
   @apply hover:text-foreground flex size-9 items-center justify-center rounded-md transition-colors;
 }

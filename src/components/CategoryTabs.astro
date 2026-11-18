@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import type { CategorySlug } from "@/data/categories";
+import { getCategoryCounts } from "@/utils/getCategoryCounts";
+import config from "@/config";
+
+type Props = {
+  posts: CollectionEntry<"posts">[];
+  active?: CategorySlug | "all";
+};
+
+const { posts, active } = Astro.props;
+const locale = Astro.currentLocale ?? config.site.lang;
+const { total, categories } = getCategoryCounts(posts);
+
+const items = [
+  {
+    key: "all",
+    label: "전체",
+    count: total,
+    href: getRelativeLocaleUrl(locale, "posts"),
+  },
+  ...categories.map(c => ({
+    key: c.slug,
+    label: c.label,
+    count: c.count,
+    href: getRelativeLocaleUrl(locale, `categories/${c.slug}/`),
+  })),
+];
+---
+
+<nav class="border-border -mx-4 mb-2 border-b lg:hidden" aria-label="카테고리">
+  <ul
+    class="flex [scrollbar-width:none] gap-5 overflow-x-auto px-4 whitespace-nowrap tabular-nums"
+  >
+    {
+      items.map(item => (
+        <li>
+          <a
+            href={item.href}
+            class:list={["cat-tab", { "cat-tab-active": active === item.key }]}
+            aria-current={active === item.key ? "page" : undefined}
+          >
+            {item.label} <span class="side-count">{item.count}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

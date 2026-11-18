@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { toTransitionName } from "@/utils/toTransitionName";
+import { slugifyStr } from "@/utils/slugify";
+import { formatDate } from "@/utils/formatDate";
+import { getCategoryLabel } from "@/data/categories";
+import config from "@/config";
+
+type Props = { headingLevel?: "h2" | "h3" } & CollectionEntry<"posts">;
+
+const { headingLevel: Heading = "h3", id, data, filePath } = Astro.props;
+const { title, description, tags, category, thumbnail, pubDatetime } = data;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const date = formatDate(pubDatetime, data.timezone);
+---
+
+<li
+  class="group border-border relative grid grid-cols-[minmax(0,1fr)_auto] gap-4 border-b py-6 last:border-b-0 sm:gap-8"
+>
+  <div class="min-w-0">
+    <Heading
+      class="text-[17.5px] leading-snug font-bold tracking-tight sm:text-xl"
+      transition:name={toTransitionName(id)}
+    >
+      {/* after:inset-0 → 줄 전체를 눌러도 글로 이동 */}
+      <a
+        href={getPostUrl(id, filePath, Astro.currentLocale)}
+        class="group-hover:text-accent-ink transition-colors after:absolute after:inset-0"
+      >
+        {title}
+      </a>
+    </Heading>
+    <p class="text-sub mt-1.5 line-clamp-2 text-[15px] leading-relaxed">
+      {description}
+    </p>
+    {/* relative z-10 → 태그는 줄 전체 링크 위에서 따로 눌림 */}
+    {
+      tags.length > 0 && (
+        <ul class="relative z-10 mt-3 flex flex-wrap gap-2" aria-label="태그">
+          {tags.map(tag => (
+            <li>
+              <a
+                href={getRelativeLocaleUrl(locale, `tags/${slugifyStr(tag)}/`)}
+                class="tag-chip"
+              >
+                {tag}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <p class="text-muted-foreground mt-2.5 flex gap-3 text-[13px] tabular-nums">
+      <time datetime={date.iso}>{date.label}</time>
+      <span>{getCategoryLabel(category)}</span>
+    </p>
+  </div>
+  {
+    thumbnail && (
+      <Image
+        src={thumbnail}
+        alt=""
+        width={336}
+        height={208}
+        class="border-border h-[66px] w-[88px] rounded-lg border object-cover sm:h-[104px] sm:w-[168px]"
+      />
+    )
+  }
+</li>

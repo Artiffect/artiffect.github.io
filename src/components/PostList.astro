@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PostItem from "./PostItem.astro";
+import { formatDate } from "@/utils/formatDate";
+
+type Props = { posts: CollectionEntry<"posts">[] };
+const { posts } = Astro.props;
+
+// 이미 최신순으로 정렬된 글을 연도별로 묶는다 (순서 유지)
+const groups: { year: number; posts: CollectionEntry<"posts">[] }[] = [];
+for (const post of posts) {
+  const { year } = formatDate(post.data.pubDatetime, post.data.timezone);
+  const last = groups.at(-1);
+  if (last?.year === year) last.posts.push(post);
+  else groups.push({ year, posts: [post] });
+}
+---
+
+{
+  posts.length === 0 ? (
+    <p class="text-sub py-20 text-center text-[15px]">
+      아직 공개한 글이 없습니다.
+    </p>
+  ) : (
+    groups.map(({ year, posts }) => (
+      <section
+        class="mt-10 first-of-type:mt-6 lg:first-of-type:mt-0"
+        aria-labelledby={`year-${year}`}
+      >
+        <h2
+          id={`year-${year}`}
+          class="text-muted-foreground after:bg-border flex items-center gap-3.5 text-sm font-semibold tabular-nums after:h-px after:flex-1"
+        >
+          {year}
+        </h2>
+        <ul>
+          {posts.map(post => (
+            <PostItem {...post} />
+          ))}
+        </ul>
+      </section>
+    ))
+  )
+}
