@@ -43,16 +43,14 @@ const el = (type: string, style: Style, children?: unknown): OgNode => ({
 });
 
 type OgOptions = {
-  kicker?: string; // 제목 위 작은 글자 (카테고리)
   title: string;
   description?: string;
-  footer: string; // 왼쪽 아래 (사이트 이름 또는 주소)
+  footer: string; // 왼쪽 아래 (사이트 이름·카테고리 또는 주소)
   chips?: string[]; // 오른쪽 아래 태그 칩, 최대 3개
 };
 
 /** 1200×630 OG 이미지를 PNG로 그린다. */
 export async function renderOgImage({
-  kicker,
   title,
   description,
   footer,
@@ -80,17 +78,9 @@ export async function renderOgImage({
         "div",
         { display: "flex", flexDirection: "column" },
         [
-          kicker
-            ? el(
-                "div",
-                { fontSize: 30, fontWeight: 700, color: C.chipInk },
-                kicker
-              )
-            : null,
           el(
             "div",
             {
-              marginTop: kicker ? 20 : 0,
               fontSize: title.length > 40 ? 56 : 66,
               fontWeight: 700,
               color: C.ink,

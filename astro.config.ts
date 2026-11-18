@@ -47,12 +47,30 @@ export default defineConfig({
       rehypePlugins: [
         rehypeHeadingIds,
         rehypeInlineToc,
-        rehypeCallouts,
+        [
+          rehypeCallouts,
+          {
+            theme: "obsidian",
+            // 메모 상자 기본 제목을 한국어로 (글에서 > [!NOTE] 제목 으로 직접 바꿀 수도 있음)
+            callouts: {
+              note: { title: "메모" },
+              info: { title: "정보" },
+              tip: { title: "팁" },
+              important: { title: "중요" },
+              warning: { title: "주의" },
+              caution: { title: "주의" },
+              danger: { title: "위험" },
+              example: { title: "예시" },
+              question: { title: "질문" },
+              quote: { title: "인용" },
+            },
+          },
+        ],
         rehypeTableWrapper,
       ],
     }),
     shikiConfig: {
-      themes: { light: "min-light", dark: "night-owl" },
+      themes: { light: "min-light", dark: "github-dark-default" },
       defaultColor: false,
       wrap: false,
       transformers: [

@@ -4,6 +4,32 @@
 @import "./typography.css";
 @import "rehype-callouts/theme/obsidian";
 
+/* 메모 상자(콜아웃): 정보성은 청록 하나로, 경고·오류만 의미 색을 남긴다.
+   테마는 라이트에서 --rc-color-light, 다크(html.dark)에서 --rc-color-dark를 쓴다. */
+.callout[data-callout] {
+  --rc-color-light: var(--color-accent-ink);
+  --rc-color-dark: var(--color-accent-ink);
+}
+.callout:is(
+  [data-callout="warning"],
+  [data-callout="caution"],
+  [data-callout="attention"]
+) {
+  --rc-color-light: #b35c00;
+  --rc-color-dark: #ffa94d;
+}
+.callout:is(
+  [data-callout="danger"],
+  [data-callout="error"],
+  [data-callout="bug"],
+  [data-callout="fail"],
+  [data-callout="failure"],
+  [data-callout="missing"]
+) {
+  --rc-color-light: #c92a2a;
+  --rc-color-dark: #ff8787;
+}
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {

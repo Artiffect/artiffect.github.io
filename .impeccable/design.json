@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T04:57:46+00:00",
+  "title": "Design System: alison0525 개발 블로그",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "종이 흰색",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "먹색",
+        "canonical": "#16181b",
+        "tonalRamp": [
+          "#090b0e",
+          "#24272a",
+          "#434549",
+          "#64666a",
+          "#87898d",
+          "#abaeb2",
+          "#ced1d5",
+          "#eceff3"
+        ]
+      },
+      "sub": {
+        "role": "neutral",
+        "displayName": "보조 잉크",
+        "canonical": "#454a51",
+        "tonalRamp": [
+          "#080b11",
+          "#22272d",
+          "#40454c",
+          "#61676e",
+          "#848a91",
+          "#a9aeb7",
+          "#cbd1da",
+          "#e9eff8"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "칩 바탕",
+        "canonical": "#f1f3f5",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#252728",
+          "#444547",
+          "#646668",
+          "#87898b",
+          "#acaeb0",
+          "#cfd1d3",
+          "#edeff1"
+        ]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "연회색 잉크",
+        "canonical": "#6e747c",
+        "tonalRamp": [
+          "#070b11",
+          "#22272e",
+          "#40464d",
+          "#61676e",
+          "#848a92",
+          "#a8afb7",
+          "#cbd2db",
+          "#e8eff8"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "구분선",
+        "canonical": "#e6e7e9",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#262628",
+          "#444547",
+          "#656668",
+          "#88898b",
+          "#adaeb0",
+          "#d0d1d3",
+          "#edeef0"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "표시용 청록",
+        "canonical": "#12b886",
+        "tonalRamp": [
+          "#001403",
+          "#003812",
+          "#005a30",
+          "#007e51",
+          "#00a373",
+          "#3bca97",
+          "#a0e2c4",
+          "#def5ea"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "글자용 진한 청록",
+        "canonical": "#087f5b",
+        "tonalRamp": [
+          "#001007",
+          "#00311d",
+          "#005635",
+          "#007956",
+          "#419d79",
+          "#84bca3",
+          "#badaca",
+          "#e6f2ec"
+        ]
+      },
+      "accent-foreground": {
+        "role": "neutral",
+        "displayName": "청록 위 글자",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "background-dark": {
+        "role": "neutral",
+        "displayName": "종이 흰색 (다크)",
+        "canonical": "#121314",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#252728",
+          "#444546",
+          "#656667",
+          "#88898b",
+          "#adaeaf",
+          "#d0d1d2",
+          "#edeff0"
+        ]
+      },
+      "foreground-dark": {
+        "role": "neutral",
+        "displayName": "먹색 (다크)",
+        "canonical": "#ecedee",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#262627",
+          "#444546",
+          "#656667",
+          "#88898a",
+          "#adaeaf",
+          "#d0d1d2",
+          "#edeeef"
+        ]
+      },
+      "sub-dark": {
+        "role": "neutral",
+        "displayName": "보조 잉크 (다크)",
+        "canonical": "#b4b8be",
+        "tonalRamp": [
+          "#090b0f",
+          "#24272b",
+          "#42454a",
+          "#63666c",
+          "#86898f",
+          "#aaaeb4",
+          "#cdd1d7",
+          "#ebeff5"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "칩 바탕 (다크)",
+        "canonical": "#1f2124",
+        "tonalRamp": [
+          "#090b0e",
+          "#24272a",
+          "#434548",
+          "#64666a",
+          "#87898d",
+          "#abaeb2",
+          "#ced1d5",
+          "#eceff3"
+        ]
+      },
+      "muted-foreground-dark": {
+        "role": "neutral",
+        "displayName": "연회색 잉크 (다크)",
+        "canonical": "#8e949b",
+        "tonalRamp": [
+          "#080c10",
+          "#22272d",
+          "#40464c",
+          "#61676d",
+          "#848a91",
+          "#a8afb6",
+          "#cbd2d9",
+          "#e9eff7"
+        ]
+      },
+      "border-dark": {
+        "role": "neutral",
+        "displayName": "구분선 (다크)",
+        "canonical": "#2a2c2f",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#252729",
+          "#434548",
+          "#64666a",
+          "#87898d",
+          "#abaeb2",
+          "#ced1d5",
+          "#eceff3"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "표시용 청록 (다크)",
+        "canonical": "#20c997",
+        "tonalRamp": [
+          "#001602",
+          "#003914",
+          "#005b32",
+          "#007f52",
+          "#00a475",
+          "#24cb99",
+          "#90e6c3",
+          "#daf6e9"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "primary",
+        "displayName": "글자용 진한 청록 (다크)",
+        "canonical": "#63e6be",
+        "tonalRamp": [
+          "#001803",
+          "#00371c",
+          "#00593a",
+          "#007d5b",
+          "#00a27d",
+          "#3fc8a1",
+          "#6aecc4",
+          "#cffaea"
+        ]
+      },
+      "accent-foreground-dark": {
+        "role": "neutral",
+        "displayName": "청록 위 글자 (다크)",
+        "canonical": "#121314",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#252728",
+          "#444546",
+          "#656667",
+          "#88898b",
+          "#adaeaf",
+          "#d0d1d2",
+          "#edeff0"
+        ]
+      },
+      "callout-warning": {
+        "role": "semantic",
+        "displayName": "경고 호박색",
+        "canonical": "#b35c00",
+        "tonalRamp": [
+          "#1c0300",
+          "#4a1000",
+          "#792600",
+          "#a04b00",
+          "#c86f24",
+          "#de9e71",
+          "#eec8b0",
+          "#f9ebe2"
+        ]
+      },
+      "callout-warning-dark": {
+        "role": "semantic",
+        "displayName": "경고 호박색 (다크)",
+        "canonical": "#ffa94d",
+        "tonalRamp": [
+          "#2b0000",
+          "#510000",
+          "#772b00",
+          "#9d4e00",
+          "#c47300",
+          "#ed9839",
+          "#ffbf75",
+          "#ffe9d0"
+        ]
+      },
+      "callout-danger": {
+        "role": "semantic",
+        "displayName": "위험 빨강",
+        "canonical": "#c92a2a",
+        "tonalRamp": [
+          "#230000",
+          "#580000",
+          "#920000",
+          "#bc191e",
+          "#e54c46",
+          "#f58c82",
+          "#fdc0b8",
+          "#ffe8e5"
+        ]
+      },
+      "callout-danger-dark": {
+        "role": "semantic",
+        "displayName": "위험 빨강 (다크)",
+        "canonical": "#ff8787",
+        "tonalRamp": [
+          "#2a0000",
+          "#5a0001",
+          "#810f20",
+          "#aa3a40",
+          "#d36062",
+          "#fd8585",
+          "#ffb7b4",
+          "#ffe6e4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "글 상세 제목. 28px, sm(640px) 이상 36px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "페이지 제목. 24px, sm 이상 30px (목록 화면은 24px 고정)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "글 목록 항목 제목. 17.5px, sm 이상 20px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "글 본문(app-prose), 최대 768px 단."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "글 요약 2줄, 페이지 설명, 빈 상태 문구."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "날짜·카테고리 메타, 글 수, 푸터. 표 숫자."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "인라인 코드와 코드 블록 전용."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "color-transition",
+        "value": "color/background-color/border-color 150ms (Tailwind transition-colors 기본)",
+        "purpose": "링크·칩·탭·카드 호버의 유일한 움직임."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "purpose": "사이드바 2열 전환, 모바일 카테고리 탭 숨김"
+      },
+      {
+        "name": "toc",
+        "value": "1280px",
+        "purpose": "글 상세 옆 목차 표시"
+      }
+    ],
+    "focus": {
+      "value": "outline 2px solid var(--color-accent), offset 2px",
+      "purpose": "모든 링크·버튼의 키보드 포커스."
+    }
+  },
+  "components": [
+    {
+      "name": "태그 칩",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "글 목록·글 상단의 velog식 태그 칩. 호버 시 바탕이 한 단 짙어진다.",
+      "html": "<ul class=\"ds-chips\"><li><a class=\"ds-tag-chip\" href=\"#\">spring</a></li><li><a class=\"ds-tag-chip\" href=\"#\">transaction</a></li></ul>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:var(--font-app, Pretendard, system-ui, sans-serif)} .ds-tag-chip{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:9999px;background:var(--muted, #f1f3f5);color:var(--accent-ink, #087f5b);font-size:13.5px;font-weight:500;text-decoration:none;transition:background-color .15s} .ds-tag-chip:hover{background:var(--border, #e6e7e9)} .ds-tag-chip:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px}"
+    },
+    {
+      "name": "사이드바 태그 칩 (활성 포함)",
+      "kind": "chip",
+      "refersTo": "tag-chip-sm",
+      "description": "사이드바의 작은 칩. 글 수를 덧붙이고, 현재 태그는 반전된다.",
+      "html": "<ul class=\"ds-chips-sm\"><li><a class=\"ds-chip-sm ds-chip-active\" href=\"#\">spring <span>3</span></a></li><li><a class=\"ds-chip-sm\" href=\"#\">astro <span>2</span></a></li><li><a class=\"ds-chip-sm\" href=\"#\">redis <span>1</span></a></li></ul>",
+      "css": ".ds-chips-sm{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0;font-family:var(--font-app, Pretendard, system-ui, sans-serif);font-variant-numeric:tabular-nums} .ds-chip-sm{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:9999px;background:var(--muted, #f1f3f5);color:var(--accent-ink, #087f5b);font-size:13px;font-weight:500;text-decoration:none;transition:background-color .15s} .ds-chip-sm span{color:var(--muted-foreground, #6e747c);font-weight:400} .ds-chip-sm:hover{background:var(--border, #e6e7e9)} .ds-chip-sm:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-chip-active,.ds-chip-active:hover{background:var(--accent-ink, #087f5b);color:var(--background, #ffffff)} .ds-chip-active span{color:var(--background, #ffffff);opacity:.7}"
+    },
+    {
+      "name": "카테고리 목록",
+      "kind": "nav",
+      "refersTo": "side-cat",
+      "description": "사이드바 카테고리. 활성은 굵게 + 왼쪽 청록 점, 오른쪽에 글 수.",
+      "html": "<nav class=\"ds-side\"><h2 class=\"ds-side-heading\">카테고리</h2><ul><li><a class=\"ds-side-cat ds-side-cat-active\" href=\"#\">전체 <span>7</span></a></li><li><a class=\"ds-side-cat\" href=\"#\">백엔드 <span>4</span></a></li><li><a class=\"ds-side-cat\" href=\"#\">인프라 <span>1</span></a></li></ul></nav>",
+      "css": ".ds-side{width:220px;padding-left:16px;font-family:var(--font-app, Pretendard, system-ui, sans-serif)} .ds-side ul{list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums} .ds-side-heading{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--muted-foreground, #6e747c)} .ds-side-cat{position:relative;display:flex;justify-content:space-between;padding:6px 0;font-size:14.5px;color:var(--sub, #454a51);text-decoration:none;transition:color .15s} .ds-side-cat:hover{color:var(--foreground, #16181b)} .ds-side-cat:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-side-cat span{font-size:13px;font-weight:400;color:var(--muted-foreground, #6e747c)} .ds-side-cat-active{color:var(--foreground, #16181b);font-weight:700} .ds-side-cat-active::before{content:'';position:absolute;top:50%;left:-14px;width:6px;height:6px;border-radius:9999px;background:var(--accent, #12b886);transform:translateY(-50%)}"
+    },
+    {
+      "name": "상단 메뉴",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "헤더: 사이트명 왼쪽, 글자 메뉴와 아이콘 버튼 오른쪽. 활성은 청록 2px 밑줄.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-brand\" href=\"#\">alison0525</a><ul><li><a class=\"ds-nav-link ds-nav-active\" href=\"#\" aria-current=\"page\">글</a></li><li><a class=\"ds-nav-link\" href=\"#\">소개</a></li><li><a class=\"ds-nav-icon\" href=\"#\" aria-label=\"검색\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\"/><path d=\"M21 21l-6 -6\"/></svg></a></li></ul></header>",
+      "css": ".ds-header{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 24px;border-bottom:1px solid var(--border, #e6e7e9);background:var(--background, #ffffff);font-family:var(--font-app, Pretendard, system-ui, sans-serif)} .ds-brand{font-size:20px;font-weight:700;letter-spacing:-0.025em;color:var(--foreground, #16181b);text-decoration:none} .ds-header ul{display:flex;align-items:center;gap:12px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--sub, #454a51)} .ds-nav-link{display:block;padding:8px 10px;color:inherit;text-decoration:none;transition:color .15s} .ds-nav-link:hover,.ds-nav-icon:hover{color:var(--foreground, #16181b)} .ds-nav-active{color:var(--foreground, #16181b);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent, #12b886);text-decoration-thickness:2px;text-underline-offset:8px} .ds-nav-icon{display:flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:6px;color:inherit;transition:color .15s} .ds-nav-link:focus-visible,.ds-nav-icon:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px}"
+    },
+    {
+      "name": "모바일 카테고리 탭",
+      "kind": "nav",
+      "refersTo": "cat-tab",
+      "description": "1024px 미만에서 사이드바 대신 쓰는 가로 스크롤 밑줄 탭. 끝은 '태그' 탭.",
+      "html": "<nav class=\"ds-tabs\"><ul><li><a class=\"ds-cat-tab ds-cat-tab-active\" href=\"#\">전체 <span>7</span></a></li><li><a class=\"ds-cat-tab\" href=\"#\">백엔드 <span>4</span></a></li><li><a class=\"ds-cat-tab\" href=\"#\">회고 <span>1</span></a></li><li><a class=\"ds-cat-tab\" href=\"#\">태그 <span>7</span></a></li></ul></nav>",
+      "css": ".ds-tabs{border-bottom:1px solid var(--border, #e6e7e9);font-family:var(--font-app, Pretendard, system-ui, sans-serif)} .ds-tabs ul{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;list-style:none;margin:0;padding:0 16px;font-variant-numeric:tabular-nums} .ds-cat-tab{display:block;padding:12px 0;font-size:14.5px;color:var(--sub, #454a51);text-decoration:none;transition:color .15s} .ds-cat-tab span{font-size:13px;color:var(--muted-foreground, #6e747c)} .ds-cat-tab:hover{color:var(--foreground, #16181b)} .ds-cat-tab:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-cat-tab-active{color:var(--foreground, #16181b);font-weight:700;box-shadow:inset 0 -2px 0 var(--accent, #12b886)}"
+    },
+    {
+      "name": "글 목록 항목",
+      "kind": "custom",
+      "refersTo": "post-item-title",
+      "description": "제목 → 요약 2줄 → 태그 칩 → 날짜·카테고리. 줄 전체가 링크, 호버 시 제목만 진한 청록.",
+      "html": "<section class=\"ds-list\"><h2 class=\"ds-year\">2026</h2><article class=\"ds-post\"><h3><a href=\"#\">Spring 트랜잭션 전파, 직접 깨뜨려 보며 이해하기</a></h3><p class=\"ds-desc\">REQUIRES_NEW가 예상과 다르게 동작한 이유를 프록시 구조부터 따라가 봤다.</p><p class=\"ds-meta\"><time>2026. 11. 14.</time><span>백엔드</span></p></article></section>",
+      "css": ".ds-list{max-width:640px;font-family:var(--font-app, Pretendard, system-ui, sans-serif);word-break:keep-all} .ds-year{display:flex;align-items:center;gap:14px;margin:0;font-size:14px;font-weight:600;color:var(--muted-foreground, #6e747c);font-variant-numeric:tabular-nums} .ds-year::after{content:'';flex:1;height:1px;background:var(--border, #e6e7e9)} .ds-post{position:relative;padding:24px 0;border-bottom:1px solid var(--border, #e6e7e9)} .ds-post h3{margin:0;font-size:20px;font-weight:700;line-height:1.375;letter-spacing:-0.025em} .ds-post h3 a{color:var(--foreground, #16181b);text-decoration:none;transition:color .15s} .ds-post h3 a::after{content:'';position:absolute;inset:0} .ds-post:hover h3 a{color:var(--accent-ink, #087f5b)} .ds-post h3 a:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-desc{margin:6px 0 0;font-size:15px;line-height:1.625;color:var(--sub, #454a51);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden} .ds-meta{display:flex;gap:12px;margin:10px 0 0;font-size:13px;color:var(--muted-foreground, #6e747c);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "이웃 글 카드",
+      "kind": "card",
+      "refersTo": "adjacent-link",
+      "description": "글 끝의 이전·다음 글. 1px 테두리 12px 모서리, 호버 시 테두리만 진해진다.",
+      "html": "<a class=\"ds-adjacent\" href=\"#\"><span class=\"ds-adj-label\">← 이전 글</span><span class=\"ds-adj-title\">N+1 문제를 fetch join 없이 풀어 본 기록</span></a>",
+      "css": ".ds-adjacent{display:flex;flex-direction:column;max-width:340px;padding:16px 20px;border:1px solid var(--border, #e6e7e9);border-radius:12px;color:var(--foreground, #16181b);text-decoration:none;font-family:var(--font-app, Pretendard, system-ui, sans-serif);transition:border-color .15s} .ds-adjacent:hover{border-color:color-mix(in srgb, var(--foreground, #16181b) 25%, transparent)} .ds-adjacent:focus-visible{outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-adj-label{font-size:13px;color:var(--muted-foreground, #6e747c)} .ds-adj-title{margin-top:6px;font-weight:600}"
+    },
+    {
+      "name": "본문 읽기 (링크·인라인 코드·인용)",
+      "kind": "custom",
+      "refersTo": "code-inline",
+      "description": "17px / 1.85 본문. 링크는 진한 청록 + 40% 밑줄, 인라인 코드는 칩 바탕, 인용은 왼쪽 2px 선.",
+      "html": "<div class=\"ds-prose\"><p>트랜잭션 경계는 <code>@Transactional</code>이 붙은 <a href=\"#\">프록시</a>에서 정해진다.</p><blockquote>같은 클래스 안의 호출은 프록시를 거치지 않는다.</blockquote></div>",
+      "css": ".ds-prose{max-width:640px;font-family:var(--font-app, Pretendard, system-ui, sans-serif);font-size:17px;line-height:1.85;color:var(--foreground, #16181b);word-break:keep-all} .ds-prose a{color:var(--accent-ink, #087f5b);text-decoration:underline;text-decoration-color:color-mix(in srgb, var(--accent, #12b886) 40%, transparent);text-underline-offset:4px;transition:text-decoration-color .15s} .ds-prose a:hover{text-decoration-color:var(--accent, #12b886)} .ds-prose a:focus-visible{text-decoration:none;outline:2px solid var(--accent, #12b886);outline-offset:2px} .ds-prose code{padding:2px 6px;border-radius:6px;background:var(--muted, #f1f3f5);font-family:'Google Sans Code',ui-monospace,monospace;font-size:.88em} .ds-prose blockquote{margin:1.5em 0;padding-left:1em;border-left:2px solid var(--border, #e6e7e9);color:var(--sub, #454a51);font-style:normal}"
+    }
+  ],
+  "narrative": {
+    "northStar": "잘 정리된 기술 서가",
+    "overview": "토스·우아한형제들·velog처럼 한국 개발자가 익숙하게 읽는 기술 블로그의 표준 배치를, 그 기준 블로그들 수준의 마감으로 옮긴 세계다. 흰 바탕 위에 무채색 잉크 네 단계(제목·본문 `foreground`, 요약 `sub`, 날짜·개수 `muted-foreground`, 구분선 `border`)가 위계를 만들고, 색은 청록 하나만 쓴다. 장식이 아니라 정돈이 인상을 만든다: 1px 구분선, 그림자 없는 평면, Pretendard 한 서체.\n\n밀도는 \"훑기 좋은 목록 + 편히 읽는 본문\"의 두 박자다. 목록 화면은 넓은 틀(최대 1152px)에 왼쪽 220px 사이드바와 오른쪽 글 목록을 두고, 글 본문은 768px 한 단으로 좁혀 17px / 1.85 행간의 긴 한글 읽기에 집중한다. 글은 연도별로 묶이고, 날짜는 한국식(`2026. 11. 16.`)으로 표기한다.\n\n분류는 \"카테고리 1개 + 태그 여러 개\"이고, 두 분류는 모양으로 구분된다. 카테고리는 굵기와 청록 점으로 켜지는 목록, 태그는 velog식 둥근 칩이다. 다크 모드는 같은 위계를 그대로 반전한다.",
+    "keyCharacteristics": [
+      "흰 바탕 + 무채색 잉크 네 단계, 포인트는 청록 하나",
+      "Pretendard로 제목과 본문, 고정폭(Google Sans Code)은 코드에만",
+      "카테고리는 목록(굵게 + 청록 점), 태그는 둥근 칩",
+      "1px 구분선, 그림자 없음, 제목 위 라벨 없음",
+      "사이드바는 1024px 이상에서만, 모바일은 밑줄 카테고리 탭",
+      "한국식 날짜, `word-break: keep-all`"
+    ],
+    "rules": [
+      {
+        "name": "The One Teal Rule",
+        "body": "포인트 색은 청록 하나다. 정보성 메모 상자도 청록으로 통일하고, 호박색·빨강은 경고·위험 메모 상자에만 남긴다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-or-Mark Rule",
+        "body": "청록이 글자가 되면 `accent-ink`, 점·밑줄·막대처럼 표시가 되면 `accent`. 둘을 바꿔 쓰지 않는다.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "제목과 본문은 모두 Pretendard다. 고정폭은 코드에만 쓰고 라벨·숫자·날짜를 고정폭으로 꾸미지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Keep-All Rule",
+        "body": "문서 전체에 `word-break: keep-all`과 `overflow-wrap: anywhere`를 건다. 한글은 띄어쓰기 단위로 줄바꿈하고, 긴 영단어·URL만 끊는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Korean Date Rule",
+        "body": "날짜는 `YYYY. MM. DD.`, 연도가 이미 보이는 곳(아카이브)은 `MM. DD.`로 쓴다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "그림자를 쓰지 않는다. 경계는 1px `border` 선, 강조는 굵기와 청록 표시로 한다.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 청록이 글자일 때는 `accent-ink`(#087f5b / 다크 #63e6be), 점·밑줄·막대일 때는 `accent`를 쓴다.",
+      "**Do** 카테고리는 목록(굵게 + 6px 청록 점), 태그는 알약 칩으로 그려 두 분류를 모양으로 구분한다.",
+      "**Do** 경계는 1px `border` 선으로, 호버는 바탕 한 단(`muted`→`border`) 또는 테두리 농도로 표현한다.",
+      "**Do** 글 목록은 연도별로 묶고 날짜를 `YYYY. MM. DD.`로 쓴다. 숫자에는 tnum을 건다.",
+      "**Do** 썸네일은 실제 이미지가 있을 때만 보이고, 없으면 글이 폭 전체를 쓰게 한다.",
+      "**Do** 다크 모드에서도 같은 위계와 같은 역할 이름의 토큰을 쓴다."
+    ],
+    "donts": [
+      "**Don't** 제목 위에 작은 라벨(kicker, eyebrow)을 두지 않는다.",
+      "**Don't** 청록 외의 포인트 색을 들이지 않는다. 호박색·빨강은 경고·위험 메모 상자 전용이다.",
+      "**Don't** 그림자로 깊이를 만들지 않는다.",
+      "**Don't** 고정폭 서체를 코드 밖(라벨, 날짜, 장식)에 쓰지 않는다.",
+      "**Don't** 1024px 미만에서 사이드바를 보이지 않는다. 그 자리는 밑줄 카테고리 탭이 대신한다.",
+      "**Don't** 썸네일이 없는 글에 자리 표시 이미지를 채우지 않는다."
+    ]
+  }
+}

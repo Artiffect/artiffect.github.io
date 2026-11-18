@@ -28,9 +28,8 @@ export const GET: APIRoute = async ({ props }) => {
   }
 
   const png = await renderOgImage({
-    kicker: getCategoryLabel(props.data.category),
     title: props.data.title,
-    footer: config.site.title,
+    footer: `${config.site.title} · ${getCategoryLabel(props.data.category)}`,
     chips: props.data.tags,
   });
 

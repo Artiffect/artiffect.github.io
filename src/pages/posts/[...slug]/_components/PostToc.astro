@@ -143,19 +143,12 @@ const items = buildTocTree(headings);
     overflow-wrap: anywhere;
     transition: color 0.2s ease;
   }
-  :is(.toc-side, .toc-popover) nav a::before {
-    content: "#";
-    content: "#" / "";
-    position: absolute;
-    inset-inline-start: -0.75rem;
-    opacity: 0.6;
-  }
   [data-toc-nav] a:hover,
   [data-toc-nav] a[aria-current="true"] {
-    color: var(--color-accent);
+    color: var(--color-accent-ink);
   }
   [data-toc-nav] a[aria-current="true"] {
-    text-decoration: underline dashed;
+    text-decoration: underline;
     text-underline-offset: 4px;
   }
   .toc-label {
@@ -187,7 +180,7 @@ const items = buildTocTree(headings);
     z-index: 1;
     padding: 0.125rem 0.25rem;
     background: var(--color-background);
-    color: var(--color-accent);
+    color: var(--color-accent-ink);
     font-size: 0.875rem;
   }
   .toc-skip:not(:focus) {
@@ -213,7 +206,7 @@ const items = buildTocTree(headings);
     font-size: 0.875rem;
   }
   .toc-back-to-top:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-ink);
   }
   :is(.toc-side, .toc-popover) .toc-back-to-top {
     flex-shrink: 0;

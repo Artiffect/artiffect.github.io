@@ -19,11 +19,17 @@ related_targets: ["src/pages/posts","src/pages/tags","src/components"]
 - 프로필 이름·사진·소개는 미정 — 자리 표시를 단정하게 처리하고 지어내지 않는다.
 - 프로젝트·사진 메뉴는 해당 페이지가 생길 때 추가.
 
+## Approved references
+
+- 홈 최종 예시: .impeccable/mocks/home-final.html (사용자 승인)
+- 사이드바 카테고리/태그 구분: .impeccable/mocks/side-split.html 의 a안 (태그를 velog 칩으로, 사용자 승인)
+- 태그 칩 색: .impeccable/mocks/tag-velog.html 의 1안 (velog 원조 청록, 글자는 대비 위해 #087f5b)
+
 ## Direction contract
 
 THESIS: 국내 기술 블로그의 표준 레이아웃을 그 기준 블로그들 수준의 마감으로. 템플릿(AstroPaper)의 고정폭·남색·주황 흔적을 지우고, 첫 화면에 사람과 분야와 최신 글이 동시에 보이게 한다.
 
-OWN-WORLD: 밝은 바탕 위 무채색 잉크 단계(제목·본문·보조·구분선), 포인트 색 하나는 링크·활성 카테고리·태그 칩에만. Noto Sans KR 본문, 코드만 고정폭. 둥근 칩, 1px 구분선, 그림자 없음. 다크 모드는 같은 위계를 반전.
+OWN-WORLD: 흰 바탕(#ffffff, 다크 #121314) 위 무채색 잉크 단계(제목·본문·보조·구분선), 포인트 색은 청록 하나(글자 #087f5b, 표시 #12b886)로 링크·활성 카테고리·태그 칩·메모 상자에만. Pretendard 제목·본문, 코드만 고정폭(Google Sans Code). 태그는 velog식 둥근 칩, 카테고리는 목록(굵게 + 청록 점). 1px 구분선, 그림자 없음, 제목 위 라벨(kicker) 없음. 다크 모드는 같은 위계를 반전.
 
 STORY: 방문자는 왼쪽 프로필로 누구인지 알고, 카테고리 글 수로 주력 분야를 읽고, 오른쪽 목록에서 제목·요약·태그로 글을 골라 들어간다.
 

@@ -124,27 +124,31 @@ const ogImage = ogImageUrl
     data-pagefind-body
   >
     <header class="mt-2 sm:mt-6">
-      <a
-        href={getRelativeLocaleUrl(locale, `categories/${category}/`)}
-        class="text-accent-ink text-sm font-semibold underline-offset-4 hover:underline"
-      >
-        {getCategoryLabel(category)}
-      </a>
       <h1
         style={{ viewTransitionName: toTransitionName(post.id) }}
-        class="mt-2 text-[28px] leading-tight font-bold tracking-tight text-pretty sm:text-4xl"
+        class="text-[28px] leading-tight font-bold tracking-tight text-pretty sm:text-4xl"
       >
         {title}
       </h1>
       <p
-        class="text-muted-foreground mt-4 flex flex-wrap gap-x-3 text-sm tabular-nums"
+        class="text-muted-foreground mt-4 flex flex-wrap items-center gap-x-2 text-sm tabular-nums"
       >
         <time datetime={pub.iso}>{pub.label}</time>
+        <span aria-hidden="true">·</span>
+        <a
+          href={getRelativeLocaleUrl(locale, `categories/${category}/`)}
+          class="text-accent-ink font-medium underline-offset-4 hover:underline"
+        >
+          {getCategoryLabel(category)}
+        </a>
         {
           mod && (
-            <span>
-              수정 <time datetime={mod.iso}>{mod.label}</time>
-            </span>
+            <>
+              <span aria-hidden="true">·</span>
+              <span>
+                수정 <time datetime={mod.iso}>{mod.label}</time>
+              </span>
+            </>
           )
         }
       </p>
@@ -248,23 +252,19 @@ const ogImage = ogImageUrl
   addHeadingLinks();
 
   function attachCopyButtons() {
-    const copyButtonLabel = "Copy";
+    const copyButtonLabel = "복사";
     const codeBlocks = Array.from(document.querySelectorAll("pre"));
 
     for (const codeBlock of codeBlocks) {
       const wrapper = document.createElement("div");
       wrapper.style.position = "relative";
 
-      const computedStyle = getComputedStyle(codeBlock);
-      const hasFileNameOffset =
-        computedStyle.getPropertyValue("--file-name-offset").trim() !== "";
-
-      const topClass = hasFileNameOffset
-        ? "top-(--file-name-offset)"
-        : "-top-3";
+      // 파일명 탭 유무와 상관없이 항상 상자 안쪽 오른쪽 위에 둔다
+      // (파일명 변환기가 모든 pre에 --file-name-offset을 넣어 테두리에 걸쳐 보였음)
+      const topClass = "top-2";
 
       const copyButton = document.createElement("button");
-      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.className = `copy-code absolute end-2 ${topClass} rounded-md bg-muted border border-border px-2 py-1 text-xs leading-4 text-sub font-medium hover:text-foreground`;
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);
@@ -283,7 +283,7 @@ const ogImage = ogImageUrl
 
       await navigator.clipboard.writeText(text ?? "");
 
-      button.innerText = "Copied";
+      button.innerText = "복사됨";
 
       setTimeout(() => {
         button.innerText = copyButtonLabel;
