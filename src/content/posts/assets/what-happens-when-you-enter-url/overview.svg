@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 324" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="324" fill="#f8f9fa"/>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <!-- 묶음 이름 -->
+  <text x="40" y="38" font-size="12" font-weight="600" fill="#6e747c">브라우저 안</text>
+  <text x="208" y="38" font-size="12" font-weight="600" fill="#087f5b">연결 준비</text>
+  <text x="40" y="308" font-size="12" font-weight="600" fill="#087f5b">요청과 응답</text>
+  <text x="532" y="308" font-size="12" font-weight="600" fill="#6e747c">브라우저 안</text>
+  <line x1="208" y1="46" x2="680" y2="46" stroke="#12b886" stroke-width="2"/>
+  <line x1="40" y1="292" x2="512" y2="292" stroke="#12b886" stroke-width="2"/>
+
+  <!-- 1행: 1~4 -->
+  <g>
+    <rect x="40" y="60" width="148" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="62" cy="82" r="11" fill="#12b886"/><text x="62" y="86.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+    <text x="80" y="87" font-size="15" font-weight="700" fill="#16181b">주소 해석</text>
+    <text x="56" y="116" font-size="12" fill="#6e747c">URL 나누기 · HSTS</text>
+  </g>
+  <g>
+    <rect x="208" y="60" width="148" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="230" cy="82" r="11" fill="#12b886"/><text x="230" y="86.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+    <text x="248" y="87" font-size="15" font-weight="700" fill="#16181b">DNS 조회</text>
+    <text x="224" y="116" font-size="12" fill="#6e747c">도메인 → IP 주소</text>
+  </g>
+  <g>
+    <rect x="376" y="60" width="148" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="398" cy="82" r="11" fill="#12b886"/><text x="398" y="86.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+    <text x="416" y="87" font-size="15" font-weight="700" fill="#16181b">TCP 연결</text>
+    <text x="392" y="116" font-size="12" fill="#6e747c">SYN · SYN+ACK · ACK</text>
+  </g>
+  <g>
+    <rect x="544" y="60" width="136" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="566" cy="82" r="11" fill="#12b886"/><text x="566" y="86.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+    <text x="584" y="87" font-size="15" font-weight="700" fill="#16181b">TLS</text>
+    <text x="560" y="116" font-size="12" fill="#6e747c">인증서 · 대칭키</text>
+  </g>
+  <line x1="188" y1="96" x2="204" y2="96" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="356" y1="96" x2="372" y2="96" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="524" y1="96" x2="540" y2="96" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- 4 → 5 연결선 -->
+  <path d="M612 132 V170 H114 V204" fill="none" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- 2행: 5~7 -->
+  <g>
+    <rect x="40" y="208" width="148" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="62" cy="230" r="11" fill="#12b886"/><text x="62" y="234.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">5</text>
+    <text x="80" y="235" font-size="15" font-weight="700" fill="#16181b">HTTP 요청</text>
+    <text x="56" y="264" font-size="12" fill="#6e747c">계층별 포장 · 라우터</text>
+  </g>
+  <g>
+    <rect x="208" y="208" width="304" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="230" cy="230" r="11" fill="#12b886"/><text x="230" y="234.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+    <text x="248" y="235" font-size="15" font-weight="700" fill="#16181b">서버 처리와 응답</text>
+    <text x="224" y="264" font-size="12" fill="#6e747c">로드밸런서 → 웹 서버 → 애플리케이션 서버</text>
+  </g>
+  <g>
+    <rect x="532" y="208" width="148" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="554" cy="230" r="11" fill="#12b886"/><text x="554" y="234.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">7</text>
+    <text x="572" y="235" font-size="15" font-weight="700" fill="#16181b">화면 그리기</text>
+    <text x="548" y="264" font-size="12" fill="#6e747c">DOM · CSSOM · 레이아웃</text>
+  </g>
+  <line x1="188" y1="244" x2="204" y2="244" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="512" y1="244" x2="528" y2="244" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+</svg>

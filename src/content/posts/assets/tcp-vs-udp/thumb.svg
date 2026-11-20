@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker></defs>
+  <text x="84" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#087f5b">TCP</text>
+  <text x="252" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#16181b">UDP</text>
+  <line x1="168" y1="16" x2="168" y2="192" stroke="#dee2e6"/>
+  <line x1="36" y1="52" x2="36" y2="184" stroke="#adb5bd" stroke-width="2"/><line x1="132" y1="52" x2="132" y2="184" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="38" y1="66" x2="128" y2="86" stroke="#12b886" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="130" y1="98" x2="40" y2="118" stroke="#12b886" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="38" y1="130" x2="128" y2="150" stroke="#12b886" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="204" y1="52" x2="204" y2="184" stroke="#adb5bd" stroke-width="2"/><line x1="300" y1="52" x2="300" y2="184" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="206" y1="74" x2="296" y2="94" stroke="#868e96" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="206" y1="110" x2="296" y2="130" stroke="#868e96" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="206" y1="146" x2="296" y2="166" stroke="#868e96" stroke-width="2" marker-end="url(#a)"/>
+</svg>

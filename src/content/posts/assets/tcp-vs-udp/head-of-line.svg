@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="320" fill="#f8f9fa"/>
+
+  <!-- 범례 -->
+  <g font-size="11.5" fill="#454a51">
+    <rect x="404" y="18" width="14" height="14" rx="3" fill="#12b886"/><text x="424" y="29">요청 A</text>
+    <rect x="480" y="18" width="14" height="14" rx="3" fill="#4dabf7"/><text x="500" y="29">요청 B</text>
+    <rect x="556" y="18" width="14" height="14" rx="3" fill="#ae3ec9"/><text x="576" y="29">요청 C</text>
+    <rect x="632" y="18" width="14" height="14" rx="3" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="652" y="29">대기</text>
+  </g>
+
+  <!-- ===== HTTP/2 over TCP ===== -->
+  <text x="32" y="72" font-size="15" font-weight="700" fill="#16181b">HTTP/2 + TCP</text>
+  <text x="32" y="90" font-size="11.5" fill="#6e747c">연결 하나, 순서 하나</text>
+  <rect x="200" y="58" width="488" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <g font-size="12" font-weight="700" fill="#fff" text-anchor="middle">
+    <rect x="212" y="68" width="60" height="28" rx="4" fill="#12b886"/><text x="242" y="87">A1</text>
+    <rect x="280" y="68" width="60" height="28" rx="4" fill="#fff" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="310" y="87" fill="#e8590c">A2 ✕</text>
+  </g>
+  <g font-size="12" font-weight="700" text-anchor="middle" fill="#868e96">
+    <rect x="348" y="68" width="60" height="28" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="378" y="87">B1</text>
+    <rect x="416" y="68" width="60" height="28" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="446" y="87">C1</text>
+    <rect x="484" y="68" width="60" height="28" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="514" y="87">B2</text>
+    <rect x="552" y="68" width="60" height="28" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="582" y="87">C2</text>
+  </g>
+  <text x="444" y="132" text-anchor="middle" font-size="12.5" fill="#454a51">A2가 다시 올 때까지 <tspan font-weight="700" fill="#e8590c">B, C도 전부 대기</tspan></text>
+
+  <line x1="32" y1="164" x2="688" y2="164" stroke="#dee2e6"/>
+
+  <!-- ===== HTTP/3 over QUIC ===== -->
+  <text x="32" y="198" font-size="15" font-weight="700" fill="#16181b">HTTP/3 + QUIC</text>
+  <text x="32" y="216" font-size="11.5" fill="#6e747c">요청마다 스트림 따로</text>
+
+  <rect x="200" y="182" width="488" height="36" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <rect x="200" y="226" width="488" height="36" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <rect x="200" y="270" width="488" height="36" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <g font-size="11" fill="#6e747c" text-anchor="end">
+    <text x="190" y="205">스트림 A</text><text x="190" y="249">스트림 B</text><text x="190" y="293">스트림 C</text>
+  </g>
+  <g font-size="12" font-weight="700" text-anchor="middle">
+    <rect x="212" y="188" width="60" height="24" rx="4" fill="#12b886"/><text x="242" y="205" fill="#fff">A1</text>
+    <rect x="280" y="188" width="60" height="24" rx="4" fill="#fff" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/><text x="310" y="205" fill="#e8590c">A2 ✕</text>
+    <text x="356" y="205" text-anchor="start" font-weight="400" font-size="11.5" fill="#6e747c">A만 재전송을 기다림</text>
+
+    <rect x="212" y="232" width="60" height="24" rx="4" fill="#4dabf7"/><text x="242" y="249" fill="#fff">B1</text>
+    <rect x="280" y="232" width="60" height="24" rx="4" fill="#4dabf7"/><text x="310" y="249" fill="#fff">B2</text>
+    <text x="356" y="249" text-anchor="start" font-weight="600" font-size="11.5" fill="#087f5b">바로 전달</text>
+
+    <rect x="212" y="276" width="60" height="24" rx="4" fill="#ae3ec9"/><text x="242" y="293" fill="#fff">C1</text>
+    <rect x="280" y="276" width="60" height="24" rx="4" fill="#ae3ec9"/><text x="310" y="293" fill="#fff">C2</text>
+    <text x="356" y="293" text-anchor="start" font-weight="600" font-size="11.5" fill="#087f5b">바로 전달</text>
+  </g>
+</svg>

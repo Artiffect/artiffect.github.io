@@ -7,10 +7,13 @@ tags:
   - network
   - http
   - dns
+thumbnail: ./assets/what-happens-when-you-enter-url/thumb.svg
 draft: false
 ---
 
 주소창에 `https://www.google.com`을 치고 엔터를 누르면 1초도 안 돼서 화면이 뜹니다. 그 짧은 사이에 일어나는 흐름을 한 번 잡아 두면 TCP, HTTP, DNS 같은 주제가 전체 그림의 어디에 들어가는지 보입니다. 그래서 네트워크 정리의 첫 글로 골랐습니다. 일곱 단계로 나눠 따라가 보겠습니다.
+
+![주소 해석, DNS 조회, TCP 연결, TLS, HTTP 요청, 서버 처리와 응답, 화면 그리기의 일곱 단계 흐름](./assets/what-happens-when-you-enter-url/overview.svg)
 
 ## 1. 주소 해석
 
@@ -28,14 +31,7 @@ draft: false
 
 리졸버에도 기록이 없으면 리졸버가 위에서부터 차례로 물어봅니다.
 
-```text
-리졸버 → 루트 네임서버    : www.google.com 어디야?
-루트   → 리졸버          : .com은 이 서버에 물어봐
-리졸버 → .com 네임서버    : www.google.com 어디야?
-.com   → 리졸버          : google.com은 이 서버에 물어봐
-리졸버 → google.com 네임서버
-google → 리졸버          : 142.250.xxx.xxx
-```
+![브라우저는 리졸버에 한 번 묻고, 리졸버가 루트, .com, google.com 네임서버에 차례로 물어 IP를 받아 오는 과정](./assets/what-happens-when-you-enter-url/dns-lookup.svg)
 
 여러 서버를 돌아다니며 묻는 일은 리졸버가 맡습니다(반복 질의). 브라우저는 리졸버에 한 번 묻고 답을 기다리기만 합니다(재귀 질의). 받은 답은 TTL 동안 캐시해 두니 매번 이 과정을 다 거치지는 않습니다.
 
@@ -64,12 +60,7 @@ Cookie: ...
 
 이 메시지가 서버까지 가는 동안 계층을 하나씩 내려가며 포장이 덧붙습니다.
 
-| 계층         | 하는 일             | 붙는 정보                 |
-| ------------ | ------------------- | ------------------------- |
-| 애플리케이션 | HTTP 메시지 작성    | 요청 내용                 |
-| 전송         | TCP 세그먼트로 나눔 | 출발·도착 포트, 순서 번호 |
-| 네트워크     | IP 패킷으로 감쌈    | 출발·도착 IP 주소         |
-| 데이터 링크  | 프레임으로 감쌈     | 바로 다음 장비의 MAC 주소 |
+![HTTP 메시지 앞에 TCP 헤더, IP 헤더, 이더넷 헤더가 차례로 붙는 계층별 포장](./assets/what-happens-when-you-enter-url/encapsulation.svg)
 
 마지막 MAC 주소는 최종 서버가 아니라 바로 다음 장비, 보통 공유기(기본 게이트웨이)의 주소입니다. 게이트웨이의 MAC 주소는 ARP로 알아냅니다.
 

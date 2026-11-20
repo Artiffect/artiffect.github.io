@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="360" fill="#f8f9fa"/>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <!-- 브라우저 -->
+  <rect x="24" y="150" width="128" height="60" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="88" y="186" text-anchor="middle" font-size="16" font-weight="700" fill="#16181b">브라우저</text>
+
+  <!-- 리졸버 -->
+  <rect x="262" y="150" width="140" height="60" rx="8" fill="#fff" stroke="#12b886" stroke-width="2"/>
+  <text x="332" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#087f5b">DNS 리졸버</text>
+  <text x="332" y="197" text-anchor="middle" font-size="12" fill="#6e747c">통신사·8.8.8.8</text>
+
+  <!-- 브라우저 ↔ 리졸버 (재귀 질의) -->
+  <line x1="152" y1="170" x2="258" y2="170" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="262" y1="192" x2="156" y2="192" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+  <text x="205" y="160" text-anchor="middle" font-size="11" fill="#454a51">www.google.com?</text>
+  <text x="205" y="210" text-anchor="middle" font-size="12" fill="#454a51">142.250.x.x</text>
+  <text x="205" y="240" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">재귀 질의</text>
+  <text x="205" y="256" text-anchor="middle" font-size="11" fill="#6e747c">한 번 묻고 기다림</text>
+
+  <!-- 네임서버 3개 -->
+  <rect x="512" y="40" width="184" height="60" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="604" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">루트 네임서버</text>
+  <text x="604" y="86" text-anchor="middle" font-size="12" fill="#6e747c">".com은 저 서버에"</text>
+
+  <rect x="512" y="150" width="184" height="60" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="604" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">.com 네임서버</text>
+  <text x="604" y="196" text-anchor="middle" font-size="12" fill="#6e747c">"google.com은 저 서버에"</text>
+
+  <rect x="512" y="260" width="184" height="60" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="604" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">google.com 네임서버</text>
+  <text x="604" y="306" text-anchor="middle" font-size="12" fill="#6e747c">"142.250.x.x"</text>
+
+  <!-- 리졸버 → 네임서버 (반복 질의) -->
+  <line x1="402" y1="162" x2="508" y2="74" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="402" y1="180" x2="508" y2="180" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="402" y1="198" x2="508" y2="286" stroke="#868e96" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <circle cx="452" cy="112" r="11" fill="#12b886"/>
+  <text x="452" y="116.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+  <circle cx="455" cy="166" r="11" fill="#12b886"/>
+  <text x="455" y="170.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+  <circle cx="452" cy="248" r="11" fill="#12b886"/>
+  <text x="452" y="252.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+
+  <text x="332" y="300" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">반복 질의</text>
+  <text x="332" y="316" text-anchor="middle" font-size="11" fill="#6e747c">리졸버가 차례로 돌아다님</text>
+</svg>
