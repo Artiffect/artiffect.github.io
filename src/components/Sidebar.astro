@@ -94,6 +94,28 @@ const bio = PROFILE.bio ?? config.site.description;
             >
               {c.label} <span class="side-count">{c.count}</span>
             </a>
+            {c.children.length > 0 && (
+              <ul>
+                {c.children.map(child => (
+                  <li>
+                    <a
+                      href={getRelativeLocaleUrl(
+                        locale,
+                        `categories/${child.slug}/`
+                      )}
+                      class:list={[
+                        "side-cat ps-3 text-[14px]",
+                        { "side-cat-active": active === child.slug },
+                      ]}
+                      aria-current={active === child.slug ? "page" : undefined}
+                    >
+                      {child.label}{" "}
+                      <span class="side-count">{child.count}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))
       }

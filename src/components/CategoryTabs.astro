@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import type { CategorySlug } from "@/data/categories";
+import { getTopCategorySlug, type CategorySlug } from "@/data/categories";
 import { getCategoryCounts } from "@/utils/getCategoryCounts";
 import { getTagCounts } from "@/utils/getTagCounts";
 import config from "@/config";
@@ -11,7 +11,12 @@ type Props = {
   active?: CategorySlug | "all";
 };
 
-const { posts, active } = Astro.props;
+const { posts, active: activeProp } = Astro.props;
+// 탭에는 상위 카테고리만 있으므로, 하위 카테고리 페이지에서는 부모 탭을 켠다
+const active =
+  activeProp && activeProp !== "all"
+    ? getTopCategorySlug(activeProp)
+    : activeProp;
 const locale = Astro.currentLocale ?? config.site.lang;
 const { total, categories } = getCategoryCounts(posts);
 // 모바일에서는 사이드바 태그 칩이 숨겨지므로 탭 끝에 태그 목록 입구를 둔다
