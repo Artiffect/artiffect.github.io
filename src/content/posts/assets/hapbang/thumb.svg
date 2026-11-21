@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 앱 -->
+  <g fill="#fff" stroke="#adb5bd" stroke-width="2">
+    <rect x="40" y="40" width="56" height="34" rx="6"/>
+    <rect x="140" y="40" width="56" height="34" rx="6"/>
+    <rect x="240" y="40" width="56" height="34" rx="6"/>
+    <rect x="40" y="134" width="56" height="34" rx="6"/>
+    <rect x="240" y="134" width="56" height="34" rx="6"/>
+  </g>
+  <rect x="140" y="134" width="56" height="34" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <g fill="#e9ecef">
+    <rect x="52" y="54" width="32" height="6" rx="3"/><rect x="152" y="54" width="32" height="6" rx="3"/><rect x="252" y="54" width="32" height="6" rx="3"/>
+    <rect x="52" y="148" width="32" height="6" rx="3"/><rect x="252" y="148" width="32" height="6" rx="3"/>
+  </g>
+  <!-- 검색 아이콘 -->
+  <circle cx="165" cy="150" r="7" fill="none" stroke="#12b886" stroke-width="2.5"/>
+  <line x1="170" y1="155" x2="176" y2="161" stroke="#12b886" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 이벤트 버스 -->
+  <rect x="40" y="96" width="256" height="16" rx="8" fill="#12b886"/>
+  <g fill="#fff"><circle cx="120" cy="104" r="3"/><circle cx="168" cy="104" r="3"/><circle cx="216" cy="104" r="3"/></g>
+  <g stroke="#ced4da" stroke-width="2">
+    <line x1="68" y1="74" x2="68" y2="96"/><line x1="168" y1="74" x2="168" y2="96"/><line x1="268" y1="74" x2="268" y2="96"/>
+    <line x1="68" y1="112" x2="68" y2="134"/><line x1="268" y1="112" x2="268" y2="134"/>
+  </g>
+  <line x1="168" y1="112" x2="168" y2="134" stroke="#12b886" stroke-width="2"/>
+</svg>

@@ -28,7 +28,15 @@ export const CATEGORIES = [
     ],
   },
   { slug: "coding-test", label: "코딩테스트" },
-  { slug: "project", label: "프로젝트" },
+  {
+    slug: "project",
+    label: "프로젝트",
+    children: [
+      { slug: "hapbang", label: "합방" },
+      { slug: "camping-gaja", label: "캠핑가자" },
+      { slug: "kagong-day", label: "카공데이" },
+    ],
+  },
   { slug: "infra", label: "인프라" },
   { slug: "retrospective", label: "회고" },
   { slug: "photo", label: "사진" },

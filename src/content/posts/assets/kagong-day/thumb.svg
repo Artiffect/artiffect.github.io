@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 지도 블록 -->
+  <g fill="#fff" stroke="#dee2e6" stroke-width="2">
+    <rect x="48" y="36" width="72" height="52" rx="6"/>
+    <rect x="132" y="36" width="72" height="52" rx="6"/>
+    <rect x="216" y="36" width="72" height="52" rx="6"/>
+    <rect x="48" y="100" width="72" height="72" rx="6"/>
+    <rect x="216" y="100" width="72" height="72" rx="6"/>
+  </g>
+  <!-- 검색 영역 -->
+  <rect x="132" y="100" width="72" height="72" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2" stroke-dasharray="5 4"/>
+  <!-- 다른 카페 -->
+  <g fill="#ced4da">
+    <circle cx="84" cy="62" r="5"/>
+    <circle cx="252" cy="136" r="5"/>
+    <circle cx="96" cy="146" r="5"/>
+    <circle cx="246" cy="58" r="5"/>
+  </g>
+  <!-- 핀 -->
+  <path d="M168 154c0 0-18-20-18-32a18 18 0 0 1 36 0c0 12-18 32-18 32z" fill="#12b886"/>
+  <circle cx="168" cy="122" r="7" fill="#fff"/>
+</svg>

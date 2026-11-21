@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 땅 -->
+  <line x1="40" y1="164" x2="296" y2="164" stroke="#ced4da" stroke-width="2"/>
+  <!-- 텐트 -->
+  <path d="M60 164L118 72L176 164z" fill="#fff" stroke="#12b886" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M118 164L118 120L104 164z M118 120L132 164" fill="#e6fcf5" stroke="#12b886" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="118" y1="72" x2="118" y2="60" stroke="#12b886" stroke-width="2.5"/>
+  <!-- 예약 달력 -->
+  <rect x="200" y="62" width="96" height="84" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="200" y="62" width="96" height="20" rx="6" fill="#e9ecef"/>
+  <rect x="200" y="76" width="96" height="6" fill="#e9ecef"/>
+  <g fill="#e9ecef">
+    <rect x="210" y="92" width="14" height="10" rx="2"/><rect x="230" y="92" width="14" height="10" rx="2"/><rect x="250" y="92" width="14" height="10" rx="2"/><rect x="270" y="92" width="14" height="10" rx="2"/>
+    <rect x="210" y="110" width="14" height="10" rx="2"/><rect x="270" y="110" width="14" height="10" rx="2"/>
+    <rect x="210" y="128" width="14" height="10" rx="2"/><rect x="230" y="128" width="14" height="10" rx="2"/><rect x="250" y="128" width="14" height="10" rx="2"/><rect x="270" y="128" width="14" height="10" rx="2"/>
+  </g>
+  <rect x="230" y="110" width="34" height="10" rx="2" fill="#12b886"/>
+</svg>

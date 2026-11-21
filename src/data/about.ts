@@ -72,10 +72,12 @@ export const ABOUT = {
       name: "프로그래머스 데브코스 클라우드 기반 백엔드 엔지니어링",
       period: "2026.01 – 2026.07",
     },
+    { name: "서경대학교 SW전문인재양성 과정", period: "2025.02 – 2025.06" },
     { name: "서경대학교 컴퓨터과학과", period: "졸업" },
   ],
   certifications: [
     { name: "ADsP", org: "한국데이터산업진흥원", date: "2026.11" },
+    { name: "OPIc IM2", org: "ACTFL", date: "2026.10" },
     { name: "SQLD", org: "한국데이터산업진흥원", date: "2025.12" },
     { name: "정보처리기사", org: "한국산업인력공단", date: "2025.12" },
   ],
