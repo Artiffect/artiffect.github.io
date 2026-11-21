@@ -1,0 +1,143 @@
+/* giscus 다크 테마: 블로그 토큰(src/styles/theme.css)에 맞춤. 문법 색 등 나머지는 기본 dark 테마를 따른다. */
+@import url("https://giscus.app/themes/dark.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+main {
+  --color-fg-default: #ecedee;
+  --color-fg-muted: #8e949b;
+  --color-fg-subtle: #8e949b;
+  --color-canvas-default: #121314;
+  --color-canvas-overlay: #1a1b1d;
+  --color-canvas-inset: #17181a;
+  --color-canvas-subtle: #1a1b1d;
+  --color-border-default: #2a2c2f;
+  --color-border-muted: #2a2c2f;
+  --color-neutral-muted: #26282b;
+  --color-accent-fg: #63e6be;
+  --color-accent-emphasis: #20c997;
+  --color-accent-muted: #20c99766;
+  --color-accent-subtle: #20c9971a;
+  --color-primer-shadow-inset: none;
+
+  --color-btn-text: #b4b8be;
+  --color-btn-bg: #121314;
+  --color-btn-border: #2a2c2f;
+  --color-btn-shadow: none;
+  --color-btn-inset-shadow: none;
+  --color-btn-hover-bg: #1f2124;
+  --color-btn-hover-border: #3a3d41;
+  --color-btn-active-bg: #26282b;
+  --color-btn-active-border: #3a3d41;
+  --color-btn-selected-bg: #1f2124;
+
+  --color-btn-primary-text: #121314;
+  --color-btn-primary-bg: #20c997;
+  --color-btn-primary-border: #20c997;
+  --color-btn-primary-shadow: none;
+  --color-btn-primary-inset-shadow: none;
+  --color-btn-primary-hover-bg: #38d9a9;
+  --color-btn-primary-hover-border: #38d9a9;
+  --color-btn-primary-selected-bg: #12b886;
+  --color-btn-primary-selected-shadow: none;
+  --color-btn-primary-disabled-text: #121314b3;
+  --color-btn-primary-disabled-bg: #20c99780;
+  --color-btn-primary-disabled-border: #20c99780;
+
+  --color-segmented-control-bg: #1f2124;
+  --color-segmented-control-button-bg: #121314;
+  --color-segmented-control-button-selected-border: #3a3d41;
+  --color-action-list-item-default-hover-bg: #1f2124;
+  --color-scale-gray-1: #1f2124;
+  --color-scale-blue-1: #0f3d30;
+
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    sans-serif;
+}
+
+main textarea,
+main button,
+main input {
+  font-family: inherit;
+}
+
+main .gsc-loading-image {
+  display: none;
+}
+
+/* 밑줄·기울임 없애기: 블로그 링크처럼 호버 때만 밑줄 */
+main .underline,
+main .link-secondary {
+  text-decoration: none;
+}
+
+main .underline:hover,
+main a.link-secondary:hover,
+main button.link-secondary:hover {
+  text-decoration: underline;
+}
+
+main .gsc-left-header em {
+  font-style: normal;
+}
+
+#__next .gsc-comments-count a.underline {
+  text-decoration-line: none;
+}
+
+#__next .gsc-comments-count a.underline:hover {
+  text-decoration-line: underline;
+}
+
+/* 정렬 버튼: 박스 없는 글자 탭. 선택된 쪽은 진한 글씨 + 청록 2px 밑줄 (블로그 상단 메뉴와 같음) */
+#__next .gsc-right-header {
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#__next .gsc-right-header .BtnGroup-item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#__next .gsc-right-header .BtnGroup-item + .BtnGroup-item::before {
+  content: "·";
+  margin: 0 4px;
+  color: var(--color-fg-muted);
+}
+
+#__next .gsc-right-header .btn {
+  padding: 4px 2px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-fg-muted);
+  font-weight: 400;
+}
+
+#__next .gsc-right-header .btn:hover {
+  background: transparent;
+  color: var(--color-fg-default);
+}
+
+#__next .gsc-right-header .BtnGroup-item--selected .btn {
+  color: var(--color-fg-default);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-accent-emphasis);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}

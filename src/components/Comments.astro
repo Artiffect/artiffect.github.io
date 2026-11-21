@@ -1,0 +1,85 @@
+---
+// giscus 댓글·반응. 저장소에서 Discussions를 켜고 giscus 앱을 설치해야 동작한다.
+// 테마 CSS는 data URL로 넘긴다. 파일 주소로 넘기면 giscus(외부 https)가
+// localhost 파일을 못 불러와 로컬에서 확인할 수 없다.
+import lightCss from "@/styles/giscus/light.css?raw";
+import darkCss from "@/styles/giscus/dark.css?raw";
+
+type Props = { term: string };
+const { term } = Astro.props;
+
+const toDataUrl = (css: string) =>
+  `data:text/css;base64,${Buffer.from(css).toString("base64")}`;
+
+const GISCUS = {
+  repo: "Artiffect/artiffect.github.io",
+  repoId: "R_kgDOVxY7sw",
+  category: "Announcements",
+  categoryId: "DIC_kwDOVxY7s84DLoMT",
+};
+---
+
+<section class="mt-12" aria-label="댓글">
+  <div
+    id="giscus-container"
+    data-repo={GISCUS.repo}
+    data-repo-id={GISCUS.repoId}
+    data-category={GISCUS.category}
+    data-category-id={GISCUS.categoryId}
+    data-term={term}
+    data-theme-light={toDataUrl(lightCss)}
+    data-theme-dark={toDataUrl(darkCss)}
+  >
+  </div>
+</section>
+
+<script is:inline data-astro-rerun>
+  (() => {
+    const box = document.getElementById("giscus-container");
+    if (!box) return;
+    // 블로그 색에 맞춘 테마 (src/styles/giscus/*.css)
+    const theme = () =>
+      document.documentElement.dataset.theme === "dark"
+        ? box.dataset.themeDark
+        : box.dataset.themeLight;
+
+    const s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.async = true;
+    s.crossOrigin = "anonymous";
+    Object.entries({
+      repo: box.dataset.repo,
+      "repo-id": box.dataset.repoId,
+      category: box.dataset.category,
+      "category-id": box.dataset.categoryId,
+      mapping: "specific",
+      term: box.dataset.term,
+      strict: "1",
+      "reactions-enabled": "1",
+      "emit-metadata": "0",
+      "input-position": "bottom",
+      theme: theme(),
+      lang: "ko",
+      loading: "lazy",
+    }).forEach(([k, v]) => s.setAttribute(`data-${k}`, v));
+    box.appendChild(s);
+
+    // 사이트 테마를 바꾸면 댓글 창도 따라 바꾼다
+    const observer = new MutationObserver(() => {
+      box
+        .querySelector("iframe.giscus-frame")
+        ?.contentWindow?.postMessage(
+          { giscus: { setConfig: { theme: theme() } } },
+          "https://giscus.app"
+        );
+    });
+    observer.observe(document.documentElement, {
+      attributeFilter: ["data-theme"],
+    });
+    document.addEventListener(
+      "astro:before-swap",
+      () => observer.disconnect(),
+      { once: true }
+    );
+  })();
+</script>

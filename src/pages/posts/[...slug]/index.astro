@@ -152,6 +152,15 @@ const ogImage = ogImageUrl
             </>
           )
         }
+        <!-- 조회수(Vercount). 숫자를 받아 오면 스크립트가 보이게 바꾼다 -->
+        <span
+          id="vercount_container_page_pv"
+          style="display: none"
+          data-pagefind-ignore
+        >
+          <span aria-hidden="true" class="me-2">·</span>{"조회 "}<span
+            id="vercount_value_page_pv"></span>
+        </span>
       </p>
       {
         tags.length > 0 && (
@@ -199,6 +208,16 @@ const ogImage = ogImageUrl
   </main>
   <Footer />
 </PostLayout>
+
+<script is:inline data-astro-rerun>
+  // 조회수(Vercount): 페이지 이동(View Transitions)마다 새로 불러야 다시 센다
+  (() => {
+    const counter = document.createElement("script");
+    counter.src = "https://events.vercount.one/js";
+    counter.defer = true;
+    document.body.appendChild(counter);
+  })();
+</script>
 
 <script is:inline data-astro-rerun>
   function createProgressBar() {
