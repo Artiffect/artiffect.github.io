@@ -56,6 +56,8 @@ export interface UIStrings {
 
     projectsTitle: string;
     projectsDesc: string;
+    photosTitle: string;
+    photosDesc: string;
   };
   a11y: {
     skipToContent: string;

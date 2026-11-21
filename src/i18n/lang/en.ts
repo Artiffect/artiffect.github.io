@@ -57,6 +57,8 @@ export default {
 
     projectsTitle: "Projects",
     projectsDesc: "{{count}} projects so far",
+    photosTitle: "Photos",
+    photosDesc: "{{count}} photos",
   },
   a11y: {
     skipToContent: "Skip to content",

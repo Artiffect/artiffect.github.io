@@ -31,6 +31,7 @@ export const CATEGORIES = [
   { slug: "project-log", label: "프로젝트 기록" },
   { slug: "infra", label: "인프라" },
   { slug: "retrospective", label: "회고" },
+  { slug: "photo", label: "사진" },
   { slug: "etc", label: "기타" },
 ] as const;
 

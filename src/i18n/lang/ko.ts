@@ -57,6 +57,8 @@ export default {
 
     projectsTitle: "프로젝트",
     projectsDesc: "지금까지 만든 프로젝트 {{count}}개",
+    photosTitle: "사진",
+    photosDesc: "찍어 둔 사진 {{count}}장",
   },
   a11y: {
     skipToContent: "본문으로 건너뛰기",

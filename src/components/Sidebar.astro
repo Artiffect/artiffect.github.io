@@ -7,6 +7,7 @@ import { PROFILE } from "@/data/profile";
 import { getCategoryCounts } from "@/utils/getCategoryCounts";
 import { getTagCounts } from "@/utils/getTagCounts";
 import config from "@/config";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 
 type Props = {
   posts: CollectionEntry<"posts">[];
@@ -21,6 +22,10 @@ const { total, categories } = getCategoryCounts(posts);
 
 const TAG_LIMIT = 12; // 넘치면 "전체 태그 보기"
 const tags = getTagCounts(posts);
+
+// 하위가 있는 카테고리는 접어 두고, 지금 보고 있는 쪽(자기 자신이나 하위)만 펼친다
+const isOpen = (c: (typeof categories)[number]) =>
+  active === c.slug || c.children.some(child => child.slug === active);
 
 const name = PROFILE.name ?? config.site.author;
 const bio = PROFILE.bio ?? config.site.description;
@@ -72,7 +77,7 @@ const bio = PROFILE.bio ?? config.site.description;
   <nav class="mt-10" aria-labelledby="side-categories">
     <h2 id="side-categories" class="side-heading">카테고리</h2>
     <ul class="tabular-nums">
-      <li>
+      <li class="side-row">
         <a
           href={getRelativeLocaleUrl(locale, "posts")}
           class:list={["side-cat", { "side-cat-active": active === "all" }]}
@@ -83,7 +88,7 @@ const bio = PROFILE.bio ?? config.site.description;
       </li>
       {
         categories.map(c => (
-          <li>
+          <li class="side-row">
             <a
               href={getRelativeLocaleUrl(locale, `categories/${c.slug}/`)}
               class:list={[
@@ -95,7 +100,18 @@ const bio = PROFILE.bio ?? config.site.description;
               {c.label} <span class="side-count">{c.count}</span>
             </a>
             {c.children.length > 0 && (
-              <ul>
+              <button
+                type="button"
+                class="side-toggle"
+                aria-expanded={isOpen(c) ? "true" : "false"}
+                aria-controls={`side-sub-${c.slug}`}
+                aria-label={`${c.label} 하위 카테고리 ${isOpen(c) ? "접기" : "펼치기"}`}
+              >
+                <IconChevronLeft class="size-3.5" aria-hidden="true" />
+              </button>
+            )}
+            {c.children.length > 0 && (
+              <ul id={`side-sub-${c.slug}`} hidden={!isOpen(c)}>
                 {c.children.map(child => (
                   <li>
                     <a
@@ -157,3 +173,28 @@ const bio = PROFILE.bio ?? config.site.description;
     )
   }
 </aside>
+
+<script>
+  // 사이드바 하위 카테고리 접기·펼치기
+  document.addEventListener("astro:page-load", () => {
+    document
+      .querySelectorAll<HTMLButtonElement>(".side-toggle")
+      .forEach(button => {
+        button.addEventListener("click", () => {
+          const list = document.getElementById(
+            button.getAttribute("aria-controls") ?? ""
+          );
+          if (!list) return;
+          const open = button.getAttribute("aria-expanded") !== "true";
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute(
+            "aria-label",
+            button
+              .getAttribute("aria-label")!
+              .replace(open ? "펼치기" : "접기", open ? "접기" : "펼치기")
+          );
+          list.hidden = !open;
+        });
+      });
+  });
+</script>

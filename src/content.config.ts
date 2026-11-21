@@ -72,4 +72,20 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { posts, pages, projects };
+export const PHOTOS_PATH = "src/content/photos";
+
+// 사진 갤러리 (/photos). 한 장 = md 파일 하나(frontmatter만). pnpm photo:add 로 만든다.
+const photos = defineCollection({
+  loader: glob({ pattern: "*.md", base: `./${PHOTOS_PATH}` }),
+  schema: ({ image }) =>
+    z.object({
+      image: image(),
+      // 설명 한 줄 (선택)
+      caption: z.string().optional(),
+      date: z.date(),
+      camera: z.string().optional(),
+      lens: z.string().optional(),
+    }),
+});
+
+export const collections = { posts, pages, projects, photos };

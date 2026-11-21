@@ -94,6 +94,15 @@
   @apply text-foreground before:bg-accent font-bold before:absolute before:top-1/2 before:-left-3.5 before:size-1.5 before:-translate-y-1/2 before:rounded-full;
 }
 
+/* 사이드바 카테고리 한 줄: 이름·개수 | 접기 버튼 칸(하위가 없으면 비움). 개수가 한 줄로 맞는다 */
+@utility side-row {
+  @apply grid grid-cols-[1fr_1.5rem] items-center [&>ul]:col-start-1;
+}
+
+@utility side-toggle {
+  @apply text-muted-foreground hover:text-foreground hover:bg-muted ms-1 flex size-6 items-center justify-center rounded-md transition-colors [&>svg]:rotate-180 [&>svg]:transition-transform aria-expanded:[&>svg]:-rotate-90;
+}
+
 @utility side-count {
   @apply text-muted-foreground text-[13px] font-normal;
 }
