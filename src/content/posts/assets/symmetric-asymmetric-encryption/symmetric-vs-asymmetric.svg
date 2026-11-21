@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 456" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="456" fill="#f8f9fa"/>
+  <defs>
+    <marker id="sa-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- ===== 대칭키 ===== -->
+  <text x="32" y="40" font-size="15" font-weight="700" fill="#087f5b">대칭키 암호화</text>
+  <text x="32" y="60" font-size="12" fill="#6e747c">암호화와 복호화에 같은 키</text>
+
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="32" y="80" width="96" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="80" y="113" fill="#16181b">평문</text>
+    <rect x="176" y="80" width="96" height="56" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="224" y="113" fill="#087f5b">암호화</text>
+    <rect x="320" y="80" width="96" height="56" rx="8" fill="#fff" stroke="#adb5bd" stroke-dasharray="4 3"/>
+    <text x="368" y="106" fill="#454a51">암호문</text>
+    <text x="368" y="124" font-size="11" font-weight="400" fill="#868e96">x8#qL2…</text>
+    <rect x="464" y="80" width="96" height="56" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="512" y="113" fill="#087f5b">복호화</text>
+    <rect x="608" y="80" width="80" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="648" y="113" fill="#16181b">평문</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="128" y1="108" x2="172" y2="108" marker-end="url(#sa-n)"/>
+    <line x1="272" y1="108" x2="316" y2="108" marker-end="url(#sa-n)"/>
+    <line x1="416" y1="108" x2="460" y2="108" marker-end="url(#sa-n)"/>
+    <line x1="560" y1="108" x2="604" y2="108" marker-end="url(#sa-n)"/>
+  </g>
+
+  <!-- 같은 키 -->
+  <g font-size="12" font-weight="700" text-anchor="middle" fill="#087f5b">
+    <rect x="184" y="160" width="80" height="26" rx="13" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="224" y="177">키 K</text>
+    <rect x="472" y="160" width="80" height="26" rx="13" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="512" y="177">키 K</text>
+  </g>
+  <line x1="224" y1="160" x2="224" y2="140" stroke="#12b886" stroke-width="1.5"/>
+  <line x1="512" y1="160" x2="512" y2="140" stroke="#12b886" stroke-width="1.5"/>
+  <path d="M264 173 H472" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="368" y="208" text-anchor="middle" font-size="12.5" font-weight="600" fill="#e8590c">이 키를 상대에게 어떻게 안전하게 건넬까?</text>
+
+  <line x1="32" y1="232" x2="688" y2="232" stroke="#dee2e6"/>
+
+  <!-- ===== 비대칭키 ===== -->
+  <text x="32" y="268" font-size="15" font-weight="700" fill="#1864ab">비대칭키 암호화</text>
+  <text x="32" y="288" font-size="12" fill="#6e747c">공개키로 잠그고, 짝이 되는 개인키로 연다</text>
+
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="32" y="308" width="96" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="80" y="341" fill="#16181b">평문</text>
+    <rect x="176" y="308" width="96" height="56" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="224" y="341" fill="#1864ab">암호화</text>
+    <rect x="320" y="308" width="96" height="56" rx="8" fill="#fff" stroke="#adb5bd" stroke-dasharray="4 3"/>
+    <text x="368" y="334" fill="#454a51">암호문</text>
+    <text x="368" y="352" font-size="11" font-weight="400" fill="#868e96">9fR!w0…</text>
+    <rect x="464" y="308" width="96" height="56" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="512" y="341" fill="#1864ab">복호화</text>
+    <rect x="608" y="308" width="80" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="648" y="341" fill="#16181b">평문</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="128" y1="336" x2="172" y2="336" marker-end="url(#sa-n)"/>
+    <line x1="272" y1="336" x2="316" y2="336" marker-end="url(#sa-n)"/>
+    <line x1="416" y1="336" x2="460" y2="336" marker-end="url(#sa-n)"/>
+    <line x1="560" y1="336" x2="604" y2="336" marker-end="url(#sa-n)"/>
+  </g>
+
+  <g font-size="12" font-weight="700" text-anchor="middle">
+    <rect x="176" y="388" width="96" height="26" rx="13" fill="#e7f5ff" stroke="#4dabf7"/>
+    <text x="224" y="405" fill="#1864ab">B의 공개키</text>
+    <rect x="464" y="388" width="96" height="26" rx="13" fill="#1864ab" stroke="#1864ab"/>
+    <text x="512" y="405" fill="#fff">B의 개인키</text>
+  </g>
+  <line x1="224" y1="388" x2="224" y2="368" stroke="#4dabf7" stroke-width="1.5"/>
+  <line x1="512" y1="388" x2="512" y2="368" stroke="#1864ab" stroke-width="1.5"/>
+  <g font-size="11.5" fill="#6e747c" text-anchor="middle">
+    <text x="224" y="436">누구나 가져도 됨</text>
+    <text x="512" y="436">B만 가지고 있음</text>
+  </g>
+</svg>

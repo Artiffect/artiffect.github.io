@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="300" fill="#f8f9fa"/>
+  <defs>
+    <marker id="cr-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <!-- 단계 이름 -->
+  <text x="190" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">컴파일: 한 번</text>
+  <line x1="32" y1="46" x2="348" y2="46" stroke="#12b886" stroke-width="2"/>
+  <text x="558" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">실행: 운영체제마다 맞는 JVM</text>
+  <line x1="420" y1="46" x2="696" y2="46" stroke="#12b886" stroke-width="2"/>
+
+  <!-- 소스 파일 -->
+  <rect x="32" y="114" width="120" height="72" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="92" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#16181b">Hello.java</text>
+  <text x="92" y="168" text-anchor="middle" font-size="12" fill="#6e747c">소스 코드</text>
+
+  <line x1="152" y1="150" x2="212" y2="150" stroke="#868e96" stroke-width="1.5" marker-end="url(#cr-ah)"/>
+  <text x="182" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#454a51">javac</text>
+
+  <!-- 클래스 파일 -->
+  <rect x="216" y="114" width="132" height="72" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="282" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">Hello.class</text>
+  <text x="282" y="168" text-anchor="middle" font-size="12" fill="#087f5b">바이트코드</text>
+
+  <!-- 분기 -->
+  <path d="M348 150 H384 V92 H416" fill="none" stroke="#868e96" stroke-width="1.5" marker-end="url(#cr-ah)"/>
+  <path d="M384 150 H416" fill="none" stroke="#868e96" stroke-width="1.5" marker-end="url(#cr-ah)"/>
+  <path d="M384 150 V208 H416" fill="none" stroke="#868e96" stroke-width="1.5" marker-end="url(#cr-ah)"/>
+
+  <!-- JVM -->
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#1864ab">
+    <rect x="420" y="68" width="140" height="48" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="490" y="97">Windows용 JVM</text>
+    <rect x="420" y="126" width="140" height="48" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="490" y="155">Linux용 JVM</text>
+    <rect x="420" y="184" width="140" height="48" rx="8" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="490" y="213">macOS용 JVM</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="560" y1="92" x2="592" y2="92" marker-end="url(#cr-ah)"/>
+    <line x1="560" y1="150" x2="592" y2="150" marker-end="url(#cr-ah)"/>
+    <line x1="560" y1="208" x2="592" y2="208" marker-end="url(#cr-ah)"/>
+  </g>
+
+  <!-- 운영체제 -->
+  <g font-size="13" font-weight="600" text-anchor="middle" fill="#454a51">
+    <rect x="596" y="68" width="100" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="646" y="97">Windows</text>
+    <rect x="596" y="126" width="100" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="646" y="155">Linux</text>
+    <rect x="596" y="184" width="100" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="646" y="213">macOS</text>
+  </g>
+  <text x="646" y="252" text-anchor="middle" font-size="11.5" fill="#6e747c">각자의 기계어로 실행</text>
+
+  <text x="360" y="282" text-anchor="middle" font-size="12.5" fill="#454a51">class 파일은 그대로 두고 <tspan font-weight="700" fill="#087f5b">JVM만 운영체제에 맞게</tspan> 바뀝니다</text>
+</svg>

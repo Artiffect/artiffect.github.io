@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="360" fill="#f8f9fa"/>
+  <defs>
+    <marker id="pm-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <!-- ===== 왼쪽: 프로세스 메모리 ===== -->
+  <text x="162" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">프로세스의 메모리</text>
+  <rect x="24" y="54" width="276" height="284" rx="10" fill="#fff" stroke="#dee2e6"/>
+
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="44" y="72" width="100" height="48" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="94" y="101" fill="#1864ab">스택</text>
+    <rect x="44" y="124" width="100" height="40" rx="6" fill="#fff" stroke="#ced4da" stroke-dasharray="4 3"/>
+    <rect x="44" y="168" width="100" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="94" y="197" fill="#087f5b">힙</text>
+    <rect x="44" y="220" width="100" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="94" y="249" fill="#087f5b">데이터</text>
+    <rect x="44" y="272" width="100" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="94" y="301" fill="#087f5b">코드</text>
+  </g>
+  <line x1="78" y1="128" x2="78" y2="144" stroke="#868e96" stroke-width="1.5" marker-end="url(#pm-ah)"/>
+  <line x1="110" y1="160" x2="110" y2="144" stroke="#868e96" stroke-width="1.5" marker-end="url(#pm-ah)"/>
+
+  <g font-size="12" fill="#454a51">
+    <text x="158" y="100">지역 변수, 호출 정보</text>
+    <text x="158" y="148" fill="#6e747c">서로를 향해 자람</text>
+    <text x="158" y="196">new로 만든 객체</text>
+    <text x="158" y="248">전역·static 변수</text>
+    <text x="158" y="300">실행할 명령어</text>
+  </g>
+
+  <!-- ===== 오른쪽: 스레드 3개 ===== -->
+  <text x="508" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">스레드가 3개인 프로세스</text>
+  <rect x="320" y="54" width="376" height="284" rx="10" fill="#fff" stroke="#dee2e6"/>
+
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#087f5b">
+    <rect x="340" y="72" width="104" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="392" y="101">코드</text>
+    <rect x="456" y="72" width="104" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="508" y="101">데이터</text>
+    <rect x="572" y="72" width="104" height="48" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="624" y="101">힙</text>
+  </g>
+  <text x="508" y="142" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">모든 스레드가 함께 씀</text>
+  <line x1="340" y1="156" x2="676" y2="156" stroke="#e9ecef"/>
+
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#16181b">
+    <text x="392" y="180">스레드 1</text>
+    <text x="508" y="180">스레드 2</text>
+    <text x="624" y="180">스레드 3</text>
+  </g>
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#1864ab">
+    <rect x="340" y="192" width="104" height="56" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="392" y="225">스택</text>
+    <rect x="340" y="256" width="104" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="392" y="281" font-size="12">레지스터·PC</text>
+
+    <rect x="456" y="192" width="104" height="56" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="508" y="225">스택</text>
+    <rect x="456" y="256" width="104" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="508" y="281" font-size="12">레지스터·PC</text>
+
+    <rect x="572" y="192" width="104" height="56" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="624" y="225">스택</text>
+    <rect x="572" y="256" width="104" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="624" y="281" font-size="12">레지스터·PC</text>
+  </g>
+  <text x="508" y="320" text-anchor="middle" font-size="12" font-weight="600" fill="#1864ab">스레드마다 따로 가짐</text>
+</svg>

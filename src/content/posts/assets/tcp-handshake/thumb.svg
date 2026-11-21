@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs>
+    <marker id="th-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+  <!-- 양쪽 -->
+  <rect x="64" y="28" width="40" height="28" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="232" y="28" width="40" height="28" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="84" y1="56" x2="84" y2="184" stroke="#adb5bd" stroke-width="3"/>
+  <line x1="252" y1="56" x2="252" y2="184" stroke="#adb5bd" stroke-width="3"/>
+  <!-- 세 번 -->
+  <line x1="88" y1="76" x2="244" y2="100" stroke="#12b886" stroke-width="3" marker-end="url(#th-g)"/>
+  <line x1="248" y1="116" x2="92" y2="140" stroke="#12b886" stroke-width="3" marker-end="url(#th-g)"/>
+  <line x1="88" y1="156" x2="244" y2="180" stroke="#12b886" stroke-width="3" marker-end="url(#th-g)"/>
+  <g font-size="11" font-weight="700" fill="#087f5b" text-anchor="middle">
+    <text x="168" y="78">SYN</text>
+    <text x="168" y="118">SYN+ACK</text>
+    <text x="168" y="158">ACK</text>
+  </g>
+</svg>

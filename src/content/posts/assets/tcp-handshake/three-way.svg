@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="352" fill="#f8f9fa"/>
+  <defs>
+    <marker id="tw-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+    <marker id="tw-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- 양쪽 -->
+  <text x="200" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">클라이언트</text>
+  <text x="520" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">서버</text>
+  <line x1="200" y1="52" x2="200" y2="312" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="520" y1="52" x2="520" y2="312" stroke="#adb5bd" stroke-width="2"/>
+
+  <!-- 상태: 클라이언트 (오른쪽 끝 x=188) -->
+  <g font-size="11.5" font-weight="700" text-anchor="middle">
+    <rect x="128" y="69" width="60" height="22" rx="11" fill="#fff" stroke="#ced4da"/>
+    <text x="158" y="84" fill="#6e747c">CLOSED</text>
+    <rect x="112" y="133" width="76" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="150" y="148" fill="#1864ab">SYN_SENT</text>
+    <rect x="92" y="229" width="96" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="140" y="244" fill="#087f5b">ESTABLISHED</text>
+  </g>
+
+  <!-- 상태: 서버 (왼쪽 끝 x=532) -->
+  <g font-size="11.5" font-weight="700" text-anchor="middle">
+    <rect x="532" y="85" width="60" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="562" y="100" fill="#1864ab">LISTEN</text>
+    <rect x="532" y="197" width="104" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="584" y="212" fill="#1864ab">SYN_RECEIVED</text>
+    <rect x="532" y="261" width="96" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="580" y="276" fill="#087f5b">ESTABLISHED</text>
+  </g>
+
+  <!-- 1. SYN -->
+  <line x1="202" y1="96" x2="516" y2="128" stroke="#12b886" stroke-width="1.8" marker-end="url(#tw-g)"/>
+  <text x="360" y="102" text-anchor="middle" font-size="12.5" fill="#16181b"><tspan font-weight="700">SYN</tspan>  seq=100</text>
+
+  <!-- 2. SYN+ACK -->
+  <line x1="518" y1="160" x2="204" y2="192" stroke="#12b886" stroke-width="1.8" marker-end="url(#tw-g)"/>
+  <text x="360" y="166" text-anchor="middle" font-size="12.5" fill="#16181b"><tspan font-weight="700">SYN+ACK</tspan>  seq=300, ack=101</text>
+
+  <!-- 3. ACK -->
+  <line x1="202" y1="224" x2="516" y2="256" stroke="#12b886" stroke-width="1.8" marker-end="url(#tw-g)"/>
+  <text x="360" y="230" text-anchor="middle" font-size="12.5" fill="#16181b"><tspan font-weight="700">ACK</tspan>  ack=301</text>
+
+  <!-- 데이터 -->
+  <line x1="202" y1="290" x2="516" y2="302" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#tw-n)"/>
+  <text x="360" y="288" text-anchor="middle" font-size="12" fill="#6e747c">데이터 전송 시작</text>
+
+  <text x="360" y="338" text-anchor="middle" font-size="11.5" fill="#6e747c">seq 100, 300은 예시입니다. 실제 시작 번호(ISN)는 예측하기 어렵게 정합니다.</text>
+</svg>

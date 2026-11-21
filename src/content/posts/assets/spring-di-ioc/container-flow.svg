@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 312" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="312" fill="#f8f9fa"/>
+  <defs>
+    <marker id="cf-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+    <marker id="cf-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+  </defs>
+
+  <!-- 4단계 -->
+  <g>
+    <rect x="32" y="32" width="150" height="96" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="54" cy="56" r="11" fill="#12b886"/><text x="54" y="60.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+    <text x="72" y="61" font-size="14" font-weight="700" fill="#16181b">설정 읽기</text>
+    <text x="46" y="90" font-size="11" fill="#6e747c">@Configuration</text>
+    <text x="46" y="108" font-size="11" fill="#6e747c">컴포넌트 스캔</text>
+  </g>
+  <g>
+    <rect x="202" y="32" width="150" height="96" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="224" cy="56" r="11" fill="#12b886"/><text x="224" y="60.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+    <text x="242" y="61" font-size="14" font-weight="700" fill="#16181b">빈 정의 등록</text>
+    <text x="216" y="90" font-size="11" fill="#6e747c">BeanDefinition</text>
+    <text x="216" y="108" font-size="11" fill="#6e747c">클래스·스코프·의존 관계</text>
+  </g>
+  <g>
+    <rect x="372" y="32" width="150" height="96" rx="8" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+    <circle cx="394" cy="56" r="11" fill="#12b886"/><text x="394" y="60.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+    <text x="412" y="61" font-size="14" font-weight="700" fill="#16181b">생성과 주입</text>
+    <text x="386" y="90" font-size="11" fill="#6e747c">의존 대상부터 생성</text>
+    <text x="386" y="108" font-size="11" fill="#6e747c">생성자에 넣고 초기화</text>
+  </g>
+  <g>
+    <rect x="542" y="32" width="150" height="96" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <circle cx="564" cy="56" r="11" fill="#12b886"/><text x="564" y="60.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+    <text x="582" y="61" font-size="14" font-weight="700" fill="#16181b">사용</text>
+    <text x="556" y="90" font-size="11" fill="#6e747c">다른 빈에 주입</text>
+    <text x="556" y="108" font-size="11" fill="#6e747c">getBean()으로 조회</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="182" y1="80" x2="198" y2="80" marker-end="url(#cf-ah)"/>
+    <line x1="352" y1="80" x2="368" y2="80" marker-end="url(#cf-ah)"/>
+    <line x1="522" y1="80" x2="538" y2="80" marker-end="url(#cf-ah)"/>
+  </g>
+  <line x1="447" y1="128" x2="447" y2="168" stroke="#868e96" stroke-width="1.5" marker-end="url(#cf-ah)"/>
+
+  <!-- 컨테이너 -->
+  <rect x="32" y="172" width="660" height="116" rx="10" fill="#fff" stroke="#63e6be" stroke-width="1.5"/>
+  <text x="48" y="196" font-size="14" font-weight="700" fill="#087f5b">ApplicationContext</text>
+
+  <rect x="48" y="214" width="196" height="56" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="146" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#087f5b">orderService</text>
+  <text x="146" y="257" text-anchor="middle" font-size="11" fill="#087f5b">OrderService 객체 1개</text>
+
+  <rect x="320" y="214" width="196" height="56" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="418" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#087f5b">discountPolicy</text>
+  <text x="418" y="257" text-anchor="middle" font-size="11" fill="#087f5b">RateDiscountPolicy 객체 1개</text>
+
+  <line x1="320" y1="242" x2="248" y2="242" stroke="#12b886" stroke-width="2" marker-end="url(#cf-gr)"/>
+  <text x="284" y="234" text-anchor="middle" font-size="11.5" font-weight="600" fill="#087f5b">주입</text>
+
+  <text x="540" y="238" font-size="12" font-weight="600" fill="#454a51">기본 스코프는 싱글톤</text>
+  <text x="540" y="257" font-size="11.5" fill="#6e747c">빈마다 객체 하나를 공유</text>
+</svg>

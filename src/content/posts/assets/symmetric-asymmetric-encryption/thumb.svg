@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 자물쇠 -->
+  <path d="M146 96 V78 a22 22 0 0 1 44 0 V96" fill="none" stroke="#adb5bd" stroke-width="6"/>
+  <rect x="128" y="94" width="80" height="66" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <circle cx="168" cy="120" r="7" fill="#12b886"/>
+  <rect x="165" y="122" width="6" height="16" rx="2" fill="#12b886"/>
+  <!-- 왼쪽 키 (초록) -->
+  <g stroke="#12b886" stroke-width="4" fill="none" stroke-linecap="round">
+    <circle cx="54" cy="128" r="13"/>
+    <line x1="67" y1="128" x2="106" y2="128"/>
+    <line x1="94" y1="128" x2="94" y2="138"/>
+    <line x1="102" y1="128" x2="102" y2="136"/>
+  </g>
+  <!-- 오른쪽 키 (파랑) -->
+  <g stroke="#4dabf7" stroke-width="4" fill="none" stroke-linecap="round">
+    <circle cx="282" cy="128" r="13"/>
+    <line x1="269" y1="128" x2="230" y2="128"/>
+    <line x1="242" y1="128" x2="242" y2="138"/>
+    <line x1="234" y1="128" x2="234" y2="136"/>
+  </g>
+</svg>

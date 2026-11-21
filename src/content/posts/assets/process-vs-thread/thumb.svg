@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 프로세스 -->
+  <rect x="64" y="36" width="208" height="136" rx="10" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <!-- 공유 메모리 -->
+  <rect x="82" y="52" width="172" height="28" rx="6" fill="#e6fcf5" stroke="#63e6be" stroke-width="1.5"/>
+  <rect x="96" y="63" width="40" height="6" rx="3" fill="#96f2d7"/>
+  <rect x="146" y="63" width="40" height="6" rx="3" fill="#96f2d7"/>
+  <rect x="196" y="63" width="40" height="6" rx="3" fill="#96f2d7"/>
+  <!-- 스레드 3개 -->
+  <g fill="none" stroke="#12b886" stroke-width="3" stroke-linecap="round">
+    <path d="M118 94 q9 7 0 14 t0 14 t0 14 t0 8"/>
+    <path d="M168 94 q9 7 0 14 t0 14 t0 14 t0 8"/>
+    <path d="M218 94 q9 7 0 14 t0 14 t0 14 t0 8"/>
+  </g>
+  <g fill="#12b886">
+    <path d="M111 144 L125 144 L118 156 z"/>
+    <path d="M161 144 L175 144 L168 156 z"/>
+    <path d="M211 144 L225 144 L218 156 z"/>
+  </g>
+</svg>

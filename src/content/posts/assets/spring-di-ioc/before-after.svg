@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 304" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="304" fill="#f8f9fa"/>
+  <defs>
+    <marker id="ba-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+    <marker id="ba-or" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#e8590c"/>
+    </marker>
+    <marker id="ba-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+    <marker id="ba-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M1 1L11 6L1 11z" fill="#fff" stroke="#868e96" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <line x1="360" y1="20" x2="360" y2="284" stroke="#dee2e6"/>
+
+  <!-- ===== 왼쪽: 직접 생성 ===== -->
+  <text x="180" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">직접 new로 생성</text>
+  <rect x="98" y="64" width="164" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="180" y="93" text-anchor="middle" font-size="14" font-weight="700" fill="#16181b">OrderService</text>
+  <line x1="180" y1="112" x2="180" y2="168" stroke="#e8590c" stroke-width="2" marker-end="url(#ba-or)"/>
+  <text x="192" y="145" font-size="12" font-weight="700" fill="#e8590c">new로 직접 생성</text>
+  <rect x="98" y="172" width="164" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="180" y="201" text-anchor="middle" font-size="13" font-weight="600" fill="#454a51">FixDiscountPolicy</text>
+  <text x="180" y="254" text-anchor="middle" font-size="12.5" fill="#e8590c">할인 정책을 바꾸면</text>
+  <text x="180" y="273" text-anchor="middle" font-size="12.5" fill="#e8590c">OrderService도 고쳐야 함</text>
+
+  <!-- ===== 오른쪽: 주입 ===== -->
+  <text x="540" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">밖에서 주입</text>
+
+  <rect x="384" y="64" width="148" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="458" y="93" text-anchor="middle" font-size="14" font-weight="700" fill="#16181b">OrderService</text>
+
+  <rect x="552" y="64" width="140" height="48" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="622" y="93" text-anchor="middle" font-size="13" font-weight="700" fill="#087f5b">스프링 컨테이너</text>
+  <line x1="552" y1="88" x2="536" y2="88" stroke="#12b886" stroke-width="2" marker-end="url(#ba-gr)"/>
+  <text x="622" y="130" text-anchor="middle" font-size="11.5" font-weight="600" fill="#087f5b">구현을 골라 주입</text>
+
+  <line x1="458" y1="112" x2="458" y2="168" stroke="#868e96" stroke-width="1.5" marker-end="url(#ba-ah)"/>
+  <text x="468" y="145" font-size="11.5" fill="#6e747c">인터페이스만 앎</text>
+  <rect x="384" y="172" width="148" height="52" rx="8" fill="#fff" stroke="#adb5bd"/>
+  <text x="458" y="191" text-anchor="middle" font-size="10.5" fill="#6e747c">«interface»</text>
+  <text x="458" y="211" text-anchor="middle" font-size="13" font-weight="700" fill="#16181b">DiscountPolicy</text>
+
+  <g font-size="12" font-weight="600" text-anchor="middle" fill="#454a51">
+    <rect x="552" y="152" width="140" height="34" rx="6" fill="#fff" stroke="#dee2e6"/>
+    <text x="622" y="174">FixDiscountPolicy</text>
+    <rect x="552" y="196" width="140" height="34" rx="6" fill="#fff" stroke="#dee2e6"/>
+    <text x="622" y="218">RateDiscountPolicy</text>
+  </g>
+  <g fill="none" stroke="#868e96" stroke-width="1.2" stroke-dasharray="4 3">
+    <path d="M552 169 H544 V190 H533" marker-end="url(#ba-tri)"/>
+    <path d="M552 213 H544 V206 H533" marker-end="url(#ba-tri)"/>
+  </g>
+
+  <text x="540" y="262" text-anchor="middle" font-size="12.5" fill="#087f5b">정책을 바꿔도</text>
+  <text x="540" y="281" text-anchor="middle" font-size="12.5" fill="#087f5b">OrderService는 그대로</text>
+</svg>

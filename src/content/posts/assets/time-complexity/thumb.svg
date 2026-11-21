@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 축 -->
+  <g stroke="#adb5bd" stroke-width="2.5" stroke-linecap="round">
+    <line x1="72" y1="36" x2="72" y2="168"/>
+    <line x1="72" y1="168" x2="272" y2="168"/>
+  </g>
+  <!-- 곡선 -->
+  <g fill="none" stroke-width="4" stroke-linecap="round">
+    <path d="M80 164 C130 160 150 130 176 44" stroke="#e8590c"/>
+    <path d="M80 164 C150 150 210 110 264 66" stroke="#12b886"/>
+    <path d="M80 164 L264 132" stroke="#74c0fc"/>
+    <path d="M80 162 C140 152 200 150 264 149" stroke="#dee2e6"/>
+  </g>
+  <text x="188" y="54" font-size="15" font-weight="700" fill="#e8590c">n²</text></svg>

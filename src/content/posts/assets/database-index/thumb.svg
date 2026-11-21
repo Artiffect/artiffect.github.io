@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs>
+    <marker id="th-di" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#adb5bd"/></marker>
+  </defs>
+  <!-- 간선 -->
+  <g stroke="#ced4da" stroke-width="2">
+    <line x1="168" y1="66" x2="234" y2="94"/>
+    <line x1="102" y1="120" x2="70" y2="146"/>
+    <line x1="234" y1="120" x2="202" y2="146"/>
+    <line x1="234" y1="120" x2="266" y2="146"/>
+  </g>
+  <g stroke="#12b886" stroke-width="3">
+    <line x1="168" y1="66" x2="102" y2="94"/>
+    <line x1="102" y1="120" x2="134" y2="146"/>
+  </g>
+  <!-- 노드 -->
+  <rect x="138" y="40" width="60" height="26" rx="5" fill="#fff" stroke="#12b886" stroke-width="2"/>
+  <rect x="72" y="94" width="60" height="26" rx="5" fill="#fff" stroke="#12b886" stroke-width="2"/>
+  <rect x="204" y="94" width="60" height="26" rx="5" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <g stroke="#adb5bd" stroke-width="2" fill="#fff">
+    <rect x="44" y="146" width="52" height="26" rx="5"/>
+    <rect x="176" y="146" width="52" height="26" rx="5"/>
+    <rect x="240" y="146" width="52" height="26" rx="5"/>
+  </g>
+  <rect x="108" y="146" width="52" height="26" rx="5" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <g fill="#e9ecef">
+    <rect x="150" y="50" width="36" height="6" rx="3"/>
+    <rect x="84" y="104" width="36" height="6" rx="3"/>
+    <rect x="216" y="104" width="36" height="6" rx="3"/>
+    <rect x="54" y="156" width="32" height="6" rx="3"/>
+    <rect x="186" y="156" width="32" height="6" rx="3"/>
+    <rect x="250" y="156" width="32" height="6" rx="3"/>
+  </g>
+  <rect x="118" y="156" width="32" height="6" rx="3" fill="#12b886"/>
+  <!-- 리프 연결 -->
+  <g stroke="#adb5bd" stroke-width="2">
+    <line x1="97" y1="159" x2="106" y2="159" marker-end="url(#th-di)"/>
+    <line x1="161" y1="159" x2="174" y2="159" marker-end="url(#th-di)"/>
+    <line x1="229" y1="159" x2="238" y2="159" marker-end="url(#th-di)"/>
+  </g>
+</svg>

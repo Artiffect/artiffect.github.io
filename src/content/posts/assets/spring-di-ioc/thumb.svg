@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs>
+    <marker id="st-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+  </defs>
+  <!-- 컨테이너 -->
+  <rect x="32" y="36" width="272" height="136" rx="12" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="48" y="50" width="56" height="8" rx="4" fill="#63e6be"/>
+  <!-- 빈 A -->
+  <rect x="60" y="86" width="84" height="56" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <circle cx="80" cy="104" r="4" fill="#12b886"/>
+  <rect x="90" y="101" width="40" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="74" y="118" width="56" height="6" rx="3" fill="#e9ecef"/>
+  <!-- 빈 B -->
+  <rect x="192" y="86" width="84" height="56" rx="8" fill="#e6fcf5" stroke="#63e6be" stroke-width="2"/>
+  <circle cx="212" cy="104" r="4" fill="#12b886"/>
+  <rect x="222" y="101" width="40" height="6" rx="3" fill="#c3fae8"/>
+  <rect x="206" y="118" width="56" height="6" rx="3" fill="#c3fae8"/>
+  <!-- 주입 -->
+  <line x1="190" y1="114" x2="152" y2="114" stroke="#12b886" stroke-width="3" marker-end="url(#st-ah)"/>
+</svg>

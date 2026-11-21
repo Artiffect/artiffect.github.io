@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="320" fill="#f8f9fa"/>
+  <line x1="360" y1="20" x2="360" y2="300" stroke="#dee2e6"/>
+
+  <!-- ===== 멀티 프로세스 ===== -->
+  <text x="186" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#16181b">멀티 프로세스</text>
+  <g font-size="12" font-weight="700" text-anchor="middle">
+    <!-- A -->
+    <rect x="32" y="56" width="92" height="140" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="78" y="78" fill="#16181b">프로세스 A</text>
+    <rect x="44" y="90" width="68" height="44" rx="5" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="78" y="116" fill="#087f5b">메모리</text>
+    <rect x="44" y="144" width="68" height="36" rx="5" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="78" y="166" fill="#1864ab">스레드</text>
+    <!-- B -->
+    <rect x="140" y="56" width="92" height="140" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="186" y="78" fill="#16181b">프로세스 B</text>
+    <rect x="152" y="90" width="68" height="44" rx="5" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="186" y="116" fill="#087f5b">메모리</text>
+    <rect x="152" y="144" width="68" height="36" rx="5" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="186" y="166" fill="#1864ab">스레드</text>
+    <!-- C (죽음) -->
+    <rect x="248" y="56" width="92" height="140" rx="8" fill="#fff" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="294" y="78" fill="#e8590c">프로세스 C ✕</text>
+    <rect x="260" y="90" width="68" height="44" rx="5" fill="#fff" stroke="#ced4da" stroke-dasharray="3 2"/>
+    <text x="294" y="116" fill="#adb5bd">메모리</text>
+    <rect x="260" y="144" width="68" height="36" rx="5" fill="#fff" stroke="#ced4da" stroke-dasharray="3 2"/>
+    <text x="294" y="166" fill="#adb5bd">스레드</text>
+  </g>
+
+  <!-- IPC -->
+  <path d="M78 196 V218 H294 V196" fill="none" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="186" y1="196" x2="186" y2="218" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="186" y="242" text-anchor="middle" font-size="12.5" fill="#454a51">IPC(파이프·소켓)로 주고받음</text>
+  <text x="186" y="282" text-anchor="middle" font-size="13" font-weight="600" fill="#087f5b">C가 죽어도 A, B는 계속 동작</text>
+
+  <!-- ===== 멀티 스레드 ===== -->
+  <text x="534" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#16181b">멀티 스레드</text>
+  <rect x="384" y="56" width="300" height="140" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="534" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#16181b">프로세스</text>
+  <rect x="400" y="90" width="268" height="44" rx="5" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="534" y="116" text-anchor="middle" font-size="12.5" font-weight="700" fill="#087f5b">공유 메모리 (코드·데이터·힙)</text>
+  <g font-size="12" font-weight="700" text-anchor="middle">
+    <rect x="400" y="144" width="80" height="36" rx="5" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="440" y="166" fill="#1864ab">스레드 1</text>
+    <rect x="494" y="144" width="80" height="36" rx="5" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="534" y="166" fill="#1864ab">스레드 2</text>
+    <rect x="588" y="144" width="80" height="36" rx="5" fill="#fff" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="628" y="166" fill="#e8590c">스레드 3 ✕</text>
+  </g>
+  <text x="534" y="242" text-anchor="middle" font-size="12.5" fill="#454a51">변수로 바로 주고받음 (동기화 필요)</text>
+  <text x="534" y="282" text-anchor="middle" font-size="13" font-weight="600" fill="#e8590c">한 스레드의 문제가 전체에 번질 수 있음</text>
+</svg>

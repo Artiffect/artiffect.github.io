@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="460" fill="#f8f9fa"/>
+  <defs>
+    <marker id="fw-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+    <marker id="fw-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- 양쪽 -->
+  <text x="200" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">클라이언트</text>
+  <text x="200" y="48" text-anchor="middle" font-size="11.5" fill="#6e747c">먼저 끊는 쪽</text>
+  <text x="520" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">서버</text>
+  <line x1="200" y1="58" x2="200" y2="444" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="520" y1="58" x2="520" y2="444" stroke="#adb5bd" stroke-width="2"/>
+
+  <!-- TIME_WAIT 구간 -->
+  <rect x="195" y="318" width="10" height="94" rx="3" fill="#12b886" opacity="0.35"/>
+
+  <!-- 상태: 클라이언트 (오른쪽 끝 x=188) -->
+  <g font-size="11.5" font-weight="700" text-anchor="middle">
+    <rect x="92" y="65" width="96" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="140" y="80" fill="#087f5b">ESTABLISHED</text>
+    <rect x="100" y="127" width="88" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="144" y="142" fill="#1864ab">FIN_WAIT_1</text>
+    <rect x="100" y="215" width="88" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="144" y="230" fill="#1864ab">FIN_WAIT_2</text>
+    <rect x="106" y="326" width="82" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="147" y="341" fill="#1864ab">TIME_WAIT</text>
+    <rect x="128" y="421" width="60" height="22" rx="11" fill="#fff" stroke="#ced4da"/>
+    <text x="158" y="436" fill="#6e747c">CLOSED</text>
+  </g>
+  <text x="188" y="256" text-anchor="end" font-size="11.5" fill="#6e747c">받기만 함</text>
+  <text x="188" y="370" text-anchor="end" font-size="12" font-weight="600" fill="#087f5b">2MSL 동안 대기</text>
+  <text x="188" y="386" text-anchor="end" font-size="11.5" fill="#6e747c">(리눅스는 60초)</text>
+
+  <!-- 상태: 서버 (왼쪽 끝 x=532) -->
+  <g font-size="11.5" font-weight="700" text-anchor="middle">
+    <rect x="532" y="89" width="96" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="580" y="104" fill="#087f5b">ESTABLISHED</text>
+    <rect x="532" y="171" width="88" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="576" y="186" fill="#1864ab">CLOSE_WAIT</text>
+    <rect x="532" y="295" width="76" height="22" rx="11" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="570" y="310" fill="#1864ab">LAST_ACK</text>
+    <rect x="532" y="357" width="60" height="22" rx="11" fill="#fff" stroke="#ced4da"/>
+    <text x="562" y="372" fill="#6e747c">CLOSED</text>
+  </g>
+  <text x="532" y="212" font-size="11.5" fill="#6e747c">아직 보낼 수 있음</text>
+
+  <!-- 1. FIN -->
+  <line x1="202" y1="96" x2="516" y2="128" stroke="#12b886" stroke-width="1.8" marker-end="url(#fw-g)"/>
+  <text x="360" y="102" text-anchor="middle" font-size="12.5" font-weight="700" fill="#16181b">FIN</text>
+
+  <!-- 2. ACK -->
+  <line x1="518" y1="148" x2="204" y2="180" stroke="#12b886" stroke-width="1.8" marker-end="url(#fw-g)"/>
+  <text x="360" y="154" text-anchor="middle" font-size="12.5" font-weight="700" fill="#16181b">ACK</text>
+
+  <!-- 남은 데이터 -->
+  <line x1="518" y1="206" x2="204" y2="238" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#fw-n)"/>
+  <text x="360" y="212" text-anchor="middle" font-size="12" fill="#6e747c">남은 데이터</text>
+
+  <!-- 3. FIN -->
+  <line x1="518" y1="264" x2="204" y2="296" stroke="#12b886" stroke-width="1.8" marker-end="url(#fw-g)"/>
+  <text x="360" y="270" text-anchor="middle" font-size="12.5" font-weight="700" fill="#16181b">FIN</text>
+
+  <!-- 4. ACK -->
+  <line x1="202" y1="318" x2="516" y2="350" stroke="#12b886" stroke-width="1.8" marker-end="url(#fw-g)"/>
+  <text x="360" y="324" text-anchor="middle" font-size="12.5" font-weight="700" fill="#16181b">ACK</text>
+</svg>

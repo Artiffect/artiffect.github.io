@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="352" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hy-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1c7ed6"/></marker>
+    <marker id="hy-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+    <marker id="hy-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- 단계 배경 -->
+  <rect x="32" y="60" width="656" height="128" rx="8" fill="#e7f5ff" opacity="0.6"/>
+  <rect x="32" y="200" width="656" height="132" rx="8" fill="#e6fcf5" opacity="0.7"/>
+  <text x="44" y="80" font-size="12.5" font-weight="700" fill="#1864ab">1. 비대칭키로 세션 키 정하기</text>
+  <text x="44" y="220" font-size="12.5" font-weight="700" fill="#087f5b">2. 세션 키(대칭키)로 데이터 주고받기</text>
+
+  <!-- 양쪽 -->
+  <text x="248" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">브라우저</text>
+  <text x="600" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">서버</text>
+  <line x1="248" y1="50" x2="248" y2="340" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="600" y1="50" x2="600" y2="340" stroke="#adb5bd" stroke-width="2"/>
+
+  <!-- 1단계 -->
+  <line x1="250" y1="100" x2="596" y2="116" stroke="#1c7ed6" stroke-width="1.8" marker-end="url(#hy-b)"/>
+  <text x="424" y="102" text-anchor="middle" font-size="12.5" fill="#16181b">키 교환용 공개 값</text>
+  <line x1="598" y1="134" x2="252" y2="150" stroke="#1c7ed6" stroke-width="1.8" marker-end="url(#hy-b)"/>
+  <text x="430" y="134" text-anchor="middle" font-size="12.5" fill="#16181b">키 교환용 공개 값 + 인증서와 서명</text>
+  <text x="424" y="176" text-anchor="middle" font-size="12" font-weight="600" fill="#1864ab">양쪽이 각자 계산해 같은 세션 키를 얻음 · 키 자체는 오가지 않음</text>
+
+  <!-- 2단계 -->
+  <line x1="250" y1="242" x2="596" y2="254" stroke="#12b886" stroke-width="1.8" marker-end="url(#hy-g)"/>
+  <text x="424" y="242" text-anchor="middle" font-size="12.5" fill="#16181b">HTTP 요청 <tspan fill="#087f5b" font-weight="700">(AES-GCM)</tspan></text>
+  <line x1="598" y1="272" x2="252" y2="284" stroke="#12b886" stroke-width="1.8" marker-end="url(#hy-g)"/>
+  <text x="424" y="272" text-anchor="middle" font-size="12.5" fill="#16181b">HTTP 응답 <tspan fill="#087f5b" font-weight="700">(AES-GCM)</tspan></text>
+  <line x1="250" y1="304" x2="596" y2="316" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#hy-n)"/>
+  <text x="424" y="304" text-anchor="middle" font-size="12" fill="#6e747c">연결이 끝날 때까지 같은 세션 키로</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 432" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="432" fill="#f8f9fa"/>
+  <defs>
+    <marker id="js-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <!-- 1행: class 파일 → 클래스 로더 -->
+  <rect x="24" y="28" width="120" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="84" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#454a51">.class 파일</text>
+  <line x1="144" y1="50" x2="196" y2="50" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+  <rect x="200" y="28" width="180" height="44" rx="8" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+  <text x="290" y="55" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">클래스 로더</text>
+  <text x="396" y="55" font-size="12" fill="#6e747c">로딩 → 링크 → 초기화</text>
+  <line x1="290" y1="72" x2="290" y2="96" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+
+  <!-- 런타임 데이터 영역 -->
+  <rect x="24" y="100" width="672" height="180" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="40" y="124" font-size="14" font-weight="700" fill="#16181b">런타임 데이터 영역</text>
+  <g font-size="11.5" fill="#454a51">
+    <rect x="520" y="113" width="12" height="12" rx="3" fill="#e6fcf5" stroke="#63e6be"/><text x="538" y="123">공유</text>
+    <rect x="584" y="113" width="12" height="12" rx="3" fill="#e7f5ff" stroke="#74c0fc"/><text x="602" y="123">스레드마다</text>
+  </g>
+
+  <!-- 공유 영역 -->
+  <rect x="40" y="136" width="200" height="60" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="140" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">메서드 영역</text>
+  <text x="140" y="182" text-anchor="middle" font-size="11.5" fill="#087f5b">클래스 정보 · 상수 풀</text>
+  <rect x="40" y="204" width="200" height="60" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="140" y="230" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">힙</text>
+  <text x="140" y="250" text-anchor="middle" font-size="11.5" fill="#087f5b">객체 · 배열 (GC 대상)</text>
+
+  <!-- 스레드별 영역 -->
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#16181b">
+    <text x="364" y="152">스레드 1</text>
+    <text x="580" y="152">스레드 2</text>
+  </g>
+  <g text-anchor="middle" fill="#1864ab">
+    <rect x="264" y="162" width="200" height="50" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="364" y="184" font-size="13" font-weight="700">JVM 스택</text>
+    <text x="364" y="202" font-size="11">메서드 호출마다 프레임</text>
+    <rect x="264" y="220" width="96" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="312" y="244" font-size="12" font-weight="700">PC 레지스터</text>
+    <rect x="368" y="220" width="96" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="416" y="244" font-size="12" font-weight="700">네이티브 스택</text>
+
+    <rect x="480" y="162" width="200" height="50" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="580" y="184" font-size="13" font-weight="700">JVM 스택</text>
+    <text x="580" y="202" font-size="11">메서드 호출마다 프레임</text>
+    <rect x="480" y="220" width="96" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="528" y="244" font-size="12" font-weight="700">PC 레지스터</text>
+    <rect x="584" y="220" width="96" height="40" rx="6" fill="#e7f5ff" stroke="#74c0fc"/>
+    <text x="632" y="244" font-size="12" font-weight="700">네이티브 스택</text>
+  </g>
+
+  <line x1="254" y1="300" x2="254" y2="282" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+  <line x1="266" y1="282" x2="266" y2="300" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+
+  <!-- 실행 엔진 -->
+  <rect x="24" y="304" width="460" height="108" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="40" y="328" font-size="14" font-weight="700" fill="#16181b">실행 엔진</text>
+  <g text-anchor="middle">
+    <rect x="40" y="340" width="132" height="56" rx="6" fill="#fff" stroke="#12b886"/>
+    <text x="106" y="364" font-size="13" font-weight="700" fill="#087f5b">인터프리터</text>
+    <text x="106" y="384" font-size="11" fill="#6e747c">명령어 하나씩 해석</text>
+    <rect x="180" y="340" width="144" height="56" rx="6" fill="#fff" stroke="#12b886"/>
+    <text x="252" y="364" font-size="13" font-weight="700" fill="#087f5b">JIT 컴파일러</text>
+    <text x="252" y="384" font-size="11" fill="#6e747c">자주 쓰는 코드를 기계어로</text>
+    <rect x="332" y="340" width="136" height="56" rx="6" fill="#fff" stroke="#12b886"/>
+    <text x="400" y="364" font-size="13" font-weight="700" fill="#087f5b">GC</text>
+    <text x="400" y="384" font-size="11" fill="#6e747c">안 쓰는 객체 정리</text>
+  </g>
+
+  <!-- JNI -->
+  <line x1="484" y1="368" x2="512" y2="368" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+  <rect x="516" y="340" width="72" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="552" y="373" text-anchor="middle" font-size="13" font-weight="700" fill="#454a51">JNI</text>
+  <line x1="588" y1="368" x2="612" y2="368" stroke="#868e96" stroke-width="1.5" marker-end="url(#js-ah)"/>
+  <rect x="616" y="340" width="80" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="656" y="364" text-anchor="middle" font-size="12" font-weight="600" fill="#454a51">네이티브</text>
+  <text x="656" y="381" text-anchor="middle" font-size="12" font-weight="600" fill="#454a51">라이브러리</text>
+</svg>
