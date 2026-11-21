@@ -28,7 +28,7 @@ export const CATEGORIES = [
     ],
   },
   { slug: "coding-test", label: "코딩테스트" },
-  { slug: "project-log", label: "프로젝트 기록" },
+  { slug: "project", label: "프로젝트" },
   { slug: "infra", label: "인프라" },
   { slug: "retrospective", label: "회고" },
   { slug: "photo", label: "사진" },

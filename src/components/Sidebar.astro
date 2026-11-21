@@ -41,14 +41,14 @@ const bio = PROFILE.bio ?? config.site.description;
         <Image
           src={PROFILE.avatar}
           alt=""
-          width={128}
-          height={128}
-          class="size-16 rounded-2xl object-cover"
+          width={192}
+          height={192}
+          class="border-border size-24 rounded-full border object-cover"
         />
       ) : (
         <div
           aria-hidden="true"
-          class="bg-muted text-muted-foreground flex size-16 items-center justify-center rounded-2xl text-2xl font-bold"
+          class="bg-muted text-muted-foreground flex size-24 items-center justify-center rounded-full text-3xl font-bold"
         >
           {name.charAt(0).toUpperCase()}
         </div>

@@ -35,43 +35,6 @@ const posts = defineCollection({
     }),
 });
 
-const pages = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/pages" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    ogImage: z.string().optional(),
-    canonicalURL: z.string().optional(),
-  }),
-});
-
-export const PROJECTS_PATH = "src/content/projects";
-
-const projects = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${PROJECTS_PATH}` }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      // 목록에 보일 한두 줄 요약
-      description: z.string(),
-      // 기간. 화면에는 월까지만 표시한다 (예: 2026. 03. ~ 2026. 06.)
-      startDate: z.date(),
-      // 비워 두면 "진행 중"
-      endDate: z.date().optional(),
-      // 예: "개인", "팀 4명"
-      team: z.string().optional(),
-      // 기술 스택. 회색 글자로 "A · B · C"처럼 나열 (태그 칩 아님)
-      stack: z.array(z.string()).default([]),
-      github: z.url().optional(),
-      demo: z.url().optional(),
-      // 목록 오른쪽 작은 썸네일 (선택). 파일 기준 상대 경로
-      thumbnail: image().optional(),
-      // 작을수록 위. 없으면 시작일 최신순
-      order: z.number().optional(),
-      draft: z.boolean().optional(),
-    }),
-});
-
 export const PHOTOS_PATH = "src/content/photos";
 
 // 사진 갤러리 (/photos). 한 장 = md 파일 하나(frontmatter만). pnpm photo:add 로 만든다.
@@ -88,4 +51,4 @@ const photos = defineCollection({
     }),
 });
 
-export const collections = { posts, pages, projects, photos };
+export const collections = { posts, photos };

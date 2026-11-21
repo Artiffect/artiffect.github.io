@@ -3,8 +3,8 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://artiffect.github.io/",
-    title: "Artiffect", // TODO: 사이트 제목 정하기
-    description: "개발 기록과 프로젝트, 사진을 모아 두는 곳", // TODO: 한 줄 소개 정하기
+    title: "artiffect.log",
+    description: "공부한 것, 만든 것, 찍은 것을 기록합니다",
     author: "Artiffect", // TODO: 표시할 작성자 이름
     profile: "https://github.com/Artiffect",
     ogImage: "default-og.jpg",
