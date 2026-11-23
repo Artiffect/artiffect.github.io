@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 396" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="396" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hs-sn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- ===== 솔트 없이 ===== -->
+  <text x="32" y="36" font-size="15" font-weight="700" fill="#343a40">솔트 없이 해시만</text>
+
+  <g font-size="13" font-weight="700" fill="#343a40">
+    <text x="32" y="80">사용자 A</text>
+    <text x="32" y="136">사용자 B</text>
+  </g>
+  <g text-anchor="middle">
+    <rect x="112" y="54" width="208" height="40" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="216" y="79" font-size="13" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">password123</text>
+    <rect x="112" y="110" width="208" height="40" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="216" y="135" font-size="13" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">password123</text>
+
+    <rect x="360" y="54" width="88" height="40" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="404" y="79" font-size="13" font-weight="700" fill="#343a40">SHA-256</text>
+    <rect x="360" y="110" width="88" height="40" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="404" y="135" font-size="13" font-weight="700" fill="#343a40">SHA-256</text>
+
+    <rect x="488" y="54" width="200" height="40" rx="8" fill="#fff" stroke="#e8590c"/>
+    <text x="588" y="79" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">ef92b778bafe…73e94f</text>
+    <rect x="488" y="110" width="200" height="40" rx="8" fill="#fff" stroke="#e8590c"/>
+    <text x="588" y="135" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">ef92b778bafe…73e94f</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="320" y1="74" x2="356" y2="74" marker-end="url(#hs-sn)"/>
+    <line x1="320" y1="130" x2="356" y2="130" marker-end="url(#hs-sn)"/>
+    <line x1="448" y1="74" x2="484" y2="74" marker-end="url(#hs-sn)"/>
+    <line x1="448" y1="130" x2="484" y2="130" marker-end="url(#hs-sn)"/>
+  </g>
+  <text x="688" y="176" text-anchor="end" font-size="12.5" font-weight="600" fill="#e8590c">두 해시가 똑같음 · 미리 계산한 표에서 바로 찾힘</text>
+
+  <line x1="32" y1="200" x2="688" y2="200" stroke="#dee2e6"/>
+
+  <!-- ===== 솔트를 붙이면 ===== -->
+  <text x="32" y="236" font-size="15" font-weight="700" fill="#087f5b">사용자마다 다른 솔트를 붙이면</text>
+
+  <g font-size="13" font-weight="700" fill="#343a40">
+    <text x="32" y="280">사용자 A</text>
+    <text x="32" y="336">사용자 B</text>
+  </g>
+  <g text-anchor="middle">
+    <rect x="112" y="254" width="208" height="40" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="216" y="279" font-size="13" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40"><tspan fill="#087f5b" font-weight="700">9f2c41</tspan> + password123</text>
+    <rect x="112" y="310" width="208" height="40" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="216" y="335" font-size="13" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40"><tspan fill="#087f5b" font-weight="700">d07e8a</tspan> + password123</text>
+
+    <rect x="360" y="254" width="88" height="40" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="404" y="279" font-size="13" font-weight="700" fill="#343a40">SHA-256</text>
+    <rect x="360" y="310" width="88" height="40" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="404" y="335" font-size="13" font-weight="700" fill="#343a40">SHA-256</text>
+
+    <rect x="488" y="254" width="200" height="40" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="588" y="279" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">9abc471342e9…e8c239</text>
+    <rect x="488" y="310" width="200" height="40" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="588" y="335" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">c70a859ba2df…d23a9c</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="320" y1="274" x2="356" y2="274" marker-end="url(#hs-sn)"/>
+    <line x1="320" y1="330" x2="356" y2="330" marker-end="url(#hs-sn)"/>
+    <line x1="448" y1="274" x2="484" y2="274" marker-end="url(#hs-sn)"/>
+    <line x1="448" y1="330" x2="484" y2="330" marker-end="url(#hs-sn)"/>
+  </g>
+  <text x="588" y="376" text-anchor="middle" font-size="12.5" font-weight="600" fill="#087f5b">비밀번호가 같아도 해시가 다름</text>
+  <text x="216" y="376" text-anchor="middle" font-size="12" fill="#868e96">솔트는 해시와 함께 DB에 저장</text>
+</svg>

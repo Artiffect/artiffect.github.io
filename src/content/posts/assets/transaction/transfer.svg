@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="300" fill="#f8f9fa"/>
+  <defs>
+    <marker id="tx-tr-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+    <marker id="tx-tr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ced4da"/></marker>
+    <marker id="tx-tr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+
+  <!-- ===== 트랜잭션 없이 ===== -->
+  <text x="24" y="36" font-size="15" font-weight="700" fill="#16181b">트랜잭션 없이</text>
+
+  <rect x="24" y="56" width="124" height="56" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="86" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#16181b">계좌 1 출금</text>
+  <text x="86" y="100" text-anchor="middle" font-size="12" fill="#6e747c">50만 → 40만</text>
+
+  <line x1="150" y1="84" x2="180" y2="84" stroke="#868e96" stroke-width="1.5" marker-end="url(#tx-tr-n)"/>
+  <circle cx="198" cy="84" r="13" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="198" y="89" text-anchor="middle" font-size="14" font-weight="700" fill="#e8590c">!</text>
+  <text x="198" y="116" text-anchor="middle" font-size="11.5" font-weight="600" fill="#e8590c">장애</text>
+  <line x1="213" y1="84" x2="244" y2="84" stroke="#ced4da" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#tx-tr-l)"/>
+
+  <rect x="248" y="56" width="124" height="56" rx="6" fill="#fff" stroke="#ced4da" stroke-dasharray="5 4"/>
+  <text x="310" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#adb5bd">계좌 2 입금</text>
+  <text x="310" y="100" text-anchor="middle" font-size="12" fill="#adb5bd">실행 안 됨</text>
+
+  <line x1="374" y1="84" x2="404" y2="84" stroke="#868e96" stroke-width="1.5" marker-end="url(#tx-tr-n)"/>
+
+  <rect x="408" y="56" width="288" height="56" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="552" y="80" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16181b">계좌 1 40만 · 계좌 2 30만</text>
+  <text x="552" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#e8590c">합계 70만, 10만 원이 사라짐</text>
+
+  <line x1="24" y1="148" x2="696" y2="148" stroke="#dee2e6"/>
+
+  <!-- ===== 트랜잭션으로 묶으면 ===== -->
+  <text x="24" y="182" font-size="15" font-weight="700" fill="#16181b">트랜잭션으로 묶으면</text>
+
+  <rect x="14" y="194" width="368" height="84" rx="10" fill="none" stroke="#12b886" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="372" y="182" text-anchor="end" font-size="11.5" font-weight="600" fill="#087f5b">START TRANSACTION ~ ROLLBACK</text>
+
+  <rect x="24" y="208" width="124" height="56" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="86" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#16181b">계좌 1 출금</text>
+  <text x="86" y="252" text-anchor="middle" font-size="12" fill="#6e747c">50만 → 40만</text>
+
+  <line x1="150" y1="236" x2="180" y2="236" stroke="#868e96" stroke-width="1.5" marker-end="url(#tx-tr-n)"/>
+  <circle cx="198" cy="236" r="13" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="198" y="241" text-anchor="middle" font-size="14" font-weight="700" fill="#e8590c">!</text>
+  <text x="198" y="268" text-anchor="middle" font-size="11.5" font-weight="600" fill="#e8590c">장애</text>
+  <line x1="213" y1="236" x2="244" y2="236" stroke="#12b886" stroke-width="1.5" marker-end="url(#tx-tr-g)"/>
+
+  <rect x="248" y="208" width="124" height="56" rx="6" fill="#fff" stroke="#12b886" stroke-width="2"/>
+  <text x="310" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#087f5b">ROLLBACK</text>
+  <text x="310" y="252" text-anchor="middle" font-size="12" fill="#6e747c">출금 취소</text>
+
+  <line x1="384" y1="236" x2="404" y2="236" stroke="#12b886" stroke-width="1.5" marker-end="url(#tx-tr-g)"/>
+
+  <rect x="408" y="208" width="288" height="56" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="1.5"/>
+  <text x="552" y="232" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16181b">계좌 1 50만 · 계좌 2 30만</text>
+  <text x="552" y="252" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">합계 80만, 처음 잔액 그대로</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 316" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="316" fill="#f8f9fa"/>
+  <line x1="360" y1="20" x2="360" y2="296" stroke="#dee2e6"/>
+
+  <g font-size="16" font-weight="700" text-anchor="middle" fill="#16181b">
+    <text x="180" y="36">프로세스 간 전환</text>
+    <text x="540" y="36">스레드 간 전환</text>
+  </g>
+
+  <!-- 왼쪽: 모두 필요 -->
+  <g>
+    <rect x="36" y="58" width="288" height="42" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <rect x="36" y="110" width="288" height="42" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <rect x="36" y="162" width="288" height="42" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+    <rect x="36" y="214" width="288" height="42" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+  </g>
+  <g font-size="14" font-weight="700" fill="#087f5b">
+    <text x="52" y="84">레지스터·PC 저장과 복원</text>
+    <text x="52" y="136">페이지 테이블 교체</text>
+    <text x="52" y="188">TLB 항목 무효화</text>
+    <text x="52" y="240">캐시 다시 채우기</text>
+  </g>
+  <g font-size="12" font-weight="600" text-anchor="end" fill="#087f5b">
+    <text x="308" y="84">필요</text>
+    <text x="308" y="136">필요</text>
+    <text x="308" y="188">필요</text>
+    <text x="308" y="240">많음</text>
+  </g>
+
+  <!-- 오른쪽 -->
+  <rect x="396" y="58" width="288" height="42" rx="6" fill="#e6fcf5" stroke="#63e6be"/>
+  <text x="412" y="84" font-size="14" font-weight="700" fill="#087f5b">레지스터·PC 저장과 복원</text>
+  <text x="668" y="84" font-size="12" font-weight="600" text-anchor="end" fill="#087f5b">필요</text>
+
+  <rect x="396" y="110" width="288" height="42" rx="6" fill="#fff" stroke="#ced4da" stroke-dasharray="4 3"/>
+  <rect x="396" y="162" width="288" height="42" rx="6" fill="#fff" stroke="#ced4da" stroke-dasharray="4 3"/>
+  <g font-size="14" font-weight="700" fill="#adb5bd">
+    <text x="412" y="136">페이지 테이블 교체</text>
+    <text x="412" y="188">TLB 항목 무효화</text>
+  </g>
+  <g font-size="12" font-weight="600" text-anchor="end" fill="#adb5bd">
+    <text x="668" y="136">없음</text>
+    <text x="668" y="188">없음</text>
+  </g>
+
+  <rect x="396" y="214" width="288" height="42" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="412" y="240" font-size="14" font-weight="700" fill="#343a40">캐시 다시 채우기</text>
+  <text x="668" y="240" font-size="12" font-weight="600" text-anchor="end" fill="#868e96">적음</text>
+
+  <g font-size="12.5" text-anchor="middle" fill="#868e96">
+    <text x="180" y="286">주소 공간이 바뀌어 TLB·캐시 미스가 늘어남</text>
+    <text x="540" y="286">코드·힙을 함께 써서 캐시를 이어 씀</text>
+  </g>
+</svg>

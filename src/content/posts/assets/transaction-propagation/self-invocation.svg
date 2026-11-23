@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 296" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="296" fill="#f8f9fa"/>
+  <defs>
+    <marker id="tp-si-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+    <marker id="tp-si-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+    <marker id="tp-si-or" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#e8590c"/>
+    </marker>
+  </defs>
+
+  <!-- 호출하는 빈 -->
+  <rect x="24" y="100" width="128" height="60" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="88" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#343a40">호출하는 빈</text>
+  <text x="88" y="145" text-anchor="middle" font-size="11" fill="#868e96" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">OrderController</text>
+
+  <!-- 프록시 -->
+  <rect x="196" y="24" width="168" height="248" rx="10" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+  <text x="280" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">프록시</text>
+  <text x="280" y="72" text-anchor="middle" font-size="11.5" fill="#868e96">트랜잭션 처리</text>
+
+  <rect x="212" y="102" width="136" height="56" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="280" y="126" text-anchor="middle" font-size="12.5" font-weight="700" fill="#343a40">order()</text>
+  <text x="280" y="145" text-anchor="middle" font-size="11.5" fill="#087f5b">REQUIRED 시작</text>
+
+  <rect x="212" y="188" width="136" height="56" rx="6" fill="#f8f9fa" stroke="#ced4da" stroke-dasharray="4 4"/>
+  <text x="280" y="212" text-anchor="middle" font-size="12.5" font-weight="700" fill="#adb5bd">saveHistory()</text>
+  <text x="280" y="231" text-anchor="middle" font-size="11.5" fill="#adb5bd">REQUIRES_NEW</text>
+
+  <!-- 진짜 객체 -->
+  <rect x="440" y="24" width="256" height="248" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="568" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#343a40">OrderService</text>
+  <text x="568" y="72" text-anchor="middle" font-size="11.5" fill="#868e96">진짜 객체</text>
+
+  <rect x="456" y="102" width="160" height="56" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="536" y="135" text-anchor="middle" font-size="12.5" font-weight="700" fill="#343a40">order()</text>
+
+  <rect x="456" y="188" width="160" height="56" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="536" y="212" text-anchor="middle" font-size="12.5" font-weight="700" fill="#343a40">saveHistory()</text>
+  <text x="536" y="231" text-anchor="middle" font-size="11.5" fill="#e8590c">order()의 트랜잭션에서 실행</text>
+
+  <!-- 호출 화살표 -->
+  <line x1="152" y1="130" x2="208" y2="130" stroke="#868e96" stroke-width="1.5" marker-end="url(#tp-si-ah)"/>
+  <line x1="348" y1="130" x2="452" y2="130" stroke="#12b886" stroke-width="1.5" marker-end="url(#tp-si-gr)"/>
+  <text x="402" y="122" text-anchor="middle" font-size="11.5" font-weight="600" fill="#087f5b">시작 후 위임</text>
+
+  <!-- 내부 호출 -->
+  <line x1="536" y1="158" x2="536" y2="184" stroke="#e8590c" stroke-width="1.5" marker-end="url(#tp-si-or)"/>
+  <text x="546" y="176" font-size="11" font-weight="600" fill="#e8590c" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">this.saveHistory()</text>
+
+  <!-- 거치지 않는 경로 -->
+  <line x1="348" y1="216" x2="456" y2="216" stroke="#ced4da" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <g stroke="#e8590c" stroke-width="2" stroke-linecap="round">
+    <line x1="395" y1="209" x2="409" y2="223"/>
+    <line x1="409" y1="209" x2="395" y2="223"/>
+  </g>
+  <text x="402" y="244" text-anchor="middle" font-size="11.5" font-weight="600" fill="#e8590c">거치지 않음</text>
+</svg>

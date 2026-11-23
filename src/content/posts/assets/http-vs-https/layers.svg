@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 352" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="352" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hl-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <text x="184" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">HTTP</text>
+  <text x="536" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">HTTPS</text>
+
+  <!-- 왼쪽: HTTP -->
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="64" y="60" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="184" y="89" fill="#16181b">HTTP 메시지</text>
+    <rect x="64" y="172" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="184" y="201" fill="#16181b">TCP <tspan font-size="12" font-weight="600" fill="#6e747c">· 포트 80</tspan></text>
+    <rect x="64" y="228" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="184" y="257" fill="#16181b">IP</text>
+  </g>
+  <line x1="184" y1="110" x2="184" y2="168" stroke="#868e96" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#hl-n)"/>
+  <text x="196" y="144" font-size="12" fill="#6e747c">평문 그대로</text>
+
+  <!-- 오른쪽: HTTPS -->
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="416" y="60" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="536" y="89" fill="#16181b">HTTP 메시지</text>
+    <rect x="416" y="116" width="240" height="48" rx="8" fill="#e6fcf5" stroke="#12b886" stroke-width="1.5"/>
+    <text x="536" y="137" fill="#087f5b">TLS</text>
+    <text x="536" y="155" font-size="11.5" font-weight="600" fill="#087f5b">암호화 · 무결성 · 서버 인증</text>
+    <rect x="416" y="172" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="536" y="201" fill="#16181b">TCP <tspan font-size="12" font-weight="600" fill="#6e747c">· 포트 443</tspan></text>
+    <rect x="416" y="228" width="240" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="536" y="257" fill="#16181b">IP</text>
+  </g>
+
+  <text x="360" y="316" text-anchor="middle" font-size="12" fill="#6e747c">HTTP 메시지는 두 경우 모두 같습니다. HTTPS는 TLS가 암호화한 뒤 TCP로 넘깁니다.</text>
+</svg>

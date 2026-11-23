@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 364" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="364" fill="#f8f9fa"/>
+  <defs>
+    <marker id="gc-ge-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#868e96"/>
+    </marker>
+    <marker id="gc-ge-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+  </defs>
+
+  <!-- new 객체 -->
+  <rect x="24" y="116" width="80" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="64" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#343a40">new 객체</text>
+
+  <!-- Young 영역 -->
+  <rect x="128" y="40" width="568" height="172" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="144" y="64" font-size="14" font-weight="700" fill="#343a40">Young 영역</text>
+  <text x="680" y="64" text-anchor="end" font-size="12" font-weight="600" fill="#087f5b">Eden이 가득 차면 Minor GC</text>
+
+  <line x1="104" y1="138" x2="140" y2="138" stroke="#868e96" stroke-width="1.5" marker-end="url(#gc-ge-ah)"/>
+
+  <!-- Eden -->
+  <rect x="144" y="80" width="240" height="116" rx="6" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+  <text x="264" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">Eden</text>
+  <text x="264" y="124" text-anchor="middle" font-size="11.5" fill="#868e96">새 객체가 처음 들어가는 곳</text>
+  <g stroke-width="1.5">
+    <rect x="156" y="148" width="24" height="24" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/>
+    <rect x="188" y="148" width="24" height="24" rx="4" fill="#e6fcf5" stroke="#12b886"/>
+    <rect x="220" y="148" width="24" height="24" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/>
+    <rect x="252" y="148" width="24" height="24" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/>
+    <rect x="284" y="148" width="24" height="24" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/>
+    <rect x="316" y="148" width="24" height="24" rx="4" fill="#e6fcf5" stroke="#12b886"/>
+    <rect x="348" y="148" width="24" height="24" rx="4" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/>
+  </g>
+  <text x="264" y="188" text-anchor="middle" font-size="11" fill="#868e96">대부분 금방 쓰레기가 됨</text>
+
+  <!-- Eden → Survivor -->
+  <line x1="384" y1="102" x2="436" y2="102" stroke="#12b886" stroke-width="1.5" marker-end="url(#gc-ge-t)"/>
+  <text x="410" y="94" text-anchor="middle" font-size="11.5" font-weight="600" fill="#087f5b">복사</text>
+
+  <!-- Survivor -->
+  <rect x="440" y="80" width="240" height="44" rx="6" fill="#e6fcf5" stroke="#12b886"/>
+  <text x="560" y="107" text-anchor="middle" font-size="13" font-weight="700" fill="#087f5b">Survivor 0</text>
+  <rect x="440" y="152" width="240" height="44" rx="6" fill="#fff" stroke="#adb5bd" stroke-dasharray="5 4"/>
+  <text x="560" y="179" text-anchor="middle" font-size="13" font-weight="700" fill="#868e96">Survivor 1 <tspan font-size="11.5" font-weight="400">(비어 있음)</tspan></text>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="460" y1="126" x2="460" y2="149" marker-end="url(#gc-ge-ah)"/>
+    <line x1="476" y1="150" x2="476" y2="127" marker-end="url(#gc-ge-ah)"/>
+  </g>
+  <text x="490" y="142" font-size="11.5" fill="#343a40">GC마다 번갈아 복사, age +1</text>
+
+  <!-- 승격 -->
+  <line x1="640" y1="196" x2="640" y2="248" stroke="#12b886" stroke-width="2" marker-end="url(#gc-ge-t)"/>
+  <text x="628" y="234" text-anchor="end" font-size="12" font-weight="600" fill="#087f5b">age가 기준에 이르면 승격</text>
+
+  <!-- Old 영역 -->
+  <rect x="128" y="252" width="568" height="92" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="144" y="276" font-size="14" font-weight="700" fill="#343a40">Old 영역</text>
+  <text x="680" y="276" text-anchor="end" font-size="12" font-weight="600" fill="#087f5b">가득 차면 Major GC</text>
+  <g font-size="12" font-weight="600" text-anchor="middle" fill="#343a40">
+    <rect x="144" y="292" width="96" height="36" rx="6" fill="#fff" stroke="#dee2e6"/>
+    <text x="192" y="315">스프링 빈</text>
+    <rect x="252" y="292" width="96" height="36" rx="6" fill="#fff" stroke="#dee2e6"/>
+    <text x="300" y="315">캐시</text>
+    <rect x="360" y="292" width="96" height="36" rx="6" fill="#fff" stroke="#dee2e6"/>
+    <text x="408" y="315">커넥션 풀</text>
+  </g>
+  <text x="472" y="315" font-size="11.5" fill="#868e96">오래 살아남는 객체</text>
+</svg>

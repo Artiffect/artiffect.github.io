@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 두 작업 -->
+  <rect x="44" y="64" width="96" height="80" rx="10" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="196" y="64" width="96" height="80" rx="10" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <g fill="#96f2d7">
+    <rect x="62" y="84" width="60" height="8" rx="4"/>
+    <rect x="62" y="100" width="44" height="8" rx="4"/>
+    <rect x="62" y="116" width="52" height="8" rx="4"/>
+  </g>
+  <g fill="#dee2e6">
+    <rect x="214" y="84" width="60" height="8" rx="4"/>
+    <rect x="214" y="100" width="44" height="8" rx="4"/>
+    <rect x="214" y="116" width="52" height="8" rx="4"/>
+  </g>
+  <!-- 오가는 화살표 -->
+  <g fill="none" stroke-width="3" stroke-linecap="round">
+    <path d="M100 56 C124 22, 212 22, 234 50" stroke="#12b886"/>
+    <path d="M236 152 C212 186, 124 186, 102 158" stroke="#adb5bd"/>
+  </g>
+  <path d="M240 58 L227 53 L238 44 z" fill="#12b886"/>
+  <path d="M96 150 L109 155 L98 164 z" fill="#adb5bd"/>
+</svg>

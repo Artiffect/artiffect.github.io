@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="344" fill="#f8f9fa"/>
+  <defs>
+    <marker id="cs-st-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+    <marker id="cs-st-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- 상태 -->
+  <g font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="90" y="70" width="120" height="44" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="150" y="97" fill="#343a40">준비</text>
+    <rect x="510" y="70" width="120" height="44" rx="8" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="570" y="97" fill="#087f5b">실행</text>
+    <rect x="300" y="250" width="120" height="44" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="360" y="277" fill="#343a40">대기</text>
+  </g>
+  <g font-size="11.5" text-anchor="middle" fill="#868e96">
+    <text x="150" y="58">CPU 차례를 기다림</text>
+    <text x="570" y="58">CPU에서 실행 중</text>
+    <text x="360" y="314">I/O·락·시간을 기다림</text>
+  </g>
+
+  <!-- 준비 → 실행 -->
+  <line x1="212" y1="82" x2="506" y2="82" stroke="#868e96" stroke-width="1.5" marker-end="url(#cs-st-n)"/>
+  <text x="360" y="74" text-anchor="middle" font-size="12.5" fill="#6e747c">스케줄러가 선택</text>
+
+  <!-- 실행 → 준비 -->
+  <line x1="508" y1="104" x2="214" y2="104" stroke="#12b886" stroke-width="1.8" marker-end="url(#cs-st-g)"/>
+  <text x="360" y="128" text-anchor="middle" font-size="12.5" font-weight="600" fill="#087f5b">① 할당 시간을 다 씀 (타이머 인터럽트)</text>
+
+  <!-- 실행 → 대기 -->
+  <line x1="560" y1="116" x2="420" y2="248" stroke="#12b886" stroke-width="1.8" marker-end="url(#cs-st-g)"/>
+  <g font-size="12.5" font-weight="600" fill="#087f5b">
+    <text x="506" y="186">② I/O 요청, sleep, 락 대기</text>
+    <text x="506" y="204">(시스템 콜)</text>
+  </g>
+
+  <!-- 대기 → 준비 -->
+  <line x1="300" y1="250" x2="164" y2="118" stroke="#868e96" stroke-width="1.5" marker-end="url(#cs-st-n)"/>
+  <text x="222" y="196" text-anchor="end" font-size="12.5" fill="#6e747c">I/O 완료, 깨어남</text>
+</svg>

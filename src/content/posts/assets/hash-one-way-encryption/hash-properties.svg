@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="320" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hs-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+    <marker id="hs-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e8590c"/></marker>
+  </defs>
+
+  <!-- 열 제목 -->
+  <g font-size="13" font-weight="700" fill="#343a40" text-anchor="middle">
+    <text x="112" y="44">입력 (길이 제한 없음)</text>
+    <text x="572" y="44">해시값 (항상 같은 길이)</text>
+  </g>
+
+  <!-- 입력 -->
+  <g text-anchor="middle">
+    <rect x="32" y="64" width="160" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="112" y="85" font-size="14" font-weight="700" fill="#343a40">hello</text>
+    <text x="112" y="102" font-size="11" fill="#868e96">5바이트</text>
+    <rect x="32" y="128" width="160" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="112" y="149" font-size="14" font-weight="700" fill="#343a40">hellp</text>
+    <text x="112" y="166" font-size="11" fill="#868e96">마지막 한 글자만 다름</text>
+    <rect x="32" y="192" width="160" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="112" y="213" font-size="14" font-weight="700" fill="#343a40">a × 1,000,000</text>
+    <text x="112" y="230" font-size="11" fill="#868e96">1,000,000바이트</text>
+  </g>
+
+  <!-- 해시 함수 -->
+  <rect x="264" y="124" width="120" height="56" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+  <text x="324" y="157" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">SHA-256</text>
+
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="192" y1="88" x2="260" y2="140" marker-end="url(#hs-n)"/>
+    <line x1="192" y1="152" x2="260" y2="152" marker-end="url(#hs-n)"/>
+    <line x1="192" y1="216" x2="260" y2="164" marker-end="url(#hs-n)"/>
+    <line x1="384" y1="140" x2="452" y2="88" marker-end="url(#hs-n)"/>
+    <line x1="384" y1="152" x2="452" y2="152" marker-end="url(#hs-n)"/>
+    <line x1="384" y1="164" x2="452" y2="216" marker-end="url(#hs-n)"/>
+  </g>
+
+  <!-- 출력 -->
+  <g text-anchor="middle">
+    <rect x="456" y="64" width="232" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="572" y="85" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">2cf24dba5fb0a30e…938b9824</text>
+    <text x="572" y="102" font-size="11" fill="#868e96">16진수 64자 (256비트)</text>
+    <rect x="456" y="128" width="232" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="572" y="149" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">fdd7585e08c4e2af…08aa4ce7</text>
+    <text x="572" y="166" font-size="11" font-weight="700" fill="#087f5b">입력이 비슷해도 전혀 다른 값</text>
+    <rect x="456" y="192" width="232" height="48" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="572" y="213" font-size="12.5" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#343a40">cdc76e5c9914fb92…c7112cd0</text>
+    <text x="572" y="230" font-size="11" fill="#868e96">입력이 길어도 64자</text>
+  </g>
+
+  <!-- 되돌릴 수 없음 -->
+  <line x1="456" y1="272" x2="196" y2="272" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#hs-o)"/>
+  <g stroke="#e8590c" stroke-width="2" stroke-linecap="round">
+    <line x1="318" y1="264" x2="334" y2="280"/>
+    <line x1="334" y1="264" x2="318" y2="280"/>
+  </g>
+  <text x="326" y="302" text-anchor="middle" font-size="12.5" font-weight="600" fill="#e8590c">해시값만 보고 원래 입력을 계산해 낼 방법은 없음</text>
+</svg>

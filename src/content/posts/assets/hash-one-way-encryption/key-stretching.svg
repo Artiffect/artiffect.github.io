@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="300" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hs-kn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+    <marker id="hs-kg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+
+  <!-- ===== 한 번 ===== -->
+  <text x="32" y="36" font-size="15" font-weight="700" fill="#343a40">해시를 한 번만</text>
+  <g text-anchor="middle">
+    <rect x="32" y="52" width="136" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="100" y="79" font-size="13" font-weight="700" fill="#343a40">비밀번호 + 솔트</text>
+    <rect x="208" y="52" width="56" height="44" rx="8" fill="#fff" stroke="#adb5bd"/>
+    <text x="236" y="79" font-size="14" font-weight="700" fill="#343a40">H</text>
+    <rect x="304" y="52" width="96" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="352" y="79" font-size="13" font-weight="700" fill="#343a40">저장할 값</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="168" y1="74" x2="204" y2="74" marker-end="url(#hs-kn)"/>
+    <line x1="264" y1="74" x2="300" y2="74" marker-end="url(#hs-kn)"/>
+  </g>
+  <text x="432" y="70" font-size="12.5" fill="#343a40">후보 하나 확인 = H 1번</text>
+  <text x="432" y="88" font-size="12" font-weight="600" fill="#e8590c">GPU 한 장으로 초당 100억 개 넘게 대입</text>
+
+  <line x1="32" y1="124" x2="688" y2="124" stroke="#dee2e6"/>
+
+  <!-- ===== 반복 ===== -->
+  <text x="32" y="160" font-size="15" font-weight="700" fill="#087f5b">키 스트레칭: 해시를 반복</text>
+  <g text-anchor="middle">
+    <rect x="32" y="176" width="136" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="100" y="203" font-size="13" font-weight="700" fill="#343a40">비밀번호 + 솔트</text>
+    <rect x="200" y="176" width="56" height="44" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="228" y="203" font-size="14" font-weight="700" fill="#087f5b">H</text>
+    <rect x="288" y="176" width="56" height="44" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="316" y="203" font-size="14" font-weight="700" fill="#087f5b">H</text>
+    <rect x="376" y="176" width="56" height="44" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="404" y="203" font-size="14" font-weight="700" fill="#087f5b">H</text>
+    <text x="472" y="203" font-size="16" font-weight="700" fill="#087f5b">· · ·</text>
+    <rect x="512" y="176" width="56" height="44" rx="8" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="540" y="203" font-size="14" font-weight="700" fill="#087f5b">H</text>
+    <rect x="600" y="176" width="88" height="44" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="644" y="203" font-size="13" font-weight="700" fill="#343a40">저장할 값</text>
+  </g>
+  <g stroke="#12b886" stroke-width="1.5">
+    <line x1="168" y1="198" x2="196" y2="198" marker-end="url(#hs-kg)"/>
+    <line x1="256" y1="198" x2="284" y2="198" marker-end="url(#hs-kg)"/>
+    <line x1="344" y1="198" x2="372" y2="198" marker-end="url(#hs-kg)"/>
+    <line x1="568" y1="198" x2="596" y2="198" marker-end="url(#hs-kg)"/>
+  </g>
+  <line x1="432" y1="198" x2="452" y2="198" stroke="#12b886" stroke-width="1.5"/>
+  <line x1="492" y1="198" x2="508" y2="198" stroke="#12b886" stroke-width="1.5" marker-end="url(#hs-kg)"/>
+
+  <!-- 반복 횟수 괄호 -->
+  <path d="M200 232 V240 H568 V232" fill="none" stroke="#12b886" stroke-width="1.5"/>
+  <text x="384" y="262" text-anchor="middle" font-size="12.5" font-weight="700" fill="#087f5b">앞 결과를 다시 넣어 N번 반복 (예: 600,000번)</text>
+  <text x="384" y="282" text-anchor="middle" font-size="12" fill="#868e96">후보 하나 확인하는 비용도 N배 · 공격자의 대입 속도는 1/N</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <!-- 양쪽 -->
+  <rect x="36" y="76" width="64" height="56" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="236" y="76" width="64" height="56" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <!-- 감싼 통로 -->
+  <rect x="100" y="94" width="136" height="20" fill="#e6fcf5"/>
+  <line x1="100" y1="94" x2="236" y2="94" stroke="#12b886" stroke-width="3"/>
+  <line x1="100" y1="114" x2="236" y2="114" stroke="#12b886" stroke-width="3"/>
+  <!-- 자물쇠 -->
+  <path d="M156 92 V80 a12 12 0 0 1 24 0 V92" fill="none" stroke="#12b886" stroke-width="5"/>
+  <rect x="146" y="90" width="44" height="34" rx="6" fill="#fff" stroke="#12b886" stroke-width="3"/>
+  <circle cx="168" cy="104" r="4" fill="#12b886"/>
+  <rect x="166" y="105" width="4" height="9" rx="1.5" fill="#12b886"/>
+</svg>

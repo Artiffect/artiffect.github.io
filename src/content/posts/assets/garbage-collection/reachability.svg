@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 296" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="296" fill="#f8f9fa"/>
+  <defs>
+    <marker id="gc-ra-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+    <marker id="gc-ra-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#adb5bd"/>
+    </marker>
+  </defs>
+
+  <!-- GC Root -->
+  <rect x="24" y="40" width="168" height="168" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="40" y="64" font-size="14" font-weight="700" fill="#343a40">GC Root</text>
+  <g text-anchor="middle">
+    <rect x="40" y="80" width="136" height="48" rx="6" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+    <text x="108" y="100" font-size="13" font-weight="700" fill="#087f5b">지역 변수</text>
+    <text x="108" y="118" font-size="11.5" fill="#868e96">cart (스택)</text>
+    <rect x="40" y="144" width="136" height="48" rx="6" fill="#fff" stroke="#12b886" stroke-width="1.5"/>
+    <text x="108" y="164" font-size="13" font-weight="700" fill="#087f5b">static 변수</text>
+    <text x="108" y="182" font-size="11.5" fill="#868e96">CONFIG</text>
+  </g>
+
+  <!-- 힙 -->
+  <rect x="224" y="40" width="472" height="188" rx="10" fill="#fff" stroke="#dee2e6"/>
+  <text x="240" y="64" font-size="14" font-weight="700" fill="#343a40">힙</text>
+  <g font-size="11.5" fill="#343a40">
+    <rect x="520" y="54" width="12" height="12" rx="3" fill="#e6fcf5" stroke="#12b886"/><text x="538" y="64">도달 가능</text>
+    <rect x="604" y="54" width="12" height="12" rx="3" fill="#fff" stroke="#adb5bd" stroke-dasharray="3 2"/><text x="622" y="64">수거 대상</text>
+  </g>
+
+  <!-- 도달 가능한 객체 -->
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#087f5b">
+    <rect x="256" y="84" width="104" height="40" rx="6" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="308" y="109">Cart</text>
+    <rect x="408" y="84" width="104" height="40" rx="6" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="460" y="109">Item</text>
+    <rect x="256" y="148" width="104" height="40" rx="6" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="308" y="173">Config</text>
+    <rect x="408" y="148" width="104" height="40" rx="6" fill="#e6fcf5" stroke="#12b886"/>
+    <text x="460" y="173">HashMap</text>
+  </g>
+  <g stroke="#12b886" stroke-width="1.5">
+    <line x1="176" y1="104" x2="252" y2="104" marker-end="url(#gc-ra-t)"/>
+    <line x1="360" y1="104" x2="404" y2="104" marker-end="url(#gc-ra-t)"/>
+    <line x1="176" y1="168" x2="252" y2="168" marker-end="url(#gc-ra-t)"/>
+    <line x1="360" y1="168" x2="404" y2="168" marker-end="url(#gc-ra-t)"/>
+  </g>
+
+  <!-- 닿지 않는 객체: 서로 참조 -->
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#868e96">
+    <rect x="560" y="84" width="104" height="40" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="612" y="109">Order</text>
+    <rect x="560" y="148" width="104" height="40" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="612" y="173">Payment</text>
+  </g>
+  <g stroke="#adb5bd" stroke-width="1.5">
+    <line x1="596" y1="124" x2="596" y2="144" marker-end="url(#gc-ra-g)"/>
+    <line x1="628" y1="148" x2="628" y2="128" marker-end="url(#gc-ra-g)"/>
+  </g>
+  <text x="612" y="212" text-anchor="middle" font-size="11.5" fill="#868e96">서로 참조하지만 Root에서 끊김</text>
+
+  <text x="360" y="268" text-anchor="middle" font-size="12.5" fill="#343a40">GC는 <tspan font-weight="700" fill="#087f5b">Root에서 참조를 따라가 닿는 객체</tspan>만 남기고 나머지를 치웁니다</text>
+</svg>

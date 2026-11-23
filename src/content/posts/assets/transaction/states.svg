@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 290" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="290" fill="#f8f9fa"/>
+  <defs>
+    <marker id="tx-st-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+    <marker id="tx-st-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e8590c"/></marker>
+    <marker id="tx-st-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+  </defs>
+
+  <!-- 시작 -->
+  <circle cx="30" cy="140" r="6" fill="#868e96"/>
+  <line x1="36" y1="140" x2="64" y2="140" stroke="#868e96" stroke-width="1.5" marker-end="url(#tx-st-n)"/>
+  <text x="30" y="124" text-anchor="middle" font-size="11.5" fill="#868e96">시작</text>
+
+  <!-- 전이 -->
+  <path d="M128 112 V64 H300" fill="none" stroke="#12b886" stroke-width="1.8" marker-end="url(#tx-st-g)"/>
+  <text x="214" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">마지막 쿼리 후 COMMIT</text>
+
+  <path d="M128 168 V212 H300" fill="none" stroke="#e8590c" stroke-width="1.8" marker-end="url(#tx-st-o)"/>
+  <text x="214" y="204" text-anchor="middle" font-size="12" font-weight="600" fill="#e8590c">쿼리 오류</text>
+
+  <line x1="454" y1="64" x2="550" y2="64" stroke="#12b886" stroke-width="1.8" marker-end="url(#tx-st-g)"/>
+  <text x="502" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#087f5b">로그 기록 끝</text>
+
+  <line x1="379" y1="92" x2="379" y2="180" stroke="#e8590c" stroke-width="1.8" marker-end="url(#tx-st-o)"/>
+  <text x="390" y="140" font-size="12" font-weight="600" fill="#e8590c">로그 기록 중 장애</text>
+
+  <line x1="454" y1="212" x2="550" y2="212" stroke="#868e96" stroke-width="1.8" marker-end="url(#tx-st-n)"/>
+  <text x="502" y="204" text-anchor="middle" font-size="12" font-weight="600" fill="#6e747c">롤백 끝</text>
+
+  <!-- 상태 -->
+  <rect x="68" y="112" width="120" height="56" rx="8" fill="#fff" stroke="#12b886" stroke-width="2"/>
+  <text x="128" y="137" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">활성</text>
+  <text x="128" y="156" text-anchor="middle" font-size="11.5" fill="#868e96">Active</text>
+
+  <rect x="304" y="36" width="150" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="379" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">부분 완료</text>
+  <text x="379" y="80" text-anchor="middle" font-size="11.5" fill="#868e96">Partially Committed</text>
+
+  <rect x="554" y="36" width="142" height="56" rx="8" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="625" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">완료</text>
+  <text x="625" y="80" text-anchor="middle" font-size="11.5" fill="#868e96">Committed</text>
+  <text x="625" y="114" text-anchor="middle" font-size="12" fill="#6e747c">변경이 확정됨</text>
+
+  <rect x="304" y="184" width="150" height="56" rx="8" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="379" y="209" text-anchor="middle" font-size="15" font-weight="700" fill="#e8590c">실패</text>
+  <text x="379" y="228" text-anchor="middle" font-size="11.5" fill="#868e96">Failed</text>
+
+  <rect x="554" y="184" width="142" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="625" y="209" text-anchor="middle" font-size="15" font-weight="700" fill="#16181b">철회</text>
+  <text x="625" y="228" text-anchor="middle" font-size="11.5" fill="#868e96">Aborted</text>
+  <text x="625" y="262" text-anchor="middle" font-size="12" fill="#6e747c">다시 실행하거나 끝냄</text>
+</svg>

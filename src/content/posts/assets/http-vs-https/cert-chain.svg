@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 316" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="316" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hc-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+
+  <!-- 카드 -->
+  <rect x="32" y="32" width="172" height="156" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <rect x="274" y="32" width="172" height="156" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <rect x="516" y="32" width="172" height="156" rx="8" fill="#e6fcf5" stroke="#12b886" stroke-width="1.5"/>
+  <g font-size="14" font-weight="700" fill="#16181b">
+    <text x="46" y="58">서버 인증서</text>
+    <text x="288" y="58">중간 CA 인증서</text>
+    <text x="530" y="58" fill="#087f5b">루트 CA 인증서</text>
+  </g>
+  <g stroke="#dee2e6">
+    <line x1="46" y1="70" x2="190" y2="70"/>
+    <line x1="288" y1="70" x2="432" y2="70"/>
+    <line x1="530" y1="70" x2="674" y2="70" stroke="#96f2d7"/>
+  </g>
+  <g font-size="12" fill="#343a40">
+    <text x="46" y="94">shop.example.com</text>
+    <text x="46" y="116">서버의 공개키</text>
+    <text x="46" y="138" fill="#868e96">발급자: 중간 CA</text>
+    <text x="288" y="94">중간 CA</text>
+    <text x="288" y="116">중간 CA의 공개키</text>
+    <text x="288" y="138" fill="#868e96">발급자: 루트 CA</text>
+    <text x="530" y="94">루트 CA</text>
+    <text x="530" y="116">루트 CA의 공개키</text>
+    <text x="530" y="138" fill="#868e96">발급자: 자기 자신</text>
+  </g>
+  <!-- 서명 -->
+  <g font-size="11.5" font-weight="700" text-anchor="middle" fill="#087f5b">
+    <rect x="46" y="152" width="112" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="102" y="167">중간 CA의 서명</text>
+    <rect x="288" y="152" width="112" height="22" rx="11" fill="#e6fcf5" stroke="#63e6be"/>
+    <text x="344" y="167">루트 CA의 서명</text>
+    <rect x="530" y="152" width="80" height="22" rx="11" fill="#fff" stroke="#63e6be"/>
+    <text x="570" y="167">자기 서명</text>
+  </g>
+
+  <!-- 검증 화살표: 발급자 공개키로 서명 검증 -->
+  <path d="M286 112 C 248 112, 236 163, 162 163" fill="none" stroke="#12b886" stroke-width="1.8" marker-end="url(#hc-g)"/>
+  <path d="M528 112 C 490 112, 478 163, 404 163" fill="none" stroke="#12b886" stroke-width="1.8" marker-end="url(#hc-g)"/>
+  <g font-size="11.5" font-weight="600" fill="#087f5b" text-anchor="middle">
+    <text x="239" y="100">검증</text>
+    <text x="481" y="100">검증</text>
+  </g>
+
+  <!-- 어디서 오는지 -->
+  <path d="M32 204 V212 H446 V204" fill="none" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="239" y="234" text-anchor="middle" font-size="12" fill="#6e747c">서버가 TLS 연결 때 함께 보냄</text>
+  <path d="M516 204 V212 H688 V204" fill="none" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="602" y="234" text-anchor="middle" font-size="12" fill="#6e747c">OS · 브라우저에 내장</text>
+
+  <text x="360" y="282" text-anchor="middle" font-size="12" fill="#343a40">각 인증서의 서명은 발급자의 공개키로 검증합니다.</text>
+  <text x="360" y="300" text-anchor="middle" font-size="12" fill="#6e747c">서명을 따라 올라가 내장된 루트 CA에 닿으면 서버 인증서를 믿습니다.</text>
+</svg>

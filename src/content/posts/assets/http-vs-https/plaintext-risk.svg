@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="420" fill="#f8f9fa"/>
+  <defs>
+    <marker id="hh-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker>
+    <marker id="hh-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+
+  <!-- ===== HTTP ===== -->
+  <text x="32" y="40" font-size="15" font-weight="700" fill="#16181b">HTTP</text>
+  <text x="32" y="60" font-size="12" fill="#6e747c">메시지가 평문 그대로 지나감</text>
+
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="32" y="84" width="120" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="92" y="117" fill="#16181b">브라우저</text>
+    <rect x="300" y="84" width="120" height="56" rx="8" fill="#fff" stroke="#e8590c" stroke-dasharray="4 3"/>
+    <text x="360" y="109" fill="#454a51">중간 지점</text>
+    <text x="360" y="127" font-size="11" font-weight="400" fill="#868e96">공유기 · 프록시</text>
+    <rect x="568" y="84" width="120" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="628" y="117" fill="#16181b">서버</text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5">
+    <line x1="152" y1="112" x2="296" y2="112" marker-end="url(#hh-n)"/>
+    <line x1="420" y1="112" x2="564" y2="112" marker-end="url(#hh-n)"/>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#343a40">
+    <text x="224" y="102">pw=1234</text>
+    <text x="492" y="102">pw=1234</text>
+  </g>
+  <g font-size="12.5" font-weight="600" text-anchor="middle" fill="#e8590c">
+    <text x="360" y="166">비밀번호를 그대로 읽음</text>
+    <text x="360" y="186">응답에 스크립트를 끼워 넣어도 모름</text>
+  </g>
+
+  <line x1="32" y1="214" x2="688" y2="214" stroke="#dee2e6"/>
+
+  <!-- ===== HTTPS ===== -->
+  <text x="32" y="250" font-size="15" font-weight="700" fill="#087f5b">HTTPS</text>
+  <text x="32" y="270" font-size="12" fill="#6e747c">TLS가 암호화한 뒤 지나감</text>
+
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="32" y="294" width="120" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="92" y="327" fill="#16181b">브라우저</text>
+    <rect x="300" y="294" width="120" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="360" y="319" fill="#454a51">중간 지점</text>
+    <text x="360" y="337" font-size="11" font-weight="400" fill="#868e96">공유기 · 프록시</text>
+    <rect x="568" y="294" width="120" height="56" rx="8" fill="#fff" stroke="#dee2e6"/>
+    <text x="628" y="327" fill="#16181b">서버</text>
+  </g>
+  <g stroke="#12b886" stroke-width="1.8">
+    <line x1="152" y1="322" x2="296" y2="322" marker-end="url(#hh-g)"/>
+    <line x1="420" y1="322" x2="564" y2="322" marker-end="url(#hh-g)"/>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#087f5b" font-weight="700">
+    <text x="224" y="312">x8#qL2…</text>
+    <text x="492" y="312">x8#qL2…</text>
+  </g>
+  <g font-size="12.5" text-anchor="middle" fill="#343a40">
+    <text x="360" y="376">암호문만 보여서 읽을 수 없음</text>
+    <text x="360" y="396">내용을 바꾸면 받는 쪽이 알아채고 연결을 끊음</text>
+  </g>
+</svg>

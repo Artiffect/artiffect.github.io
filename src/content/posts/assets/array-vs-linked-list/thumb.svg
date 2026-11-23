@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs>
+    <marker id="avl-th" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker>
+  </defs>
+  <rect x="60" y="40" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="96" y="40" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="132" y="40" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="168" y="40" width="36" height="30" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <rect x="204" y="40" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="240" y="40" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="178" y="52" width="16" height="6" rx="3" fill="#12b886"/>
+  <rect x="70" y="52" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="106" y="52" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="142" y="52" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="214" y="52" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="250" y="52" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="52" y="118" width="28" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="80" y="118" width="16" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="59" y="128" width="14" height="6" rx="3" fill="#e9ecef"/>
+  <circle cx="88" cy="131" r="3" fill="#868e96"/>
+  <line x1="96" y1="131" x2="118" y2="163" stroke="#12b886" stroke-width="2.5" marker-end="url(#avl-th)"/>
+  <rect x="120" y="150" width="28" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="148" y="150" width="16" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="127" y="160" width="14" height="6" rx="3" fill="#e9ecef"/>
+  <circle cx="156" cy="163" r="3" fill="#868e96"/>
+  <line x1="164" y1="163" x2="186" y2="125" stroke="#12b886" stroke-width="2.5" marker-end="url(#avl-th)"/>
+  <rect x="188" y="112" width="28" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="216" y="112" width="16" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="195" y="122" width="14" height="6" rx="3" fill="#e9ecef"/>
+  <circle cx="224" cy="125" r="3" fill="#868e96"/>
+  <line x1="232" y1="125" x2="254" y2="159" stroke="#12b886" stroke-width="2.5" marker-end="url(#avl-th)"/>
+  <rect x="256" y="146" width="28" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="284" y="146" width="16" height="26" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="263" y="156" width="14" height="6" rx="3" fill="#e9ecef"/>
+  <circle cx="292" cy="159" r="3" fill="#868e96"/>
+</svg>

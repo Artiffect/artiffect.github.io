@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs>
+    <marker id="gc-th-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#12b886"/>
+    </marker>
+  </defs>
+  <!-- Root -->
+  <circle cx="56" cy="104" r="18" fill="#12b886"/>
+  <!-- 도달 가능한 객체 -->
+  <g stroke="#12b886" stroke-width="2.5" fill="none">
+    <line x1="74" y1="96" x2="110" y2="72" marker-end="url(#gc-th-ah)"/>
+    <line x1="74" y1="112" x2="110" y2="136" marker-end="url(#gc-th-ah)"/>
+    <line x1="160" y1="64" x2="188" y2="64" marker-end="url(#gc-th-ah)"/>
+  </g>
+  <rect x="114" y="46" width="44" height="36" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <rect x="192" y="46" width="44" height="36" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <rect x="114" y="126" width="44" height="36" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <!-- 닿지 않는 객체 -->
+  <g stroke="#adb5bd" stroke-width="2" stroke-dasharray="5 4" fill="#fff">
+    <rect x="200" y="126" width="44" height="36" rx="6"/>
+    <rect x="268" y="126" width="44" height="36" rx="6"/>
+    <rect x="268" y="46" width="44" height="36" rx="6"/>
+  </g>
+  <g stroke="#ced4da" stroke-width="2" fill="none">
+    <line x1="246" y1="138" x2="266" y2="138"/>
+    <line x1="246" y1="150" x2="266" y2="150"/>
+    <line x1="290" y1="84" x2="290" y2="124"/>
+  </g>
+</svg>
