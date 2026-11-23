@@ -36,10 +36,10 @@ draft: false # true면 사이트에 노출되지 않음
 - 카테고리 (하위가 있으면 하위 slug를 쓴다. 화면에는 "CS 공부 · 네트워크"처럼 표시)
   - CS 공부: 네트워크 `network` · 운영체제 `os` · 데이터베이스 `database` · 자료구조·알고리즘 `algorithm` · 보안 `security`
   - 백엔드: Java `java` · Spring `spring` · JPA `jpa`
-  - 코딩테스트 `coding-test` · 프로젝트 `project` · 인프라 `infra` · 회고 `retrospective` · 사진 `photo` · 기타 `etc`
+  - 프로젝트: 합방 `hapbang` · 캠핑가자 `camping-gaja` · 카공데이 `kagong-day`
+  - 코딩테스트 `coding-test` · 인프라 `infra` · 회고 `retrospective` · 사진 `photo` · 기타 `etc`
 - `pubDatetime`이 미래 날짜면 그날까지 배포 사이트에서 숨겨진다.
 - 작성 중인 글은 `src/content/posts/_drafts/`에 둔다. git에서 제외되므로 레포와 배포 사이트에 올라가지 않고, `pnpm dev`에서는 미리 볼 수 있다 (`draft: false`일 때). 다 쓰면 `posts/` 바로 아래로 옮겨 커밋한다.
-- `src/content/posts/tailwind-typography.md`: 마크다운 문법 참고용 (draft)
 
 ## 사진 추가
 
