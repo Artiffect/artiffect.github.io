@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <polyline points="60,36 104,156 148,76 192,116 236,56 280,96" fill="none" stroke="#adb5bd" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="104" y1="156" x2="104" y2="56" stroke="#12b886" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <line x1="104" y1="56" x2="236" y2="56" stroke="#12b886" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <circle cx="104" cy="156" r="7" fill="#fff" stroke="#12b886" stroke-width="3"/>
+  <circle cx="236" cy="56" r="7" fill="#12b886"/>
+  <circle cx="60" cy="36" r="4" fill="#adb5bd"/>
+  <circle cx="148" cy="76" r="4" fill="#adb5bd"/>
+  <circle cx="192" cy="116" r="4" fill="#adb5bd"/>
+  <circle cx="280" cy="96" r="4" fill="#adb5bd"/>
+</svg>

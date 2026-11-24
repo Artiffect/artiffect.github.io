@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <defs><marker id="pt-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker></defs>
+  <rect x="78" y="90" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="88" y="102" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="114" y="90" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="124" y="102" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="150" y="90" width="36" height="30" fill="#12b886" stroke="#12b886" stroke-width="2"/>
+  <rect x="160" y="102" width="16" height="6" rx="3" fill="#fff"/>
+  <rect x="186" y="90" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="196" y="102" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <rect x="222" y="90" width="36" height="30" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="232" y="102" width="16" height="6" rx="3" fill="#e9ecef"/>
+  <path d="M96 84 C 96 50, 136 50, 146 82" fill="none" stroke="#12b886" stroke-width="2.5" marker-end="url(#pt-a)"/>
+  <path d="M240 126 C 240 160, 200 160, 190 128" fill="none" stroke="#12b886" stroke-width="2.5" marker-end="url(#pt-a)"/>
+</svg>

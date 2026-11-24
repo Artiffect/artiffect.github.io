@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="330" fill="#f8f9fa"/>
+  <text x="24" y="36" text-anchor="start" font-size="15" font-weight="700" fill="#343a40">nums = [1, 2, 3, 1]</text>
+  <text x="70" y="74" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">num</text>
+  <text x="250" y="74" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">add 전 Set</text>
+  <text x="440" y="74" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">set.add(num)</text>
+  <text x="600" y="74" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">결과</text>
+  <line x1="24" y1="86" x2="696" y2="86" stroke="#dee2e6"/>
+  <text x="70" y="122.0" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1</text>
+  <text x="250" y="122.0" text-anchor="middle" font-size="13" font-weight="400" fill="#adb5bd">비어 있음</text>
+  <text x="440" y="122.0" text-anchor="middle" font-size="14" font-weight="500" fill="#495057">true (새로 넣음)</text>
+  <text x="600" y="122.0" text-anchor="middle" font-size="14" font-weight="400" fill="#868e96">계속</text>
+  <line x1="24" y1="142" x2="696" y2="142" stroke="#e9ecef"/>
+  <text x="70" y="172.0" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">2</text>
+  <rect x="232" y="154" width="36" height="26" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="250" y="172" text-anchor="middle" font-size="13" font-weight="500" fill="#495057">1</text>
+  <text x="440" y="172.0" text-anchor="middle" font-size="14" font-weight="500" fill="#495057">true (새로 넣음)</text>
+  <text x="600" y="172.0" text-anchor="middle" font-size="14" font-weight="400" fill="#868e96">계속</text>
+  <line x1="24" y1="192" x2="696" y2="192" stroke="#e9ecef"/>
+  <text x="70" y="222.0" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">3</text>
+  <rect x="210" y="204" width="36" height="26" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="228" y="222" text-anchor="middle" font-size="13" font-weight="500" fill="#495057">1</text>
+  <rect x="254" y="204" width="36" height="26" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="272" y="222" text-anchor="middle" font-size="13" font-weight="500" fill="#495057">2</text>
+  <text x="440" y="222.0" text-anchor="middle" font-size="14" font-weight="500" fill="#495057">true (새로 넣음)</text>
+  <text x="600" y="222.0" text-anchor="middle" font-size="14" font-weight="400" fill="#868e96">계속</text>
+  <rect x="24" y="246" width="672" height="42" rx="8" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="70" y="272.0" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">1</text>
+  <rect x="188" y="254" width="36" height="26" rx="6" fill="#12b886" stroke="#12b886"/>
+  <text x="206" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+  <rect x="232" y="254" width="36" height="26" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="250" y="272" text-anchor="middle" font-size="13" font-weight="500" fill="#495057">2</text>
+  <rect x="276" y="254" width="36" height="26" rx="6" fill="#fff" stroke="#dee2e6"/>
+  <text x="294" y="272" text-anchor="middle" font-size="13" font-weight="500" fill="#495057">3</text>
+  <text x="440" y="272.0" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">false (이미 있음)</text>
+  <text x="600" y="272.0" text-anchor="middle" font-size="14" font-weight="700" fill="#087f5b">true 반환</text>
+  <text x="24" y="312" text-anchor="start" font-size="12" font-weight="400" fill="#868e96">add가 false를 반환하는 순간 중복이므로, 남은 원소를 보지 않고 바로 끝냅니다.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="720" height="430" fill="#f8f9fa"/>
+  <text x="24" y="36" text-anchor="start" font-size="15" font-weight="700" fill="#343a40">nums = [1, 2, 3, 4]</text>
+  <text x="300" y="70" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">i = 0</text>
+  <text x="390" y="70" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">i = 1</text>
+  <text x="480" y="70" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">i = 2</text>
+  <text x="570" y="70" text-anchor="middle" font-size="12" font-weight="400" fill="#868e96">i = 3</text>
+  <text x="24" y="102" text-anchor="start" font-size="14" font-weight="700" fill="#343a40">nums</text>
+  <text x="24" y="120" text-anchor="start" font-size="11.5" font-weight="400" fill="#868e96">입력</text>
+  <rect x="264" y="80" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="300" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1</text>
+  <rect x="354" y="80" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="390" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">2</text>
+  <rect x="444" y="80" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="480" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">3</text>
+  <rect x="534" y="80" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="570" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">4</text>
+  <text x="24" y="172" text-anchor="start" font-size="14" font-weight="700" fill="#343a40">1번째 반복 →</text>
+  <text x="24" y="190" text-anchor="start" font-size="11.5" font-weight="400" fill="#868e96">answer에 왼쪽 곱 채움</text>
+  <rect x="264" y="150" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="300" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1</text>
+  <rect x="354" y="150" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="390" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1</text>
+  <rect x="444" y="150" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="480" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">2</text>
+  <rect x="534" y="150" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="570" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">6</text>
+  <text x="24" y="242" text-anchor="start" font-size="14" font-weight="700" fill="#343a40">2번째 반복 ←</text>
+  <text x="24" y="260" text-anchor="start" font-size="11.5" font-weight="400" fill="#868e96">그때의 suffix 값</text>
+  <rect x="264" y="220" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="300" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">24</text>
+  <rect x="354" y="220" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="390" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">12</text>
+  <rect x="444" y="220" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="480" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">4</text>
+  <rect x="534" y="220" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="570" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1</text>
+  <line x1="24" y1="290" x2="696" y2="290" stroke="#dee2e6"/>
+  <text x="24" y="328" text-anchor="start" font-size="14" font-weight="700" fill="#343a40">answer[i] × suffix</text>
+  <text x="24" y="346" text-anchor="start" font-size="11.5" font-weight="400" fill="#868e96"></text>
+  <rect x="264" y="306" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="300" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1×24</text>
+  <rect x="354" y="306" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="390" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">1×12</text>
+  <rect x="444" y="306" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="480" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">2×4</text>
+  <rect x="534" y="306" width="72" height="44" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="570" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="#343a40">6×1</text>
+  <text x="24" y="390" text-anchor="start" font-size="14" font-weight="700" fill="#343a40">answer</text>
+  <text x="24" y="408" text-anchor="start" font-size="11.5" font-weight="400" fill="#868e96">결과</text>
+  <rect x="264" y="368" width="72" height="44" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="300" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">24</text>
+  <rect x="354" y="368" width="72" height="44" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="390" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">12</text>
+  <rect x="444" y="368" width="72" height="44" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="480" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">8</text>
+  <rect x="534" y="368" width="72" height="44" rx="6" fill="#e6fcf5" stroke="#12b886" stroke-width="2"/>
+  <text x="570" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#087f5b">6</text>
+  <defs><marker id="pa-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#12b886"/></marker></defs>
+  <line x1="630" y1="172" x2="690" y2="172" stroke="#12b886" stroke-width="2" marker-end="url(#pa-a)"/>
+  <line x1="690" y1="242" x2="630" y2="242" stroke="#12b886" stroke-width="2" marker-end="url(#pa-a)"/>
+</svg>
