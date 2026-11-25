@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 208" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif">
+  <rect width="336" height="208" fill="#f8f9fa"/>
+  <rect x="37" y="104" width="22" height="28" rx="3" fill="#e9ecef"/>
+  <rect x="67" y="90" width="22" height="14" rx="3" fill="#ced4da"/>
+  <rect x="97" y="104" width="22" height="42" rx="3" fill="#e9ecef"/>
+  <rect x="127" y="48" width="22" height="56" rx="3" fill="#12b886"/>
+  <rect x="157" y="104" width="22" height="14" rx="3" fill="#12b886"/>
+  <rect x="187" y="76" width="22" height="28" rx="3" fill="#12b886"/>
+  <rect x="217" y="90" width="22" height="14" rx="3" fill="#12b886"/>
+  <rect x="247" y="104" width="22" height="70" rx="3" fill="#e9ecef"/>
+  <rect x="277" y="48" width="22" height="56" rx="3" fill="#ced4da"/>
+  <line x1="29" y1="104" x2="307" y2="104" stroke="#adb5bd" stroke-width="2"/>
+  <path d="M121 36 L121 28 L245 28 L245 36" fill="none" stroke="#12b886" stroke-width="2.5"/>
+</svg>
